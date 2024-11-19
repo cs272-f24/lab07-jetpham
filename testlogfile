@@ -1,0 +1,332 @@
+2024/11/13 14:54:33 Set up chroma-go client successfully
+2024/11/13 14:54:33 &{0xc00022c1b0 <nil> 1 0xc000602fc0 0}
+2024/11/13 14:54:33 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14:54:33 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14:54:33 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14:54:33 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14:54:33 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14:54:33 91 unique records for "SubjectNameCollection"
+2024/11/13 14:54:33 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 14:54:33 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 14:54:33 940 unique records for "InstructorLastNameCollection"
+2024/11/13 14:54:33 1234 unique records for "TitleShortDescCollection"
+2024/11/13 14:54:33 Collection already exists: InstructorFullNameCollection
+2024/11/13 14:54:33 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.08s
+2024/11/13 14:54:33 Collection already exists: TitleShortDescCollection
+2024/11/13 14:54:33 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/13 14:54:33 Collection already exists: InstructorLastNameCollection
+2024/11/13 14:54:33 Finished inserting 940 records into "InstructorLastNameCollection" in 0.09s
+2024/11/13 14:54:33 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14:54:33 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/13 14:54:33 Collection already exists: SubjectNameCollection
+2024/11/13 14:54:33 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/13 14:54:42 {"subject_codes":["ANIM","VET"],"subject_names":["Animal Science","Veterinary Science"],"course_numbers":["101"],"sections":["001"],"crns":[12345],"schedule_type_codes":["LEC"],"campus_codes":["MAIN"],"title_short_descs":["Introduction to Cats"],"instruction_mode_descs":["In Person"],"meeting_type_codes":["CLAS"],"meeting_type_names":["Class"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["09:00"],"end_times":["10:30"],"meet_starts":["2023-01-10"],"meet_ends":["2023-05-10"],"buildings":["Animal Studies Building"],"rooms":["101"],"actual_enrollments":[25],"primary_instructor_first_names":["Sarah"],"primary_instructor_last_names":["Johnson"],"primary_instructor_full_names":["Sarah Johnson"],"primary_instructor_emails":["sarah.johnson@example.com"],"colleges":["College of Animal Sciences"]}
+2024/11/13 14:54:42 Querying collection "SubjectNameCollection" with query: Animal Science
+2024/11/13 14:54:42 Queried collection "SubjectNameCollection" in 0.53s
+2024/11/13 14:54:42 Querying collection "SubjectNameCollection" with query: Veterinary Science
+2024/11/13 14:54:43 Queried collection "SubjectNameCollection" in 0.42s
+2024/11/13 14:54:43 Querying collection "TitleShortDescCollection" with query: Introduction to Cats
+2024/11/13 14:54:43 Queried collection "TitleShortDescCollection" in 0.35s
+2024/11/13 14:54:43 Found in collection:  Sarah
+2024/11/13 14:54:43 Querying collection "InstructorFullNameCollection" with query: Sarah Johnson
+2024/11/13 14:54:44 Queried collection "InstructorFullNameCollection" in 0.44s
+2024/11/13 14:54:51 {"subject_codes":["CS"],"subject_names":["Computer Science"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:55:00 {"subject_codes":["MUS","ARTS"],"subject_names":["Music","Arts"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar Fundamentals","Introduction to Guitar"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":["College of Music","Department of Arts"]}
+2024/11/13 14:55:00 Querying collection "SubjectNameCollection" with query: Arts
+2024/11/13 14:55:00 Queried collection "SubjectNameCollection" in 0.34s
+2024/11/13 14:55:00 Querying collection "TitleShortDescCollection" with query: Guitar Fundamentals
+2024/11/13 14:55:01 Queried collection "TitleShortDescCollection" in 0.33s
+2024/11/13 14:55:01 Querying collection "TitleShortDescCollection" with query: Introduction to Guitar
+2024/11/13 14:55:01 Queried collection "TitleShortDescCollection" in 0.37s
+2024/11/13 14:55:05 {"subject_codes":["MUS","GUIT"],"subject_names":["Music","Guitar"],"course_numbers":["101","201"],"sections":["001","002"],"crns":[],"schedule_type_codes":["LEC","LAB"],"campus_codes":["MAIN"],"title_short_descs":["Intro to Guitar","Advanced Guitar Techniques"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":["CLAS","LAB"],"meeting_type_names":["Class","Laboratory"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["10:00","14:00"],"end_times":["11:00","15:00"],"meet_starts":["2023-01-10"],"meet_ends":["2023-05-10"],"buildings":["Music Hall","Arts Building"],"rooms":["101","202"],"actual_enrollments":[],"primary_instructor_first_names":["Alice","Bob"],"primary_instructor_last_names":["Johnson","Smith"],"primary_instructor_full_names":["Alice Johnson","Bob Smith"],"primary_instructor_emails":["alice@example.com","bob@example.com"],"colleges":["College of Fine Arts"]}
+2024/11/13 14:55:05 Querying collection "SubjectNameCollection" with query: Guitar
+2024/11/13 14:55:05 Queried collection "SubjectNameCollection" in 0.27s
+2024/11/13 14:55:05 Querying collection "TitleShortDescCollection" with query: Intro to Guitar
+2024/11/13 14:55:06 Queried collection "TitleShortDescCollection" in 0.46s
+2024/11/13 14:55:06 Querying collection "TitleShortDescCollection" with query: Advanced Guitar Techniques
+2024/11/13 14:55:06 Queried collection "TitleShortDescCollection" in 0.15s
+2024/11/13 14:55:06 Found in collection:  Alice
+2024/11/13 14:55:06 Not found in collection:  Bob
+2024/11/13 14:55:06 Querying collection "InstructorFirstNameCollection" with query: Bob
+2024/11/13 14:55:07 Queried collection "InstructorFirstNameCollection" in 0.46s
+2024/11/13 14:55:07 Result:  [Robert]
+2024/11/13 14:55:07 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
+2024/11/13 14:55:07 Queried collection "InstructorFullNameCollection" in 0.21s
+2024/11/13 14:55:07 Querying collection "InstructorFullNameCollection" with query: Bob Smith
+2024/11/13 14:55:07 Queried collection "InstructorFullNameCollection" in 0.20s
+2024/11/13 14:55:19 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:55:28 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:55:35 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":["M"],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:55:48 {"subject_codes":["CS"],"subject_names":["Computer Science"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:55:48 Not found in collection:  Phil
+2024/11/13 14:55:48 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 14:55:49 Queried collection "InstructorFirstNameCollection" in 0.32s
+2024/11/13 14:55:49 Result:  [Philip]
+2024/11/13 14:55:58 {"subject_codes":["PHIL"],"subject_names":["Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:56:27 Set up chroma-go client successfully
+2024/11/13 14:56:28 &{0xc0002401b0 <nil> 1 0xc000502700 0}
+2024/11/13 14:56:28 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14:56:28 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14:56:28 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14:56:28 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14:56:28 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14:56:28 91 unique records for "SubjectNameCollection"
+2024/11/13 14:56:28 940 unique records for "InstructorLastNameCollection"
+2024/11/13 14:56:28 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 14:56:28 1234 unique records for "TitleShortDescCollection"
+2024/11/13 14:56:28 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 14:56:28 Collection already exists: TitleShortDescCollection
+2024/11/13 14:56:28 Finished inserting 1234 records into "TitleShortDescCollection" in 0.05s
+2024/11/13 14:56:28 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14:56:28 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
+2024/11/13 14:56:28 Collection already exists: SubjectNameCollection
+2024/11/13 14:56:28 Finished inserting 91 records into "SubjectNameCollection" in 0.06s
+2024/11/13 14:56:28 Collection already exists: InstructorLastNameCollection
+2024/11/13 14:56:28 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 14:56:28 Collection already exists: InstructorFullNameCollection
+2024/11/13 14:56:28 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 14:56:31 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:59:26 Set up chroma-go client successfully
+2024/11/13 14:59:26 &{0xc0002401b0 <nil> 1 0xc0005a9880 0}
+2024/11/13 14:59:26 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14:59:26 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14:59:26 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14:59:26 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14:59:26 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14:59:26 91 unique records for "SubjectNameCollection"
+2024/11/13 14:59:26 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 14:59:26 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 14:59:26 940 unique records for "InstructorLastNameCollection"
+2024/11/13 14:59:26 1234 unique records for "TitleShortDescCollection"
+2024/11/13 14:59:26 Collection already exists: TitleShortDescCollection
+2024/11/13 14:59:26 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
+2024/11/13 14:59:26 Collection already exists: InstructorLastNameCollection
+2024/11/13 14:59:26 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 14:59:26 Collection already exists: SubjectNameCollection
+2024/11/13 14:59:26 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 14:59:26 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14:59:26 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
+2024/11/13 14:59:26 Collection already exists: InstructorFullNameCollection
+2024/11/13 14:59:26 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 14:59:32 {"subject_codes":["CAT"],"subject_names":["Feline Studies","Cat Behavior","Cat Care"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Understanding Cats","The World of Felines","Cat Welfare and Care"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 14:59:32 Querying collection "SubjectNameCollection" with query: Feline Studies
+2024/11/13 14:59:32 Queried collection "SubjectNameCollection" in 0.32s
+2024/11/13 14:59:32 Querying collection "SubjectNameCollection" with query: Cat Behavior
+2024/11/13 14:59:33 Queried collection "SubjectNameCollection" in 0.41s
+2024/11/13 14:59:33 Querying collection "SubjectNameCollection" with query: Cat Care
+2024/11/13 14:59:33 Queried collection "SubjectNameCollection" in 0.31s
+2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: Understanding Cats
+2024/11/13 14:59:33 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: The World of Felines
+2024/11/13 14:59:33 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: Cat Welfare and Care
+2024/11/13 14:59:34 Queried collection "TitleShortDescCollection" in 0.30s
+2024/11/13 15:00:15 Set up chroma-go client successfully
+2024/11/13 15:00:15 &{0xc0002281b0 <nil> 1 0xc000103500 0}
+2024/11/13 15:00:15 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15:00:15 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15:00:15 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15:00:15 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15:00:15 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15:00:15 91 unique records for "SubjectNameCollection"
+2024/11/13 15:00:15 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 15:00:15 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 15:00:15 940 unique records for "InstructorLastNameCollection"
+2024/11/13 15:00:15 1234 unique records for "TitleShortDescCollection"
+2024/11/13 15:00:15 Collection already exists: TitleShortDescCollection
+2024/11/13 15:00:15 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
+2024/11/13 15:00:15 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15:00:15 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
+2024/11/13 15:00:15 Collection already exists: InstructorLastNameCollection
+2024/11/13 15:00:15 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 15:00:15 Collection already exists: InstructorFullNameCollection
+2024/11/13 15:00:15 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.06s
+2024/11/13 15:00:15 Collection already exists: SubjectNameCollection
+2024/11/13 15:00:15 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 15:00:29 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":["Peterson"],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:00:29 Not found in collection:  Phil
+2024/11/13 15:00:29 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15:00:29 Queried collection "InstructorFirstNameCollection" in 0.44s
+2024/11/13 15:00:29 Result:  [Philip]
+2024/11/13 15:00:49 {"subject_codes":["PHIL"],"subject_names":["Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:01:01 {"subject_codes":["BIO","COMP","CS"],"subject_names":["Biology","Computer Science","Bioinformatics"],"course_numbers":["101","201"],"sections":["001","002"],"crns":[12345,67890],"schedule_type_codes":["LEC","LAB"],"campus_codes":["MAIN"],"title_short_descs":["Intro to Bioinformatics","Advanced Bioinformatics"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":["CLAS","LAB"],"meeting_type_names":["Class","Laboratory"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["10:00","14:00"],"end_times":["11:00","15:00"],"meet_starts":["2023-01-10","2023-01-12"],"meet_ends":["2023-05-10","2023-05-12"],"buildings":["Science Building","Engineering Hall"],"rooms":["101","202"],"actual_enrollments":[30,25],"primary_instructor_first_names":["Alice","Bob"],"primary_instructor_last_names":["Johnson","Smith"],"primary_instructor_full_names":["Alice Johnson","Bob Smith"],"primary_instructor_emails":["ajohnson@example.com","bsmith@example.com"],"colleges":["College of Life Sciences","College of Engineering"]}
+2024/11/13 15:01:01 Querying collection "SubjectNameCollection" with query: Bioinformatics
+2024/11/13 15:01:01 Queried collection "SubjectNameCollection" in 0.30s
+2024/11/13 15:01:01 Querying collection "TitleShortDescCollection" with query: Intro to Bioinformatics
+2024/11/13 15:01:02 Queried collection "TitleShortDescCollection" in 0.40s
+2024/11/13 15:01:02 Querying collection "TitleShortDescCollection" with query: Advanced Bioinformatics
+2024/11/13 15:01:02 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 15:01:02 Found in collection:  Alice
+2024/11/13 15:01:02 Not found in collection:  Bob
+2024/11/13 15:01:02 Querying collection "InstructorFirstNameCollection" with query: Bob
+2024/11/13 15:01:02 Queried collection "InstructorFirstNameCollection" in 0.17s
+2024/11/13 15:01:02 Result:  [Robert]
+2024/11/13 15:01:02 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
+2024/11/13 15:01:03 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/13 15:01:03 Querying collection "InstructorFullNameCollection" with query: Bob Smith
+2024/11/13 15:01:03 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/13 15:01:34 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":["101","102"],"sections":["001","002"],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar Basics","Intermediate Guitar"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":["M","W","F"],"meet_days_full":["Monday","Wednesday","Friday"],"begin_times":["09:00","10:00"],"end_times":["10:00","11:00"],"meet_starts":["2024-01-15"],"meet_ends":["2024-05-15"],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":["College of Music"]}
+2024/11/13 15:01:34 Querying collection "TitleShortDescCollection" with query: Guitar Basics
+2024/11/13 15:01:34 Queried collection "TitleShortDescCollection" in 0.38s
+2024/11/13 15:01:34 Querying collection "TitleShortDescCollection" with query: Intermediate Guitar
+2024/11/13 15:01:34 Queried collection "TitleShortDescCollection" in 0.26s
+2024/11/13 15:01:45 {"subject_codes":["RHET"],"subject_names":["Rhetoric"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":["Choong"],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:01:45 Querying collection "SubjectNameCollection" with query: Rhetoric
+2024/11/13 15:01:45 Queried collection "SubjectNameCollection" in 0.28s
+2024/11/13 15:01:45 Not found in collection:  Phil
+2024/11/13 15:01:45 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15:01:46 Queried collection "InstructorFirstNameCollection" in 0.53s
+2024/11/13 15:01:46 Result:  [Philip]
+2024/11/13 15:12:30 Set up chroma-go client successfully
+2024/11/13 15:12:31 &{0xc0002be1b0 <nil> 1 0xc0004ee8c0 0}
+2024/11/13 15:12:31 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15:12:31 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15:12:31 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15:12:31 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15:12:31 91 unique records for "SubjectNameCollection"
+2024/11/13 15:12:31 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15:12:31 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 15:12:31 1234 unique records for "TitleShortDescCollection"
+2024/11/13 15:12:31 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 15:12:31 940 unique records for "InstructorLastNameCollection"
+2024/11/13 15:12:31 Collection already exists: InstructorFullNameCollection
+2024/11/13 15:12:31 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 15:12:31 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15:12:31 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.08s
+2024/11/13 15:12:31 Collection already exists: SubjectNameCollection
+2024/11/13 15:12:31 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
+2024/11/13 15:12:31 Collection already exists: TitleShortDescCollection
+2024/11/13 15:12:31 Finished inserting 1234 records into "TitleShortDescCollection" in 0.08s
+2024/11/13 15:12:31 Collection already exists: InstructorLastNameCollection
+2024/11/13 15:12:31 Finished inserting 940 records into "InstructorLastNameCollection" in 0.08s
+2024/11/13 15:12:49 **Prompt Structure for Course Registry Filtering:**
+
+1. **Subject**: `Guitar`
+2. **Title Short Desc**: `Learn guitar this semester`
+
+**Final Prompt**: 
+```
+Subject: Guitar
+Title Short Desc: Learn guitar this semester
+``` 
+
+This format specifies the filtering criteria needed to search for relevant courses in the registry related to learning guitar.
+2024/11/13 15:12:51 {"subject_codes":[],"subject_names":["Guitar"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Learn guitar this semester"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:12:51 Querying collection "SubjectNameCollection" with query: Guitar
+2024/11/13 15:12:51 Queried collection "SubjectNameCollection" in 0.51s
+2024/11/13 15:12:51 Querying collection "TitleShortDescCollection" with query: Learn guitar this semester
+2024/11/13 15:12:52 Queried collection "TitleShortDescCollection" in 0.51s
+2024/11/13 15:18:17 Set up chroma-go client successfully
+2024/11/13 15:18:18 &{0xc0002201b0 <nil> 1 0xc0005b3500 0}
+2024/11/13 15:18:18 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15:18:18 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15:18:18 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15:18:18 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15:18:18 91 unique records for "SubjectNameCollection"
+2024/11/13 15:18:18 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15:18:18 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 15:18:18 940 unique records for "InstructorLastNameCollection"
+2024/11/13 15:18:18 1234 unique records for "TitleShortDescCollection"
+2024/11/13 15:18:18 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 15:18:18 Collection already exists: SubjectNameCollection
+2024/11/13 15:18:18 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 15:18:18 Collection already exists: InstructorFullNameCollection
+2024/11/13 15:18:18 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 15:18:18 Collection already exists: TitleShortDescCollection
+2024/11/13 15:18:18 Finished inserting 1234 records into "TitleShortDescCollection" in 0.07s
+2024/11/13 15:18:18 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15:18:18 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
+2024/11/13 15:18:18 Collection already exists: InstructorLastNameCollection
+2024/11/13 15:18:18 Finished inserting 940 records into "InstructorLastNameCollection" in 0.07s
+2024/11/13 15:18:29 To convert the message into a structured prompt suitable for a course registry filtering program, we need to break down the components based on the provided criteria. Here's how we can interpret the message and format it accordingly:
+
+### Prompt Structure:
+
+- **Subject**: Guitar
+- **Title**: Not explicitly specified (but we can infer it's related to learning guitar)
+- **Short Description**: Can I learn guitar this semester
+
+### Final Prompt for the Program:
+```plaintext
+{
+  "Subject": "Guitar",
+  "Title": "",
+  "Short Desc": "Can I learn guitar this semester"
+}
+```
+
+### Explanation of Components:
+- **Subject**: This is the main focus of the course inquiry, which is "Guitar".
+- **Title**: No specific title was given in the original message, so it remains empty.
+- **Short Desc**: This captures the essence of the inquiry, indicating a desire to learn guitar within the current semester.
+2024/11/13 15:18:31 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:18:31 Querying collection "TitleShortDescCollection" with query: Guitar
+2024/11/13 15:18:31 Queried collection "TitleShortDescCollection" in 0.32s
+2024/11/13 15:45:12 Set up chroma-go client successfully
+2024/11/13 15:45:12 &{0xc0002281b0 <nil> 1 0xc0006836c0 0}
+2024/11/13 15:45:12 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15:45:12 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15:45:12 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15:45:12 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15:45:12 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15:45:12 91 unique records for "SubjectNameCollection"
+2024/11/13 15:45:12 1234 unique records for "TitleShortDescCollection"
+2024/11/13 15:45:12 1022 unique records for "InstructorFullNameCollection"
+2024/11/13 15:45:12 670 unique records for "InstructorFirstNameCollection"
+2024/11/13 15:45:12 940 unique records for "InstructorLastNameCollection"
+2024/11/13 15:45:12 Collection already exists: SubjectNameCollection
+2024/11/13 15:45:12 Finished inserting 91 records into "SubjectNameCollection" in 0.17s
+2024/11/13 15:45:12 Collection already exists: InstructorFullNameCollection
+2024/11/13 15:45:12 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.17s
+2024/11/13 15:45:12 Collection already exists: TitleShortDescCollection
+2024/11/13 15:45:12 Finished inserting 1234 records into "TitleShortDescCollection" in 0.18s
+2024/11/13 15:45:12 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15:45:12 Collection already exists: InstructorLastNameCollection
+2024/11/13 15:45:12 Finished inserting 940 records into "InstructorLastNameCollection" in 0.18s
+2024/11/13 15:45:12 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.18s
+2024/11/13 15:45:39 Here’s how you can structure the prompt based on the message you provided:
+
+### Prompt Structure:
+
+1. **Subject**: Computer Science, Philosophy
+2. **Instructor Name**: Phil
+3. **Filter Type**: Course Registry Search
+4. **Output Details**: Title Short Description
+
+### Final Prompt:
+
+```
+Filter for courses in the registry where:
+- Subject is "Computer Science" OR "Philosophy"
+- Instructor Name is "Phil"
+Output the Title Short Description of the courses.
+```
+
+This prompt clearly specifies the categories to filter (subject and instructor) and indicates the desired output format.
+2024/11/13 15:45:41 {"subject_codes":["CS","PHIL"],"subject_names":["Computer Science","Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:45:41 Not found in collection:  Phil
+2024/11/13 15:45:41 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15:45:41 Queried collection "InstructorFirstNameCollection" in 0.25s
+2024/11/13 15:45:41 Result:  [Philip]
+2024/11/13 15:48:51 Certainly! Below is a structured prompt that can be used in a program to filter courses in a registry, based on the given message.
+
+**Structured Prompt:**
+
+```plaintext
+{
+  "filter_criteria": {
+    "course_subject": "STEM",
+    "course_title": null
+  }
+}
+```
+
+### Explanation of Parts:
+1. **filter_criteria**: This is the main key that holds the filtering conditions.
+2. **course_subject**: Set to "STEM" based on the request for a "very STEM related class".
+3. **course_title**: Set to `null` since there is no specific title mentioned in the request.
+
+This prompt can be modified accordingly if more specific titles or subjects are provided in future requests.
+2024/11/13 15:48:52 {"subject_codes":[],"subject_names":["STEM"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
+2024/11/13 15:48:52 Querying collection "SubjectNameCollection" with query: STEM
+2024/11/13 15:48:53 Queried collection "SubjectNameCollection" in 0.68s
