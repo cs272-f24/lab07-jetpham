@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
+	"time"
 
 	"github.com/joho/godotenv"
 	"gorm.io/gorm"
@@ -17,36 +19,48 @@ type Setup struct {
 }
 
 func newSetup() (Setup, error) {
+	startTime := time.Now()
+	defer func() {
+		log.Printf("Setup complete in %.2fs", time.Since(startTime).Seconds())
+	}()
+
 	err := godotenv.Load(".env")
+
 	if err != nil {
 		fmt.Println("Error loading .env file:", err)
 		return Setup{}, err
 	}
+
 	courses, err := loadCSV("/home/jet/Documents/cs272/project05-jetpham/Fall 2024 Class Schedule.csv")
 	if err != nil {
 		fmt.Println("Error loading CSV file:", err)
 		return Setup{}, err
 	}
+
 	openAIClient := NewOpenAIClient(os.Getenv("OPENAI_API_KEY"))
 	if openAIClient == nil {
 		fmt.Println("Error creating OpenAI client")
 		return Setup{}, err
 	}
+
 	chromaDB, err := newChroma()
 	if err != nil {
 		fmt.Println("Error setting up ChromaDB:", err)
 		return Setup{}, err
 	}
+
 	sqlDB, err := newSqlite(courses)
 	if err != nil {
 		fmt.Println("Error setting up SQLite database:", err)
 		return Setup{}, err
 	}
-	collections, err := makeCollections(chromaDB, courses) // Assuming you have a function to load collections
+
+	collections, err := makeCollections(chromaDB, courses)
 	if err != nil {
 		fmt.Println("Error loading collections:", err)
 		return Setup{}, err
 	}
+
 	return Setup{
 		courses:      courses,
 		openAIClient: openAIClient,

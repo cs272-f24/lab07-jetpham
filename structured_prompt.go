@@ -2,18 +2,17 @@ package main
 
 import (
 	"encoding/json"
-	"log"
 
 	"github.com/openai/openai-go"
 )
 
-func (openAIClient *OpenAIClient) GetCourseFilter(prompt string) CourseFilter {
+func (openAIClient *OpenAIClient) GetCourseFilter(prompt, systemPrompt string) CourseFilter {
 	// Based off of https://github.com/openai/openai-go structured output example
 	var CourseFilterResponseSchema = GenerateSchema[CourseFilter]()
 
 	schemaParam := openai.ResponseFormatJSONSchemaJSONSchemaParam{
 		Name:        openai.F("course_filter"),
-		Description: openai.F("Filter criteria for to filter out courses"),
+		Description: openai.F("Criteria for filtering for a course"),
 		Schema:      openai.F(CourseFilterResponseSchema),
 		Strict:      openai.Bool(true),
 	}
@@ -21,6 +20,7 @@ func (openAIClient *OpenAIClient) GetCourseFilter(prompt string) CourseFilter {
 	// Query the Chat Completions API
 	chat, err := openAIClient.client.Chat.Completions.New(openAIClient.context, openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(systemPrompt),
 			openai.UserMessage(prompt),
 		}),
 		ResponseFormat: openai.F[openai.ChatCompletionNewParamsResponseFormatUnion](
@@ -41,7 +41,6 @@ func (openAIClient *OpenAIClient) GetCourseFilter(prompt string) CourseFilter {
 
 	// extract into a well-typed struct
 	courseFilter := CourseFilter{}
-	log.Println(chat.Choices[0].Message.Content)
 	_ = json.Unmarshal([]byte(chat.Choices[0].Message.Content), &courseFilter)
 
 	return courseFilter

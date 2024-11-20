@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"log"
 
 	"github.com/openai/openai-go"
 	"github.com/openai/openai-go/option"
@@ -13,6 +14,7 @@ type OpenAIClient struct {
 }
 
 func NewOpenAIClient(apiKey string) *OpenAIClient {
+	defer log.Println("OpenAI setup complete")
 	return &OpenAIClient{
 		client: openai.NewClient(
 			option.WithAPIKey(apiKey),
@@ -21,9 +23,10 @@ func NewOpenAIClient(apiKey string) *OpenAIClient {
 	}
 }
 
-func (c *OpenAIClient) CreateCompletion(prompt string) (string, error) {
+func (c *OpenAIClient) CreateCompletion(prompt string, systemPrompt string) (string, error) {
 	resp, err := c.client.Chat.Completions.New(c.context, openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(systemPrompt),
 			openai.UserMessage(prompt),
 		}),
 		Model: openai.F(openai.ChatModelGPT4oMini),

@@ -17,9 +17,7 @@ type chromaDB struct {
 }
 
 func newChroma() (*chromaDB, error) {
-	defer func() {
-		log.Println("Set up chroma-go client successfully")
-	}()
+	defer log.Println("Chroma setup complete")
 	ctx := context.Background()
 
 	// Set up chroma-go client
@@ -34,6 +32,19 @@ func newChroma() (*chromaDB, error) {
 	openaiEf, err := openai.NewOpenAIEmbeddingFunction(os.Getenv("OPENAI_API_KEY"))
 	if err != nil {
 		return nil, fmt.Errorf("error creating OpenAI embedding function: %s", err)
+	}
+
+	collections, err := client.ListCollections(context.TODO())
+	if err != nil {
+		return nil, fmt.Errorf("error listing collections: %s", err)
+	}
+
+	for _, collection := range collections {
+		records, err := collection.Get(context.TODO(), nil, nil, nil, nil)
+		if err != nil {
+			return nil, fmt.Errorf("error getting records from collection: %s", err)
+		}
+		log.Printf("Collection %s has %d records", collection.Name, len(records.Documents))
 	}
 
 	return &chromaDB{

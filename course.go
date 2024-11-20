@@ -4,6 +4,7 @@ import (
 	"encoding/csv"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"strconv"
 	"strings"
@@ -39,6 +40,7 @@ type Course struct {
 }
 
 func loadCSV(path string) ([]Course, error) {
+	defer log.Println("CSV setup complete")
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err

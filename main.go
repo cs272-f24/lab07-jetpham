@@ -15,8 +15,8 @@ func main() {
 		log.Fatalf("error opening file: %v", err)
 	}
 	defer f.Close()
-
 	log.SetOutput(f)
+
 	setup, err := newSetup()
 	if err != nil {
 		fmt.Println("Error during setup:", err)
@@ -30,12 +30,12 @@ func main() {
 		if prompt == "exit" {
 			break
 		}
-		courses, filter, err := getCoursesFromPrompt(&setup, prompt)
+		courses, err := getCourses(&setup, prompt)
 		if err != nil {
 			fmt.Println("Error getting courses:", err)
 			continue
 		}
-		fmt.Println(filter)
+		log.Printf("Found %d courses", len(courses))
 		fmt.Printf("Found %d courses: \n", len(courses))
 		for _, course := range courses {
 			fmt.Println(course)
@@ -45,7 +45,8 @@ func main() {
 			fmt.Println("Error marshalling courses to JSON:", err)
 			continue
 		}
-		output, err := setup.openAIClient.CreateCompletion(prompt + "\n" + string(coursesJSON))
+		systemPrompt := "Answer the prompt with the courses, Don't repeat the courses if not necessary\n"
+		output, err := setup.openAIClient.CreateCompletion("Prompt: "+prompt+"\nCourses:\n"+string(coursesJSON), systemPrompt)
 		if err != nil {
 			fmt.Println("Error creating completion:", err)
 		}

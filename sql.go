@@ -8,6 +8,7 @@ import (
 )
 
 func newSqlite(courses []Course) (*gorm.DB, error) {
+	defer log.Println("SQLite setup complete")
 	sqlDB, err := gorm.Open(sqlite.Open("file::memory:?cache=shared"), &gorm.Config{})
 	if err != nil {
 		return nil, err
@@ -20,7 +21,6 @@ func newSqlite(courses []Course) (*gorm.DB, error) {
 		courses[i].ID = 0 // Reset ID to zero to avoid conflicts
 	}
 	sqlDB.CreateInBatches(courses, 100)
-	log.Println(sqlDB.Last(&Course{}))
 	return sqlDB, err
 }
 
@@ -104,16 +104,12 @@ func filterCourses(sqlDB *gorm.DB, filter CourseFilter) ([]Course, error) {
 	if len(filter.ActualEnrollments) > 0 {
 		query = query.Where("actual_enrollment IN ?", filter.ActualEnrollments)
 	}
-	if len(filter.PrimaryInstructorFirsts) > 0 || len(filter.PrimaryInstructorLasts) > 0 || len(filter.PrimaryInstructorFulls) > 0 || len(filter.PrimaryInstructorEmails) > 0 {
+	if len(filter.PrimaryInstructorNames) > 0 || len(filter.PrimaryInstructorEmails) > 0 {
 		subQuery := sqlDB
-		if len(filter.PrimaryInstructorFirsts) > 0 {
-			subQuery = subQuery.Or("primary_instructor_first IN ?", filter.PrimaryInstructorFirsts)
-		}
-		if len(filter.PrimaryInstructorLasts) > 0 {
-			subQuery = subQuery.Or("primary_instructor_last IN ?", filter.PrimaryInstructorLasts)
-		}
-		if len(filter.PrimaryInstructorFulls) > 0 {
-			subQuery = subQuery.Or("primary_instructor_full IN ?", filter.PrimaryInstructorFulls)
+		if len(filter.PrimaryInstructorNames) > 0 {
+			subQuery = subQuery.Or("primary_instructor_first IN ?", filter.PrimaryInstructorNames).
+				Or("primary_instructor_last IN ?", filter.PrimaryInstructorNames).
+				Or("primary_instructor_full IN ?", filter.PrimaryInstructorNames)
 		}
 		if len(filter.PrimaryInstructorEmails) > 0 {
 			subQuery = subQuery.Or("primary_instructor_email IN ?", filter.PrimaryInstructorEmails)

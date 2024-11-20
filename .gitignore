@@ -1,0 +1,5 @@
+.env
+chromadb
+chromadb/chroma.sqlite3
+testlogfile
+__debug*

@@ -10,8 +10,8 @@ import (
 )
 
 type CourseFilter struct {
-	SubjectCodes            []string `json:"subject_codes" jsonschema_description:"The subject codes of the courses, if provided as codes. Example: ['CS', 'MATH']"`
-	SubjectNames            []string `json:"subject_names" jsonschema_description:"The subject names of the courses, if provided as names. Example: ['Computer Science', 'Mathematics']"`
+	SubjectCodes            []string `json:"subject_codes" jsonschema_description:"Any subject codes listed explicitly in the prompt. Example: ['CS', 'MATH'], not ['Computer Science', 'Mathematics']"`
+	SubjectNames            []string `json:"subject_names" jsonschema_description:"The subject names listed explicitly in the prompt. Example: ['Computer Science', 'Mathematics']"`
 	CourseNumbers           []string `json:"course_numbers" jsonschema_description:"The course numbers. Example: ['101', '202']"`
 	Sections                []string `json:"sections" jsonschema_description:"The sections of the courses. Example: ['001', '002']"`
 	CRNs                    []int    `json:"crns" jsonschema_description:"The course registration numbers. Example: [12345, 67890]"`
@@ -30,9 +30,7 @@ type CourseFilter struct {
 	Buildings               []string `json:"buildings" jsonschema_description:"The buildings where the courses are held. Example: ['Engineering Hall', 'Science Building']"`
 	Rooms                   []string `json:"rooms" jsonschema_description:"The rooms where the courses are held. Example: ['101', '202']"`
 	ActualEnrollments       []int    `json:"actual_enrollments" jsonschema_description:"The actual enrollments in the courses. Example: [30, 25]"`
-	PrimaryInstructorFirsts []string `json:"primary_instructor_first_names" jsonschema_description:"The first names of the primary instructors. Only fill out if full name not given. Example: ['John', 'Jane']"`
-	PrimaryInstructorLasts  []string `json:"primary_instructor_last_names" jsonschema_description:"The last names of the primary instructors. Only if exlicitally told it's a last name. If given both first and last then fill out full name. Example: ['Doe', 'Smith']"`
-	PrimaryInstructorFulls  []string `json:"primary_instructor_full_names" jsonschema_description:"The full names of the primary instructors. Only for the full names of the instructors. Example: ['John Doe', 'Jane Smith']"`
+	PrimaryInstructorNames  []string `json:"primary_instructor_names" jsonschema_description:"The names of the primary instructors. Example: ['John Doe', 'Jane Smith', 'Phil', 'Pham']"`
 	PrimaryInstructorEmails []string `json:"primary_instructor_emails" jsonschema_description:"The emails of the primary instructors. Example: ['jdoe@example.com', 'jsmith@example.com']"`
 	Colleges                []string `json:"colleges" jsonschema_description:"The colleges offering the courses. Example: ['College of Engineering', 'College of Science']"`
 }
@@ -50,9 +48,7 @@ func GenerateSchema[T any]() interface{} {
 func (d *chromaDB) correctCourseFilter(collections *collections, filter CourseFilter) CourseFilter {
 	filter.SubjectNames = d.correctSubjectNames(collections, filter)
 	filter.TitleShortDescs = d.correctTitleShortDescs(collections, filter)
-	filter.PrimaryInstructorFirsts = d.correctInstructorFirstNames(collections, filter)
-	filter.PrimaryInstructorLasts = d.correctInstructorLastNames(collections, filter)
-	filter.PrimaryInstructorFulls = d.correctInstructorFullNames(collections, filter)
+	filter.PrimaryInstructorNames = d.correctInstructorFullNames(collections, filter)
 	return filter
 }
 
@@ -72,7 +68,7 @@ func (d *chromaDB) correctSubjectNames(collections *collections, filter CourseFi
 			correctedSubjectNames = append(correctedSubjectNames, subjectName)
 			continue
 		}
-		result, err := d.query(collections.SubjectNameCollection.Name, subjectName, 1)
+		result, err := d.query(collections.SubjectNameCollection, subjectName, 1)
 		if err != nil {
 			log.Fatalf("Error querying subject name '%s': %s \n", subjectName, err)
 		}
@@ -93,7 +89,7 @@ func (d *chromaDB) correctTitleShortDescs(collections *collections, filter Cours
 			correctedTitleShortDescs = append(correctedTitleShortDescs, titleShortDesc)
 			continue
 		}
-		result, err := d.query(collections.TitleShortDescCollection.Name, titleShortDesc, 1)
+		result, err := d.query(collections.TitleShortDescCollection, titleShortDesc, 1)
 		if err != nil {
 			log.Fatalf("Error querying title short description '%s': %s \n", titleShortDesc, err)
 		}
@@ -102,137 +98,119 @@ func (d *chromaDB) correctTitleShortDescs(collections *collections, filter Cours
 	return correctedTitleShortDescs
 }
 
-func (d *chromaDB) correctInstructorFirstNames(collections *collections, filter CourseFilter) []string {
-	correctedFirstNames := make([]string, 0, len(filter.PrimaryInstructorFirsts))
-	for _, firstName := range filter.PrimaryInstructorFirsts {
-		// Shortcut if it's in the collection already
-		if slices.Contains(collections.InstructorFirstNameList, firstName) {
-			correctedFirstNames = append(correctedFirstNames, firstName)
-			log.Println("Found in collection: ", firstName)
-			continue
-		}
-		log.Println("Not found in collection: ", firstName)
-		result, err := d.query(collections.instructorFirstNameCollection.Name, firstName, 1)
-		if err != nil {
-			log.Fatalf("Error querying primary instructor first name '%s': %s \n", firstName, err)
-		}
-		log.Println("Result: ", result)
-		correctedFirstNames = append(correctedFirstNames, result...)
-	}
-	return correctedFirstNames
-}
-
-func (d *chromaDB) correctInstructorLastNames(collections *collections, filter CourseFilter) []string {
-	correctedLastNames := make([]string, 0, len(filter.PrimaryInstructorLasts))
-	for _, lastName := range filter.PrimaryInstructorLasts {
-		// Shortcut if it's in the collection already
-		if slices.Contains(collections.InstructorLastNameList, lastName) {
-			correctedLastNames = append(correctedLastNames, lastName)
-			continue
-		}
-		result, err := d.query(collections.instructorLastNameCollection.Name, lastName, 1)
-		if err != nil {
-			log.Fatalf("Error querying primary instructor last name '%s': %s \n", lastName, err)
-		}
-		correctedLastNames = append(correctedLastNames, result...)
-	}
-	return correctedLastNames
-}
-
 func (d *chromaDB) correctInstructorFullNames(collections *collections, filter CourseFilter) []string {
-	correctedFullNames := make([]string, 0, len(filter.PrimaryInstructorFulls))
-	for _, fullName := range filter.PrimaryInstructorFulls {
-		// Shortcut if it's in the collection already
-		if slices.Contains(collections.InstructorFullNameList, fullName) {
-			correctedFullNames = append(correctedFullNames, fullName)
+	correctedNames := make([]string, 0, len(filter.PrimaryInstructorNames))
+	for _, name := range filter.PrimaryInstructorNames {
+		// Shortcut if it's in the collections already
+		if slices.Contains(collections.InstructorFullNameList, name) ||
+			slices.Contains(collections.InstructorFirstNameList, name) ||
+			slices.Contains(collections.InstructorLastNameList, name) {
+			correctedNames = append(correctedNames, name)
 			continue
 		}
-		result, err := d.query(collections.InstructorFullNameCollection.Name, fullName, 1)
+
+		// make a query for the first, last, and full name collections and see their results. Then we'll make a mini collection with those results and see which is the most similar to the original name
+
+		resultFull, err := d.query(collections.InstructorFullNameCollection, name, 1)
 		if err != nil {
-			log.Fatalf("Error querying primary instructor full name '%s': %s \n", fullName, err)
+			log.Fatalf("Error querying primary instructor full name '%s': %s \n", name, err)
 		}
-		correctedFullNames = append(correctedFullNames, result...)
+		log.Printf("Result Full: %v", resultFull)
+		resultFirst, err := d.query(collections.instructorFirstNameCollection, name, 1)
+		if err != nil {
+			log.Fatalf("Error querying primary instructor first name '%s': %s \n", name, err)
+		}
+		log.Printf("Result First: %v", resultFirst)
+		resultLast, err := d.query(collections.instructorLastNameCollection, name, 1)
+		if err != nil {
+			log.Fatalf("Error querying primary instructor last name '%s': %s \n", name, err)
+		}
+		log.Printf("Result Last: %v", resultLast)
+
+		collection, err := d.makeCollectionWithRecords([]string{resultFull[0], resultFirst[0], resultLast[0]})
+		if err != nil {
+			log.Fatalf("Error creating collection with records for '%s': %s \n", name, err)
+		}
+		result, err := d.query(collection, name, 1)
+		if err != nil {
+			log.Fatalf("Error querying primary instructor mini collection '%s': %s \n", name, err)
+		}
+		correctedNames = append(correctedNames, result...)
 	}
-	return correctedFullNames
+	return correctedNames
 }
 
 func (f CourseFilter) String() string {
 	var sb strings.Builder
-	sb.WriteString("CourseFilter:\n")
+	sb.WriteString("Filter: ")
 	if len(f.SubjectCodes) > 0 {
-		sb.WriteString(fmt.Sprintf("  SubjectCodes: %v\n", f.SubjectCodes))
+		sb.WriteString(fmt.Sprintf("SubjectCodes: %v,", f.SubjectCodes))
 	}
 	if len(f.SubjectNames) > 0 {
-		sb.WriteString(fmt.Sprintf("  SubjectNames: %v\n", f.SubjectNames))
+		sb.WriteString(fmt.Sprintf("SubjectNames: %v,", f.SubjectNames))
 	}
 	if len(f.CourseNumbers) > 0 {
-		sb.WriteString(fmt.Sprintf("  CourseNumbers: %v\n", f.CourseNumbers))
+		sb.WriteString(fmt.Sprintf("CourseNumbers: %v,", f.CourseNumbers))
 	}
 	if len(f.Sections) > 0 {
-		sb.WriteString(fmt.Sprintf("  Sections: %v\n", f.Sections))
+		sb.WriteString(fmt.Sprintf("Sections: %v,", f.Sections))
 	}
 	if len(f.CRNs) > 0 {
-		sb.WriteString(fmt.Sprintf("  CRNs: %v\n", f.CRNs))
+		sb.WriteString(fmt.Sprintf("CRNs: %v,", f.CRNs))
 	}
 	if len(f.ScheduleTypeCodes) > 0 {
-		sb.WriteString(fmt.Sprintf("  ScheduleTypeCodes: %v\n", f.ScheduleTypeCodes))
+		sb.WriteString(fmt.Sprintf("ScheduleTypeCodes: %v,", f.ScheduleTypeCodes))
 	}
 	if len(f.CampusCodes) > 0 {
-		sb.WriteString(fmt.Sprintf("  CampusCodes: %v\n", f.CampusCodes))
+		sb.WriteString(fmt.Sprintf("CampusCodes: %v,", f.CampusCodes))
 	}
 	if len(f.TitleShortDescs) > 0 {
-		sb.WriteString(fmt.Sprintf("  TitleShortDescs: %v\n", f.TitleShortDescs))
+		sb.WriteString(fmt.Sprintf("TitleShortDescs: %v,", f.TitleShortDescs))
 	}
 	if len(f.InstructionModeDescs) > 0 {
-		sb.WriteString(fmt.Sprintf("  InstructionModeDescs: %v\n", f.InstructionModeDescs))
+		sb.WriteString(fmt.Sprintf("InstructionModeDescs: %v,", f.InstructionModeDescs))
 	}
 	if len(f.MeetingTypeCodes) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetingTypeCodes: %v\n", f.MeetingTypeCodes))
+		sb.WriteString(fmt.Sprintf("MeetingTypeCodes: %v,", f.MeetingTypeCodes))
 	}
 	if len(f.MeetingTypeNames) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetingTypeNames: %v\n", f.MeetingTypeNames))
+		sb.WriteString(fmt.Sprintf("MeetingTypeNames: %v,", f.MeetingTypeNames))
 	}
 	if len(f.MeetDays) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetDays: %v\n", f.MeetDays))
+		sb.WriteString(fmt.Sprintf("MeetDays: %v,", f.MeetDays))
 	}
 	if len(f.MeetDaysFull) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetDaysFull: %v\n", f.MeetDaysFull))
+		sb.WriteString(fmt.Sprintf("MeetDaysFull: %v,", f.MeetDaysFull))
 	}
 	if len(f.BeginTimes) > 0 {
-		sb.WriteString(fmt.Sprintf("  BeginTimes: %v\n", f.BeginTimes))
+		sb.WriteString(fmt.Sprintf("BeginTimes: %v,", f.BeginTimes))
 	}
 	if len(f.EndTimes) > 0 {
-		sb.WriteString(fmt.Sprintf("  EndTimes: %v\n", f.EndTimes))
+		sb.WriteString(fmt.Sprintf("EndTimes: %v,", f.EndTimes))
 	}
 	if len(f.MeetStarts) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetStarts: %v\n", f.MeetStarts))
+		sb.WriteString(fmt.Sprintf("MeetStarts: %v,", f.MeetStarts))
 	}
 	if len(f.MeetEnds) > 0 {
-		sb.WriteString(fmt.Sprintf("  MeetEnds: %v\n", f.MeetEnds))
+		sb.WriteString(fmt.Sprintf("MeetEnds: %v,", f.MeetEnds))
 	}
 	if len(f.Buildings) > 0 {
-		sb.WriteString(fmt.Sprintf("  Buildings: %v\n", f.Buildings))
+		sb.WriteString(fmt.Sprintf("Buildings: %v,", f.Buildings))
 	}
 	if len(f.Rooms) > 0 {
-		sb.WriteString(fmt.Sprintf("  Rooms: %v\n", f.Rooms))
+		sb.WriteString(fmt.Sprintf("Rooms: %v,", f.Rooms))
 	}
 	if len(f.ActualEnrollments) > 0 {
-		sb.WriteString(fmt.Sprintf("  ActualEnrollments: %v\n", f.ActualEnrollments))
+		sb.WriteString(fmt.Sprintf("ActualEnrollments: %v,", f.ActualEnrollments))
 	}
-	if len(f.PrimaryInstructorFirsts) > 0 {
-		sb.WriteString(fmt.Sprintf("  PrimaryInstructorFirsts: %v\n", f.PrimaryInstructorFirsts))
-	}
-	if len(f.PrimaryInstructorLasts) > 0 {
-		sb.WriteString(fmt.Sprintf("  PrimaryInstructorLasts: %v\n", f.PrimaryInstructorLasts))
-	}
-	if len(f.PrimaryInstructorFulls) > 0 {
-		sb.WriteString(fmt.Sprintf("  PrimaryInstructorFulls: %v\n", f.PrimaryInstructorFulls))
+	if len(f.PrimaryInstructorNames) > 0 {
+		sb.WriteString(fmt.Sprintf("Names: %v,", f.PrimaryInstructorNames))
 	}
 	if len(f.PrimaryInstructorEmails) > 0 {
-		sb.WriteString(fmt.Sprintf("  PrimaryInstructorEmails: %v\n", f.PrimaryInstructorEmails))
+		sb.WriteString(fmt.Sprintf("PrimaryInstructorEmails: %v,", f.PrimaryInstructorEmails))
 	}
 	if len(f.Colleges) > 0 {
-		sb.WriteString(fmt.Sprintf("  Colleges: %v\n", f.Colleges))
+		sb.WriteString(fmt.Sprintf("Colleges: %v,", f.Colleges))
 	}
 	return sb.String()
 }

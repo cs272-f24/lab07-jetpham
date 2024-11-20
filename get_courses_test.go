@@ -50,7 +50,7 @@ func Test_getCoursesFromPrompt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, _, err := getCoursesFromPrompt(&setup, tt.prompt)
+			got, err := getCourses(&setup, tt.prompt)
 			CRNs := make([]int, 0, len(got))
 			for _, course := range got {
 				CRNs = append(CRNs, course.CRN)

@@ -1,205 +1,907 @@
-2024/11/13 14:54:33 Set up chroma-go client successfully
-2024/11/13 14:54:33 &{0xc00022c1b0 <nil> 1 0xc000602fc0 0}
-2024/11/13 14:54:33 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 14:54:33 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 14:54:33 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 14:54:33 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 14:54:33 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 14:54:33 91 unique records for "SubjectNameCollection"
-2024/11/13 14:54:33 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 14:54:33 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 14:54:33 940 unique records for "InstructorLastNameCollection"
-2024/11/13 14:54:33 1234 unique records for "TitleShortDescCollection"
-2024/11/13 14:54:33 Collection already exists: InstructorFullNameCollection
-2024/11/13 14:54:33 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.08s
-2024/11/13 14:54:33 Collection already exists: TitleShortDescCollection
-2024/11/13 14:54:33 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
-2024/11/13 14:54:33 Collection already exists: InstructorLastNameCollection
-2024/11/13 14:54:33 Finished inserting 940 records into "InstructorLastNameCollection" in 0.09s
-2024/11/13 14:54:33 Collection already exists: InstructorFirstNameCollection
-2024/11/13 14:54:33 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.09s
-2024/11/13 14:54:33 Collection already exists: SubjectNameCollection
-2024/11/13 14:54:33 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
-2024/11/13 14:54:42 {"subject_codes":["ANIM","VET"],"subject_names":["Animal Science","Veterinary Science"],"course_numbers":["101"],"sections":["001"],"crns":[12345],"schedule_type_codes":["LEC"],"campus_codes":["MAIN"],"title_short_descs":["Introduction to Cats"],"instruction_mode_descs":["In Person"],"meeting_type_codes":["CLAS"],"meeting_type_names":["Class"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["09:00"],"end_times":["10:30"],"meet_starts":["2023-01-10"],"meet_ends":["2023-05-10"],"buildings":["Animal Studies Building"],"rooms":["101"],"actual_enrollments":[25],"primary_instructor_first_names":["Sarah"],"primary_instructor_last_names":["Johnson"],"primary_instructor_full_names":["Sarah Johnson"],"primary_instructor_emails":["sarah.johnson@example.com"],"colleges":["College of Animal Sciences"]}
-2024/11/13 14:54:42 Querying collection "SubjectNameCollection" with query: Animal Science
-2024/11/13 14:54:42 Queried collection "SubjectNameCollection" in 0.53s
-2024/11/13 14:54:42 Querying collection "SubjectNameCollection" with query: Veterinary Science
-2024/11/13 14:54:43 Queried collection "SubjectNameCollection" in 0.42s
-2024/11/13 14:54:43 Querying collection "TitleShortDescCollection" with query: Introduction to Cats
-2024/11/13 14:54:43 Queried collection "TitleShortDescCollection" in 0.35s
-2024/11/13 14:54:43 Found in collection:  Sarah
-2024/11/13 14:54:43 Querying collection "InstructorFullNameCollection" with query: Sarah Johnson
-2024/11/13 14:54:44 Queried collection "InstructorFullNameCollection" in 0.44s
-2024/11/13 14:54:51 {"subject_codes":["CS"],"subject_names":["Computer Science"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:55:00 {"subject_codes":["MUS","ARTS"],"subject_names":["Music","Arts"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar Fundamentals","Introduction to Guitar"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":["College of Music","Department of Arts"]}
-2024/11/13 14:55:00 Querying collection "SubjectNameCollection" with query: Arts
-2024/11/13 14:55:00 Queried collection "SubjectNameCollection" in 0.34s
-2024/11/13 14:55:00 Querying collection "TitleShortDescCollection" with query: Guitar Fundamentals
-2024/11/13 14:55:01 Queried collection "TitleShortDescCollection" in 0.33s
-2024/11/13 14:55:01 Querying collection "TitleShortDescCollection" with query: Introduction to Guitar
-2024/11/13 14:55:01 Queried collection "TitleShortDescCollection" in 0.37s
-2024/11/13 14:55:05 {"subject_codes":["MUS","GUIT"],"subject_names":["Music","Guitar"],"course_numbers":["101","201"],"sections":["001","002"],"crns":[],"schedule_type_codes":["LEC","LAB"],"campus_codes":["MAIN"],"title_short_descs":["Intro to Guitar","Advanced Guitar Techniques"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":["CLAS","LAB"],"meeting_type_names":["Class","Laboratory"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["10:00","14:00"],"end_times":["11:00","15:00"],"meet_starts":["2023-01-10"],"meet_ends":["2023-05-10"],"buildings":["Music Hall","Arts Building"],"rooms":["101","202"],"actual_enrollments":[],"primary_instructor_first_names":["Alice","Bob"],"primary_instructor_last_names":["Johnson","Smith"],"primary_instructor_full_names":["Alice Johnson","Bob Smith"],"primary_instructor_emails":["alice@example.com","bob@example.com"],"colleges":["College of Fine Arts"]}
-2024/11/13 14:55:05 Querying collection "SubjectNameCollection" with query: Guitar
-2024/11/13 14:55:05 Queried collection "SubjectNameCollection" in 0.27s
-2024/11/13 14:55:05 Querying collection "TitleShortDescCollection" with query: Intro to Guitar
-2024/11/13 14:55:06 Queried collection "TitleShortDescCollection" in 0.46s
-2024/11/13 14:55:06 Querying collection "TitleShortDescCollection" with query: Advanced Guitar Techniques
-2024/11/13 14:55:06 Queried collection "TitleShortDescCollection" in 0.15s
-2024/11/13 14:55:06 Found in collection:  Alice
-2024/11/13 14:55:06 Not found in collection:  Bob
-2024/11/13 14:55:06 Querying collection "InstructorFirstNameCollection" with query: Bob
-2024/11/13 14:55:07 Queried collection "InstructorFirstNameCollection" in 0.46s
-2024/11/13 14:55:07 Result:  [Robert]
-2024/11/13 14:55:07 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
-2024/11/13 14:55:07 Queried collection "InstructorFullNameCollection" in 0.21s
-2024/11/13 14:55:07 Querying collection "InstructorFullNameCollection" with query: Bob Smith
-2024/11/13 14:55:07 Queried collection "InstructorFullNameCollection" in 0.20s
-2024/11/13 14:55:19 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:55:28 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:55:35 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":["M"],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:55:48 {"subject_codes":["CS"],"subject_names":["Computer Science"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:55:48 Not found in collection:  Phil
-2024/11/13 14:55:48 Querying collection "InstructorFirstNameCollection" with query: Phil
-2024/11/13 14:55:49 Queried collection "InstructorFirstNameCollection" in 0.32s
-2024/11/13 14:55:49 Result:  [Philip]
-2024/11/13 14:55:58 {"subject_codes":["PHIL"],"subject_names":["Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:56:27 Set up chroma-go client successfully
-2024/11/13 14:56:28 &{0xc0002401b0 <nil> 1 0xc000502700 0}
-2024/11/13 14:56:28 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 14:56:28 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 14:56:28 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 14:56:28 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 14:56:28 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 14:56:28 91 unique records for "SubjectNameCollection"
-2024/11/13 14:56:28 940 unique records for "InstructorLastNameCollection"
-2024/11/13 14:56:28 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 14:56:28 1234 unique records for "TitleShortDescCollection"
-2024/11/13 14:56:28 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 14:56:28 Collection already exists: TitleShortDescCollection
-2024/11/13 14:56:28 Finished inserting 1234 records into "TitleShortDescCollection" in 0.05s
-2024/11/13 14:56:28 Collection already exists: InstructorFirstNameCollection
-2024/11/13 14:56:28 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
-2024/11/13 14:56:28 Collection already exists: SubjectNameCollection
-2024/11/13 14:56:28 Finished inserting 91 records into "SubjectNameCollection" in 0.06s
-2024/11/13 14:56:28 Collection already exists: InstructorLastNameCollection
-2024/11/13 14:56:28 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
-2024/11/13 14:56:28 Collection already exists: InstructorFullNameCollection
-2024/11/13 14:56:28 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
-2024/11/13 14:56:31 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:59:26 Set up chroma-go client successfully
-2024/11/13 14:59:26 &{0xc0002401b0 <nil> 1 0xc0005a9880 0}
-2024/11/13 14:59:26 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 14:59:26 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 14:59:26 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 14:59:26 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 14:59:26 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 14:59:26 91 unique records for "SubjectNameCollection"
-2024/11/13 14:59:26 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 14:59:26 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 14:59:26 940 unique records for "InstructorLastNameCollection"
-2024/11/13 14:59:26 1234 unique records for "TitleShortDescCollection"
-2024/11/13 14:59:26 Collection already exists: TitleShortDescCollection
-2024/11/13 14:59:26 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
-2024/11/13 14:59:26 Collection already exists: InstructorLastNameCollection
-2024/11/13 14:59:26 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
-2024/11/13 14:59:26 Collection already exists: SubjectNameCollection
-2024/11/13 14:59:26 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
-2024/11/13 14:59:26 Collection already exists: InstructorFirstNameCollection
-2024/11/13 14:59:26 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
-2024/11/13 14:59:26 Collection already exists: InstructorFullNameCollection
-2024/11/13 14:59:26 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
-2024/11/13 14:59:32 {"subject_codes":["CAT"],"subject_names":["Feline Studies","Cat Behavior","Cat Care"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Understanding Cats","The World of Felines","Cat Welfare and Care"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 14:59:32 Querying collection "SubjectNameCollection" with query: Feline Studies
-2024/11/13 14:59:32 Queried collection "SubjectNameCollection" in 0.32s
-2024/11/13 14:59:32 Querying collection "SubjectNameCollection" with query: Cat Behavior
-2024/11/13 14:59:33 Queried collection "SubjectNameCollection" in 0.41s
-2024/11/13 14:59:33 Querying collection "SubjectNameCollection" with query: Cat Care
-2024/11/13 14:59:33 Queried collection "SubjectNameCollection" in 0.31s
-2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: Understanding Cats
-2024/11/13 14:59:33 Queried collection "TitleShortDescCollection" in 0.31s
-2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: The World of Felines
-2024/11/13 14:59:33 Queried collection "TitleShortDescCollection" in 0.31s
-2024/11/13 14:59:33 Querying collection "TitleShortDescCollection" with query: Cat Welfare and Care
-2024/11/13 14:59:34 Queried collection "TitleShortDescCollection" in 0.30s
-2024/11/13 15:00:15 Set up chroma-go client successfully
-2024/11/13 15:00:15 &{0xc0002281b0 <nil> 1 0xc000103500 0}
-2024/11/13 15:00:15 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 15:00:15 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 15:00:15 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 15:00:15 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 15:00:15 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 15:00:15 91 unique records for "SubjectNameCollection"
-2024/11/13 15:00:15 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 15:00:15 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 15:00:15 940 unique records for "InstructorLastNameCollection"
-2024/11/13 15:00:15 1234 unique records for "TitleShortDescCollection"
-2024/11/13 15:00:15 Collection already exists: TitleShortDescCollection
-2024/11/13 15:00:15 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
-2024/11/13 15:00:15 Collection already exists: InstructorFirstNameCollection
-2024/11/13 15:00:15 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
-2024/11/13 15:00:15 Collection already exists: InstructorLastNameCollection
-2024/11/13 15:00:15 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
-2024/11/13 15:00:15 Collection already exists: InstructorFullNameCollection
-2024/11/13 15:00:15 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.06s
-2024/11/13 15:00:15 Collection already exists: SubjectNameCollection
-2024/11/13 15:00:15 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
-2024/11/13 15:00:29 {"subject_codes":[],"subject_names":[],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":["Peterson"],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:00:29 Not found in collection:  Phil
-2024/11/13 15:00:29 Querying collection "InstructorFirstNameCollection" with query: Phil
-2024/11/13 15:00:29 Queried collection "InstructorFirstNameCollection" in 0.44s
-2024/11/13 15:00:29 Result:  [Philip]
-2024/11/13 15:00:49 {"subject_codes":["PHIL"],"subject_names":["Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:01:01 {"subject_codes":["BIO","COMP","CS"],"subject_names":["Biology","Computer Science","Bioinformatics"],"course_numbers":["101","201"],"sections":["001","002"],"crns":[12345,67890],"schedule_type_codes":["LEC","LAB"],"campus_codes":["MAIN"],"title_short_descs":["Intro to Bioinformatics","Advanced Bioinformatics"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":["CLAS","LAB"],"meeting_type_names":["Class","Laboratory"],"meet_days":["M","W"],"meet_days_full":["Monday","Wednesday"],"begin_times":["10:00","14:00"],"end_times":["11:00","15:00"],"meet_starts":["2023-01-10","2023-01-12"],"meet_ends":["2023-05-10","2023-05-12"],"buildings":["Science Building","Engineering Hall"],"rooms":["101","202"],"actual_enrollments":[30,25],"primary_instructor_first_names":["Alice","Bob"],"primary_instructor_last_names":["Johnson","Smith"],"primary_instructor_full_names":["Alice Johnson","Bob Smith"],"primary_instructor_emails":["ajohnson@example.com","bsmith@example.com"],"colleges":["College of Life Sciences","College of Engineering"]}
-2024/11/13 15:01:01 Querying collection "SubjectNameCollection" with query: Bioinformatics
-2024/11/13 15:01:01 Queried collection "SubjectNameCollection" in 0.30s
-2024/11/13 15:01:01 Querying collection "TitleShortDescCollection" with query: Intro to Bioinformatics
-2024/11/13 15:01:02 Queried collection "TitleShortDescCollection" in 0.40s
-2024/11/13 15:01:02 Querying collection "TitleShortDescCollection" with query: Advanced Bioinformatics
-2024/11/13 15:01:02 Queried collection "TitleShortDescCollection" in 0.31s
-2024/11/13 15:01:02 Found in collection:  Alice
-2024/11/13 15:01:02 Not found in collection:  Bob
-2024/11/13 15:01:02 Querying collection "InstructorFirstNameCollection" with query: Bob
-2024/11/13 15:01:02 Queried collection "InstructorFirstNameCollection" in 0.17s
-2024/11/13 15:01:02 Result:  [Robert]
-2024/11/13 15:01:02 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
-2024/11/13 15:01:03 Queried collection "InstructorFullNameCollection" in 0.25s
-2024/11/13 15:01:03 Querying collection "InstructorFullNameCollection" with query: Bob Smith
-2024/11/13 15:01:03 Queried collection "InstructorFullNameCollection" in 0.25s
-2024/11/13 15:01:34 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":["101","102"],"sections":["001","002"],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar Basics","Intermediate Guitar"],"instruction_mode_descs":["In Person","Online"],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":["M","W","F"],"meet_days_full":["Monday","Wednesday","Friday"],"begin_times":["09:00","10:00"],"end_times":["10:00","11:00"],"meet_starts":["2024-01-15"],"meet_ends":["2024-05-15"],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":["College of Music"]}
-2024/11/13 15:01:34 Querying collection "TitleShortDescCollection" with query: Guitar Basics
-2024/11/13 15:01:34 Queried collection "TitleShortDescCollection" in 0.38s
-2024/11/13 15:01:34 Querying collection "TitleShortDescCollection" with query: Intermediate Guitar
-2024/11/13 15:01:34 Queried collection "TitleShortDescCollection" in 0.26s
-2024/11/13 15:01:45 {"subject_codes":["RHET"],"subject_names":["Rhetoric"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":["Choong"],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:01:45 Querying collection "SubjectNameCollection" with query: Rhetoric
-2024/11/13 15:01:45 Queried collection "SubjectNameCollection" in 0.28s
-2024/11/13 15:01:45 Not found in collection:  Phil
-2024/11/13 15:01:45 Querying collection "InstructorFirstNameCollection" with query: Phil
-2024/11/13 15:01:46 Queried collection "InstructorFirstNameCollection" in 0.53s
-2024/11/13 15:01:46 Result:  [Philip]
-2024/11/13 15:12:30 Set up chroma-go client successfully
-2024/11/13 15:12:31 &{0xc0002be1b0 <nil> 1 0xc0004ee8c0 0}
-2024/11/13 15:12:31 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 15:12:31 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 15:12:31 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 15:12:31 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 15:12:31 91 unique records for "SubjectNameCollection"
-2024/11/13 15:12:31 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 15:12:31 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 15:12:31 1234 unique records for "TitleShortDescCollection"
-2024/11/13 15:12:31 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 15:12:31 940 unique records for "InstructorLastNameCollection"
-2024/11/13 15:12:31 Collection already exists: InstructorFullNameCollection
-2024/11/13 15:12:31 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
-2024/11/13 15:12:31 Collection already exists: InstructorFirstNameCollection
-2024/11/13 15:12:31 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.08s
-2024/11/13 15:12:31 Collection already exists: SubjectNameCollection
-2024/11/13 15:12:31 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
-2024/11/13 15:12:31 Collection already exists: TitleShortDescCollection
-2024/11/13 15:12:31 Finished inserting 1234 records into "TitleShortDescCollection" in 0.08s
-2024/11/13 15:12:31 Collection already exists: InstructorLastNameCollection
-2024/11/13 15:12:31 Finished inserting 940 records into "InstructorLastNameCollection" in 0.08s
-2024/11/13 15:12:49 **Prompt Structure for Course Registry Filtering:**
+2024/11/13 14: 54: 33 Set up chroma-go client successfully
+2024/11/13 14: 54: 33 &{
+  0xc00022c1b0 <nil> 1 0xc000602fc0 0
+}
+2024/11/13 14: 54: 33 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14: 54: 33 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14: 54: 33 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14: 54: 33 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14: 54: 33 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14: 54: 33 91 unique records for "SubjectNameCollection"2024/11/13 14: 54: 33 1022 unique records for "InstructorFullNameCollection"2024/11/13 14: 54: 33 670 unique records for "InstructorFirstNameCollection"2024/11/13 14: 54: 33 940 unique records for "InstructorLastNameCollection"2024/11/13 14: 54: 33 1234 unique records for "TitleShortDescCollection"2024/11/13 14: 54: 33 Collection already exists: InstructorFullNameCollection
+2024/11/13 14: 54: 33 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.08s
+2024/11/13 14: 54: 33 Collection already exists: TitleShortDescCollection
+2024/11/13 14: 54: 33 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/13 14: 54: 33 Collection already exists: InstructorLastNameCollection
+2024/11/13 14: 54: 33 Finished inserting 940 records into "InstructorLastNameCollection" in 0.09s
+2024/11/13 14: 54: 33 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14: 54: 33 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/13 14: 54: 33 Collection already exists: SubjectNameCollection
+2024/11/13 14: 54: 33 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/13 14: 54: 42 {
+  "subject_codes": [
+    "ANIM",
+    "VET"
+  ],
+  "subject_names": [
+    "Animal Science",
+    "Veterinary Science"
+  ],
+  "course_numbers": [
+    "101"
+  ],
+  "sections": [
+    "001"
+  ],
+  "crns": [
+    12345
+  ],
+  "schedule_type_codes": [
+    "LEC"
+  ],
+  "campus_codes": [
+    "MAIN"
+  ],
+  "title_short_descs": [
+    "Introduction to Cats"
+  ],
+  "instruction_mode_descs": [
+    "In Person"
+  ],
+  "meeting_type_codes": [
+    "CLAS"
+  ],
+  "meeting_type_names": [
+    "Class"
+  ],
+  "meet_days": [
+    "M",
+    "W"
+  ],
+  "meet_days_full": [
+    "Monday",
+    "Wednesday"
+  ],
+  "begin_times": [
+    "09:00"
+  ],
+  "end_times": [
+    "10:30"
+  ],
+  "meet_starts": [
+    "2023-01-10"
+  ],
+  "meet_ends": [
+    "2023-05-10"
+  ],
+  "buildings": [
+    "Animal Studies Building"
+  ],
+  "rooms": [
+    "101"
+  ],
+  "actual_enrollments": [
+    25
+  ],
+  "primary_instructor_first_names": [
+    "Sarah"
+  ],
+  "primary_instructor_last_names": [
+    "Johnson"
+  ],
+  "primary_instructor_full_names": [
+    "Sarah Johnson"
+  ],
+  "primary_instructor_emails": [
+    "sarah.johnson@example.com"
+  ],
+  "colleges": [
+    "College of Animal Sciences"
+  ]
+}
+2024/11/13 14: 54: 42 Querying collection "SubjectNameCollection" with query: Animal Science
+2024/11/13 14: 54: 42 Queried collection "SubjectNameCollection" in 0.53s
+2024/11/13 14: 54: 42 Querying collection "SubjectNameCollection" with query: Veterinary Science
+2024/11/13 14: 54: 43 Queried collection "SubjectNameCollection" in 0.42s
+2024/11/13 14: 54: 43 Querying collection "TitleShortDescCollection" with query: Introduction to Cats
+2024/11/13 14: 54: 43 Queried collection "TitleShortDescCollection" in 0.35s
+2024/11/13 14: 54: 43 Found in collection:  Sarah
+2024/11/13 14: 54: 43 Querying collection "InstructorFullNameCollection" with query: Sarah Johnson
+2024/11/13 14: 54: 44 Queried collection "InstructorFullNameCollection" in 0.44s
+2024/11/13 14: 54: 51 {
+  "subject_codes": [
+    "CS"
+  ],
+  "subject_names": [
+    "Computer Science"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 55: 00 {
+  "subject_codes": [
+    "MUS",
+    "ARTS"
+  ],
+  "subject_names": [
+    "Music",
+    "Arts"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Guitar Fundamentals",
+    "Introduction to Guitar"
+  ],
+  "instruction_mode_descs": [
+    "In Person",
+    "Online"
+  ],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": [
+    "College of Music",
+    "Department of Arts"
+  ]
+}
+2024/11/13 14: 55: 00 Querying collection "SubjectNameCollection" with query: Arts
+2024/11/13 14: 55: 00 Queried collection "SubjectNameCollection" in 0.34s
+2024/11/13 14: 55: 00 Querying collection "TitleShortDescCollection" with query: Guitar Fundamentals
+2024/11/13 14: 55: 01 Queried collection "TitleShortDescCollection" in 0.33s
+2024/11/13 14: 55: 01 Querying collection "TitleShortDescCollection" with query: Introduction to Guitar
+2024/11/13 14: 55: 01 Queried collection "TitleShortDescCollection" in 0.37s
+2024/11/13 14: 55: 05 {
+  "subject_codes": [
+    "MUS",
+    "GUIT"
+  ],
+  "subject_names": [
+    "Music",
+    "Guitar"
+  ],
+  "course_numbers": [
+    "101",
+    "201"
+  ],
+  "sections": [
+    "001",
+    "002"
+  ],
+  "crns": [],
+  "schedule_type_codes": [
+    "LEC",
+    "LAB"
+  ],
+  "campus_codes": [
+    "MAIN"
+  ],
+  "title_short_descs": [
+    "Intro to Guitar",
+    "Advanced Guitar Techniques"
+  ],
+  "instruction_mode_descs": [
+    "In Person",
+    "Online"
+  ],
+  "meeting_type_codes": [
+    "CLAS",
+    "LAB"
+  ],
+  "meeting_type_names": [
+    "Class",
+    "Laboratory"
+  ],
+  "meet_days": [
+    "M",
+    "W"
+  ],
+  "meet_days_full": [
+    "Monday",
+    "Wednesday"
+  ],
+  "begin_times": [
+    "10:00",
+    "14:00"
+  ],
+  "end_times": [
+    "11:00",
+    "15:00"
+  ],
+  "meet_starts": [
+    "2023-01-10"
+  ],
+  "meet_ends": [
+    "2023-05-10"
+  ],
+  "buildings": [
+    "Music Hall",
+    "Arts Building"
+  ],
+  "rooms": [
+    "101",
+    "202"
+  ],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [
+    "Alice",
+    "Bob"
+  ],
+  "primary_instructor_last_names": [
+    "Johnson",
+    "Smith"
+  ],
+  "primary_instructor_full_names": [
+    "Alice Johnson",
+    "Bob Smith"
+  ],
+  "primary_instructor_emails": [
+    "alice@example.com",
+    "bob@example.com"
+  ],
+  "colleges": [
+    "College of Fine Arts"
+  ]
+}
+2024/11/13 14: 55: 05 Querying collection "SubjectNameCollection" with query: Guitar
+2024/11/13 14: 55: 05 Queried collection "SubjectNameCollection" in 0.27s
+2024/11/13 14: 55: 05 Querying collection "TitleShortDescCollection" with query: Intro to Guitar
+2024/11/13 14: 55: 06 Queried collection "TitleShortDescCollection" in 0.46s
+2024/11/13 14: 55: 06 Querying collection "TitleShortDescCollection" with query: Advanced Guitar Techniques
+2024/11/13 14: 55: 06 Queried collection "TitleShortDescCollection" in 0.15s
+2024/11/13 14: 55: 06 Found in collection:  Alice
+2024/11/13 14: 55: 06 Not found in collection:  Bob
+2024/11/13 14: 55: 06 Querying collection "InstructorFirstNameCollection" with query: Bob
+2024/11/13 14: 55: 07 Queried collection "InstructorFirstNameCollection" in 0.46s
+2024/11/13 14: 55: 07 Result: [Robert
+]
+2024/11/13 14: 55: 07 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
+2024/11/13 14: 55: 07 Queried collection "InstructorFullNameCollection" in 0.21s
+2024/11/13 14: 55: 07 Querying collection "InstructorFullNameCollection" with query: Bob Smith
+2024/11/13 14: 55: 07 Queried collection "InstructorFullNameCollection" in 0.20s
+2024/11/13 14: 55: 19 {
+  "subject_codes": [
+    "MUS"
+  ],
+  "subject_names": [
+    "Music"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 55: 28 {
+  "subject_codes": [
+    "MUS"
+  ],
+  "subject_names": [
+    "Music"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 55: 35 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [
+    "M"
+  ],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 55: 48 {
+  "subject_codes": [
+    "CS"
+  ],
+  "subject_names": [
+    "Computer Science"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [
+    "Phil"
+  ],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 55: 48 Not found in collection:  Phil
+2024/11/13 14: 55: 48 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 14: 55: 49 Queried collection "InstructorFirstNameCollection" in 0.32s
+2024/11/13 14: 55: 49 Result: [Philip
+]
+2024/11/13 14: 55: 58 {
+  "subject_codes": [
+    "PHIL"
+  ],
+  "subject_names": [
+    "Philosophy"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 56: 27 Set up chroma-go client successfully
+2024/11/13 14: 56: 28 &{
+  0xc0002401b0 <nil> 1 0xc000502700 0
+}
+2024/11/13 14: 56: 28 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14: 56: 28 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14: 56: 28 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14: 56: 28 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14: 56: 28 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14: 56: 28 91 unique records for "SubjectNameCollection"2024/11/13 14: 56: 28 940 unique records for "InstructorLastNameCollection"2024/11/13 14: 56: 28 670 unique records for "InstructorFirstNameCollection"2024/11/13 14: 56: 28 1234 unique records for "TitleShortDescCollection"2024/11/13 14: 56: 28 1022 unique records for "InstructorFullNameCollection"2024/11/13 14: 56: 28 Collection already exists: TitleShortDescCollection
+2024/11/13 14: 56: 28 Finished inserting 1234 records into "TitleShortDescCollection" in 0.05s
+2024/11/13 14: 56: 28 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14: 56: 28 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
+2024/11/13 14: 56: 28 Collection already exists: SubjectNameCollection
+2024/11/13 14: 56: 28 Finished inserting 91 records into "SubjectNameCollection" in 0.06s
+2024/11/13 14: 56: 28 Collection already exists: InstructorLastNameCollection
+2024/11/13 14: 56: 28 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 14: 56: 28 Collection already exists: InstructorFullNameCollection
+2024/11/13 14: 56: 28 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 14: 56: 31 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 59: 26 Set up chroma-go client successfully
+2024/11/13 14: 59: 26 &{
+  0xc0002401b0 <nil> 1 0xc0005a9880 0
+}
+2024/11/13 14: 59: 26 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 14: 59: 26 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 14: 59: 26 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 14: 59: 26 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 14: 59: 26 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 14: 59: 26 91 unique records for "SubjectNameCollection"2024/11/13 14: 59: 26 1022 unique records for "InstructorFullNameCollection"2024/11/13 14: 59: 26 670 unique records for "InstructorFirstNameCollection"2024/11/13 14: 59: 26 940 unique records for "InstructorLastNameCollection"2024/11/13 14: 59: 26 1234 unique records for "TitleShortDescCollection"2024/11/13 14: 59: 26 Collection already exists: TitleShortDescCollection
+2024/11/13 14: 59: 26 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
+2024/11/13 14: 59: 26 Collection already exists: InstructorLastNameCollection
+2024/11/13 14: 59: 26 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 14: 59: 26 Collection already exists: SubjectNameCollection
+2024/11/13 14: 59: 26 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 14: 59: 26 Collection already exists: InstructorFirstNameCollection
+2024/11/13 14: 59: 26 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
+2024/11/13 14: 59: 26 Collection already exists: InstructorFullNameCollection
+2024/11/13 14: 59: 26 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 14: 59: 32 {
+  "subject_codes": [
+    "CAT"
+  ],
+  "subject_names": [
+    "Feline Studies",
+    "Cat Behavior",
+    "Cat Care"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Understanding Cats",
+    "The World of Felines",
+    "Cat Welfare and Care"
+  ],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 14: 59: 32 Querying collection "SubjectNameCollection" with query: Feline Studies
+2024/11/13 14: 59: 32 Queried collection "SubjectNameCollection" in 0.32s
+2024/11/13 14: 59: 32 Querying collection "SubjectNameCollection" with query: Cat Behavior
+2024/11/13 14: 59: 33 Queried collection "SubjectNameCollection" in 0.41s
+2024/11/13 14: 59: 33 Querying collection "SubjectNameCollection" with query: Cat Care
+2024/11/13 14: 59: 33 Queried collection "SubjectNameCollection" in 0.31s
+2024/11/13 14: 59: 33 Querying collection "TitleShortDescCollection" with query: Understanding Cats
+2024/11/13 14: 59: 33 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 14: 59: 33 Querying collection "TitleShortDescCollection" with query: The World of Felines
+2024/11/13 14: 59: 33 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 14: 59: 33 Querying collection "TitleShortDescCollection" with query: Cat Welfare and Care
+2024/11/13 14: 59: 34 Queried collection "TitleShortDescCollection" in 0.30s
+2024/11/13 15: 00: 15 Set up chroma-go client successfully
+2024/11/13 15: 00: 15 &{
+  0xc0002281b0 <nil> 1 0xc000103500 0
+}
+2024/11/13 15: 00: 15 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15: 00: 15 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15: 00: 15 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15: 00: 15 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15: 00: 15 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15: 00: 15 91 unique records for "SubjectNameCollection"2024/11/13 15: 00: 15 670 unique records for "InstructorFirstNameCollection"2024/11/13 15: 00: 15 1022 unique records for "InstructorFullNameCollection"2024/11/13 15: 00: 15 940 unique records for "InstructorLastNameCollection"2024/11/13 15: 00: 15 1234 unique records for "TitleShortDescCollection"2024/11/13 15: 00: 15 Collection already exists: TitleShortDescCollection
+2024/11/13 15: 00: 15 Finished inserting 1234 records into "TitleShortDescCollection" in 0.06s
+2024/11/13 15: 00: 15 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15: 00: 15 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.06s
+2024/11/13 15: 00: 15 Collection already exists: InstructorLastNameCollection
+2024/11/13 15: 00: 15 Finished inserting 940 records into "InstructorLastNameCollection" in 0.06s
+2024/11/13 15: 00: 15 Collection already exists: InstructorFullNameCollection
+2024/11/13 15: 00: 15 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.06s
+2024/11/13 15: 00: 15 Collection already exists: SubjectNameCollection
+2024/11/13 15: 00: 15 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 15: 00: 29 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [
+    "Phil"
+  ],
+  "primary_instructor_last_names": [
+    "Peterson"
+  ],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 00: 29 Not found in collection:  Phil
+2024/11/13 15: 00: 29 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15: 00: 29 Queried collection "InstructorFirstNameCollection" in 0.44s
+2024/11/13 15: 00: 29 Result: [Philip
+]
+2024/11/13 15: 00: 49 {
+  "subject_codes": [
+    "PHIL"
+  ],
+  "subject_names": [
+    "Philosophy"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 01: 01 {
+  "subject_codes": [
+    "BIO",
+    "COMP",
+    "CS"
+  ],
+  "subject_names": [
+    "Biology",
+    "Computer Science",
+    "Bioinformatics"
+  ],
+  "course_numbers": [
+    "101",
+    "201"
+  ],
+  "sections": [
+    "001",
+    "002"
+  ],
+  "crns": [
+    12345,
+    67890
+  ],
+  "schedule_type_codes": [
+    "LEC",
+    "LAB"
+  ],
+  "campus_codes": [
+    "MAIN"
+  ],
+  "title_short_descs": [
+    "Intro to Bioinformatics",
+    "Advanced Bioinformatics"
+  ],
+  "instruction_mode_descs": [
+    "In Person",
+    "Online"
+  ],
+  "meeting_type_codes": [
+    "CLAS",
+    "LAB"
+  ],
+  "meeting_type_names": [
+    "Class",
+    "Laboratory"
+  ],
+  "meet_days": [
+    "M",
+    "W"
+  ],
+  "meet_days_full": [
+    "Monday",
+    "Wednesday"
+  ],
+  "begin_times": [
+    "10:00",
+    "14:00"
+  ],
+  "end_times": [
+    "11:00",
+    "15:00"
+  ],
+  "meet_starts": [
+    "2023-01-10",
+    "2023-01-12"
+  ],
+  "meet_ends": [
+    "2023-05-10",
+    "2023-05-12"
+  ],
+  "buildings": [
+    "Science Building",
+    "Engineering Hall"
+  ],
+  "rooms": [
+    "101",
+    "202"
+  ],
+  "actual_enrollments": [
+    30,
+    25
+  ],
+  "primary_instructor_first_names": [
+    "Alice",
+    "Bob"
+  ],
+  "primary_instructor_last_names": [
+    "Johnson",
+    "Smith"
+  ],
+  "primary_instructor_full_names": [
+    "Alice Johnson",
+    "Bob Smith"
+  ],
+  "primary_instructor_emails": [
+    "ajohnson@example.com",
+    "bsmith@example.com"
+  ],
+  "colleges": [
+    "College of Life Sciences",
+    "College of Engineering"
+  ]
+}
+2024/11/13 15: 01: 01 Querying collection "SubjectNameCollection" with query: Bioinformatics
+2024/11/13 15: 01: 01 Queried collection "SubjectNameCollection" in 0.30s
+2024/11/13 15: 01: 01 Querying collection "TitleShortDescCollection" with query: Intro to Bioinformatics
+2024/11/13 15: 01: 02 Queried collection "TitleShortDescCollection" in 0.40s
+2024/11/13 15: 01: 02 Querying collection "TitleShortDescCollection" with query: Advanced Bioinformatics
+2024/11/13 15: 01: 02 Queried collection "TitleShortDescCollection" in 0.31s
+2024/11/13 15: 01: 02 Found in collection:  Alice
+2024/11/13 15: 01: 02 Not found in collection:  Bob
+2024/11/13 15: 01: 02 Querying collection "InstructorFirstNameCollection" with query: Bob
+2024/11/13 15: 01: 02 Queried collection "InstructorFirstNameCollection" in 0.17s
+2024/11/13 15: 01: 02 Result: [Robert
+]
+2024/11/13 15: 01: 02 Querying collection "InstructorFullNameCollection" with query: Alice Johnson
+2024/11/13 15: 01: 03 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/13 15: 01: 03 Querying collection "InstructorFullNameCollection" with query: Bob Smith
+2024/11/13 15: 01: 03 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/13 15: 01: 34 {
+  "subject_codes": [
+    "MUS"
+  ],
+  "subject_names": [
+    "Music"
+  ],
+  "course_numbers": [
+    "101",
+    "102"
+  ],
+  "sections": [
+    "001",
+    "002"
+  ],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Guitar Basics",
+    "Intermediate Guitar"
+  ],
+  "instruction_mode_descs": [
+    "In Person",
+    "Online"
+  ],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [
+    "M",
+    "W",
+    "F"
+  ],
+  "meet_days_full": [
+    "Monday",
+    "Wednesday",
+    "Friday"
+  ],
+  "begin_times": [
+    "09:00",
+    "10:00"
+  ],
+  "end_times": [
+    "10:00",
+    "11:00"
+  ],
+  "meet_starts": [
+    "2024-01-15"
+  ],
+  "meet_ends": [
+    "2024-05-15"
+  ],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": [
+    "College of Music"
+  ]
+}
+2024/11/13 15: 01: 34 Querying collection "TitleShortDescCollection" with query: Guitar Basics
+2024/11/13 15: 01: 34 Queried collection "TitleShortDescCollection" in 0.38s
+2024/11/13 15: 01: 34 Querying collection "TitleShortDescCollection" with query: Intermediate Guitar
+2024/11/13 15: 01: 34 Queried collection "TitleShortDescCollection" in 0.26s
+2024/11/13 15: 01: 45 {
+  "subject_codes": [
+    "RHET"
+  ],
+  "subject_names": [
+    "Rhetoric"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [
+    "Phil"
+  ],
+  "primary_instructor_last_names": [
+    "Choong"
+  ],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 01: 45 Querying collection "SubjectNameCollection" with query: Rhetoric
+2024/11/13 15: 01: 45 Queried collection "SubjectNameCollection" in 0.28s
+2024/11/13 15: 01: 45 Not found in collection:  Phil
+2024/11/13 15: 01: 45 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15: 01: 46 Queried collection "InstructorFirstNameCollection" in 0.53s
+2024/11/13 15: 01: 46 Result: [Philip
+]
+2024/11/13 15: 12: 30 Set up chroma-go client successfully
+2024/11/13 15: 12: 31 &{
+  0xc0002be1b0 <nil> 1 0xc0004ee8c0 0
+}
+2024/11/13 15: 12: 31 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15: 12: 31 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15: 12: 31 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15: 12: 31 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15: 12: 31 91 unique records for "SubjectNameCollection"2024/11/13 15: 12: 31 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15: 12: 31 1022 unique records for "InstructorFullNameCollection"2024/11/13 15: 12: 31 1234 unique records for "TitleShortDescCollection"2024/11/13 15: 12: 31 670 unique records for "InstructorFirstNameCollection"2024/11/13 15: 12: 31 940 unique records for "InstructorLastNameCollection"2024/11/13 15: 12: 31 Collection already exists: InstructorFullNameCollection
+2024/11/13 15: 12: 31 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 15: 12: 31 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15: 12: 31 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.08s
+2024/11/13 15: 12: 31 Collection already exists: SubjectNameCollection
+2024/11/13 15: 12: 31 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
+2024/11/13 15: 12: 31 Collection already exists: TitleShortDescCollection
+2024/11/13 15: 12: 31 Finished inserting 1234 records into "TitleShortDescCollection" in 0.08s
+2024/11/13 15: 12: 31 Collection already exists: InstructorLastNameCollection
+2024/11/13 15: 12: 31 Finished inserting 940 records into "InstructorLastNameCollection" in 0.08s
+2024/11/13 15: 12: 49 **Prompt Structure for Course Registry Filtering:**
 
 1. **Subject**: `Guitar`
 2. **Title Short Desc**: `Learn guitar this semester`
@@ -211,34 +913,61 @@ Title Short Desc: Learn guitar this semester
 ``` 
 
 This format specifies the filtering criteria needed to search for relevant courses in the registry related to learning guitar.
-2024/11/13 15:12:51 {"subject_codes":[],"subject_names":["Guitar"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Learn guitar this semester"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:12:51 Querying collection "SubjectNameCollection" with query: Guitar
-2024/11/13 15:12:51 Queried collection "SubjectNameCollection" in 0.51s
-2024/11/13 15:12:51 Querying collection "TitleShortDescCollection" with query: Learn guitar this semester
-2024/11/13 15:12:52 Queried collection "TitleShortDescCollection" in 0.51s
-2024/11/13 15:18:17 Set up chroma-go client successfully
-2024/11/13 15:18:18 &{0xc0002201b0 <nil> 1 0xc0005b3500 0}
-2024/11/13 15:18:18 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 15:18:18 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 15:18:18 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 15:18:18 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 15:18:18 91 unique records for "SubjectNameCollection"
-2024/11/13 15:18:18 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 15:18:18 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 15:18:18 940 unique records for "InstructorLastNameCollection"
-2024/11/13 15:18:18 1234 unique records for "TitleShortDescCollection"
-2024/11/13 15:18:18 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 15:18:18 Collection already exists: SubjectNameCollection
-2024/11/13 15:18:18 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
-2024/11/13 15:18:18 Collection already exists: InstructorFullNameCollection
-2024/11/13 15:18:18 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
-2024/11/13 15:18:18 Collection already exists: TitleShortDescCollection
-2024/11/13 15:18:18 Finished inserting 1234 records into "TitleShortDescCollection" in 0.07s
-2024/11/13 15:18:18 Collection already exists: InstructorFirstNameCollection
-2024/11/13 15:18:18 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
-2024/11/13 15:18:18 Collection already exists: InstructorLastNameCollection
-2024/11/13 15:18:18 Finished inserting 940 records into "InstructorLastNameCollection" in 0.07s
-2024/11/13 15:18:29 To convert the message into a structured prompt suitable for a course registry filtering program, we need to break down the components based on the provided criteria. Here's how we can interpret the message and format it accordingly:
+2024/11/13 15: 12: 51 {
+  "subject_codes": [],
+  "subject_names": [
+    "Guitar"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Learn guitar this semester"
+  ],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 12: 51 Querying collection "SubjectNameCollection" with query: Guitar
+2024/11/13 15: 12: 51 Queried collection "SubjectNameCollection" in 0.51s
+2024/11/13 15: 12: 51 Querying collection "TitleShortDescCollection" with query: Learn guitar this semester
+2024/11/13 15: 12: 52 Queried collection "TitleShortDescCollection" in 0.51s
+2024/11/13 15: 18: 17 Set up chroma-go client successfully
+2024/11/13 15: 18: 18 &{
+  0xc0002201b0 <nil> 1 0xc0005b3500 0
+}
+2024/11/13 15: 18: 18 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15: 18: 18 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15: 18: 18 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15: 18: 18 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15: 18: 18 91 unique records for "SubjectNameCollection"2024/11/13 15: 18: 18 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15: 18: 18 670 unique records for "InstructorFirstNameCollection"2024/11/13 15: 18: 18 940 unique records for "InstructorLastNameCollection"2024/11/13 15: 18: 18 1234 unique records for "TitleShortDescCollection"2024/11/13 15: 18: 18 1022 unique records for "InstructorFullNameCollection"2024/11/13 15: 18: 18 Collection already exists: SubjectNameCollection
+2024/11/13 15: 18: 18 Finished inserting 91 records into "SubjectNameCollection" in 0.07s
+2024/11/13 15: 18: 18 Collection already exists: InstructorFullNameCollection
+2024/11/13 15: 18: 18 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.07s
+2024/11/13 15: 18: 18 Collection already exists: TitleShortDescCollection
+2024/11/13 15: 18: 18 Finished inserting 1234 records into "TitleShortDescCollection" in 0.07s
+2024/11/13 15: 18: 18 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15: 18: 18 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.07s
+2024/11/13 15: 18: 18 Collection already exists: InstructorLastNameCollection
+2024/11/13 15: 18: 18 Finished inserting 940 records into "InstructorLastNameCollection" in 0.07s
+2024/11/13 15: 18: 29 To convert the message into a structured prompt suitable for a course registry filtering program, we need to break down the components based on the provided criteria. Here's how we can interpret the message and format it accordingly:
 
 ### Prompt Structure:
 
@@ -259,32 +988,61 @@ This format specifies the filtering criteria needed to search for relevant cours
 - **Subject**: This is the main focus of the course inquiry, which is "Guitar".
 - **Title**: No specific title was given in the original message, so it remains empty.
 - **Short Desc**: This captures the essence of the inquiry, indicating a desire to learn guitar within the current semester.
-2024/11/13 15:18:31 {"subject_codes":["MUS"],"subject_names":["Music"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":["Guitar"],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:18:31 Querying collection "TitleShortDescCollection" with query: Guitar
-2024/11/13 15:18:31 Queried collection "TitleShortDescCollection" in 0.32s
-2024/11/13 15:45:12 Set up chroma-go client successfully
-2024/11/13 15:45:12 &{0xc0002281b0 <nil> 1 0xc0006836c0 0}
-2024/11/13 15:45:12 Inserting records to collection "SubjectNameCollection" with 91 records
-2024/11/13 15:45:12 Inserting records to collection "TitleShortDescCollection" with 2740 records
-2024/11/13 15:45:12 Inserting records to collection "InstructorFullNameCollection" with 2740 records
-2024/11/13 15:45:12 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
-2024/11/13 15:45:12 Inserting records to collection "InstructorLastNameCollection" with 2740 records
-2024/11/13 15:45:12 91 unique records for "SubjectNameCollection"
-2024/11/13 15:45:12 1234 unique records for "TitleShortDescCollection"
-2024/11/13 15:45:12 1022 unique records for "InstructorFullNameCollection"
-2024/11/13 15:45:12 670 unique records for "InstructorFirstNameCollection"
-2024/11/13 15:45:12 940 unique records for "InstructorLastNameCollection"
-2024/11/13 15:45:12 Collection already exists: SubjectNameCollection
-2024/11/13 15:45:12 Finished inserting 91 records into "SubjectNameCollection" in 0.17s
-2024/11/13 15:45:12 Collection already exists: InstructorFullNameCollection
-2024/11/13 15:45:12 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.17s
-2024/11/13 15:45:12 Collection already exists: TitleShortDescCollection
-2024/11/13 15:45:12 Finished inserting 1234 records into "TitleShortDescCollection" in 0.18s
-2024/11/13 15:45:12 Collection already exists: InstructorFirstNameCollection
-2024/11/13 15:45:12 Collection already exists: InstructorLastNameCollection
-2024/11/13 15:45:12 Finished inserting 940 records into "InstructorLastNameCollection" in 0.18s
-2024/11/13 15:45:12 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.18s
-2024/11/13 15:45:39 Here’s how you can structure the prompt based on the message you provided:
+2024/11/13 15: 18: 31 {
+  "subject_codes": [
+    "MUS"
+  ],
+  "subject_names": [
+    "Music"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Guitar"
+  ],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 18: 31 Querying collection "TitleShortDescCollection" with query: Guitar
+2024/11/13 15: 18: 31 Queried collection "TitleShortDescCollection" in 0.32s
+2024/11/13 15: 45: 12 Set up chroma-go client successfully
+2024/11/13 15: 45: 12 &{
+  0xc0002281b0 <nil> 1 0xc0006836c0 0
+}
+2024/11/13 15: 45: 12 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/13 15: 45: 12 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/13 15: 45: 12 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/13 15: 45: 12 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/13 15: 45: 12 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/13 15: 45: 12 91 unique records for "SubjectNameCollection"2024/11/13 15: 45: 12 1234 unique records for "TitleShortDescCollection"2024/11/13 15: 45: 12 1022 unique records for "InstructorFullNameCollection"2024/11/13 15: 45: 12 670 unique records for "InstructorFirstNameCollection"2024/11/13 15: 45: 12 940 unique records for "InstructorLastNameCollection"2024/11/13 15: 45: 12 Collection already exists: SubjectNameCollection
+2024/11/13 15: 45: 12 Finished inserting 91 records into "SubjectNameCollection" in 0.17s
+2024/11/13 15: 45: 12 Collection already exists: InstructorFullNameCollection
+2024/11/13 15: 45: 12 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.17s
+2024/11/13 15: 45: 12 Collection already exists: TitleShortDescCollection
+2024/11/13 15: 45: 12 Finished inserting 1234 records into "TitleShortDescCollection" in 0.18s
+2024/11/13 15: 45: 12 Collection already exists: InstructorFirstNameCollection
+2024/11/13 15: 45: 12 Collection already exists: InstructorLastNameCollection
+2024/11/13 15: 45: 12 Finished inserting 940 records into "InstructorLastNameCollection" in 0.18s
+2024/11/13 15: 45: 12 Finished inserting 670 records into "InstructorFirstNameCollection" in 0.18s
+2024/11/13 15: 45: 39 Here’s how you can structure the prompt based on the message you provided:
 
 ### Prompt Structure:
 
@@ -303,12 +1061,47 @@ Output the Title Short Description of the courses.
 ```
 
 This prompt clearly specifies the categories to filter (subject and instructor) and indicates the desired output format.
-2024/11/13 15:45:41 {"subject_codes":["CS","PHIL"],"subject_names":["Computer Science","Philosophy"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":["Phil"],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:45:41 Not found in collection:  Phil
-2024/11/13 15:45:41 Querying collection "InstructorFirstNameCollection" with query: Phil
-2024/11/13 15:45:41 Queried collection "InstructorFirstNameCollection" in 0.25s
-2024/11/13 15:45:41 Result:  [Philip]
-2024/11/13 15:48:51 Certainly! Below is a structured prompt that can be used in a program to filter courses in a registry, based on the given message.
+2024/11/13 15: 45: 41 {
+  "subject_codes": [
+    "CS",
+    "PHIL"
+  ],
+  "subject_names": [
+    "Computer Science",
+    "Philosophy"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [
+    "Phil"
+  ],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 45: 41 Not found in collection:  Phil
+2024/11/13 15: 45: 41 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/13 15: 45: 41 Queried collection "InstructorFirstNameCollection" in 0.25s
+2024/11/13 15: 45: 41 Result: [Philip
+]
+2024/11/13 15: 48: 51 Certainly! Below is a structured prompt that can be used in a program to filter courses in a registry, based on the given message.
 
 **Structured Prompt:**
 
@@ -327,6 +1120,1549 @@ This prompt clearly specifies the categories to filter (subject and instructor) 
 3. **course_title**: Set to `null` since there is no specific title mentioned in the request.
 
 This prompt can be modified accordingly if more specific titles or subjects are provided in future requests.
-2024/11/13 15:48:52 {"subject_codes":[],"subject_names":["STEM"],"course_numbers":[],"sections":[],"crns":[],"schedule_type_codes":[],"campus_codes":[],"title_short_descs":[],"instruction_mode_descs":[],"meeting_type_codes":[],"meeting_type_names":[],"meet_days":[],"meet_days_full":[],"begin_times":[],"end_times":[],"meet_starts":[],"meet_ends":[],"buildings":[],"rooms":[],"actual_enrollments":[],"primary_instructor_first_names":[],"primary_instructor_last_names":[],"primary_instructor_full_names":[],"primary_instructor_emails":[],"colleges":[]}
-2024/11/13 15:48:52 Querying collection "SubjectNameCollection" with query: STEM
-2024/11/13 15:48:53 Queried collection "SubjectNameCollection" in 0.68s
+2024/11/13 15: 48: 52 {
+  "subject_codes": [],
+  "subject_names": [
+    "STEM"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_first_names": [],
+  "primary_instructor_last_names": [],
+  "primary_instructor_full_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/13 15: 48: 52 Querying collection "SubjectNameCollection" with query: STEM
+2024/11/13 15: 48: 53 Queried collection "SubjectNameCollection" in 0.68s
+2024/11/19 11: 23: 16 Set up chroma-go client successfully
+2024/11/19 11: 23: 17 &{
+  0xc00022c1b0 <nil> 1 0xc0005b56c0 0
+}
+2024/11/19 11: 23: 17 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 23: 17 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 23: 17 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 23: 17 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 23: 17 91 unique records for "SubjectNameCollection"2024/11/19 11: 23: 17 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 23: 17 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 23: 17 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 23: 17 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 23: 17 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 23: 17 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 23: 17 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 23: 17 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 23: 17 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 23: 17 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 23: 17 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 23: 17 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 23: 17 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 23: 17 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 23: 17 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 23: 17 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 23: 17 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 23: 17 Collection "InstructorLastNameCollection" already exists with 8451 records
+2024/11/19 11: 23: 17 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 23: 17 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 11: 25: 26 Set up chroma-go client successfully
+2024/11/19 11: 25: 26 &{
+  0xc00023e1b0 <nil> 1 0xc0005848c0 0
+}
+2024/11/19 11: 25: 26 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 25: 26 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 25: 26 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 25: 26 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 25: 26 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 25: 26 91 unique records for "SubjectNameCollection"2024/11/19 11: 25: 26 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 25: 26 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 25: 26 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 25: 26 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 25: 27 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 25: 27 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 25: 27 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 25: 27 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 25: 27 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 25: 27 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 25: 27 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 25: 27 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 25: 27 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 25: 27 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 25: 27 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 25: 27 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.10s
+2024/11/19 11: 25: 27 Collection "InstructorLastNameCollection" already exists with 8451 records
+2024/11/19 11: 25: 27 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 25: 27 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 11: 29: 28 Set up chroma-go client successfully
+2024/11/19 11: 29: 28 &{
+  0xc0002282d0 <nil> 1 0xc000341c00 0
+}
+2024/11/19 11: 29: 28 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 29: 28 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 29: 28 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 29: 28 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 29: 28 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 29: 28 91 unique records for "SubjectNameCollection"2024/11/19 11: 29: 28 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 29: 28 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 29: 28 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 29: 28 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 29: 28 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 29: 28 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 29: 28 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 11: 29: 28 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 29: 28 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 29: 28 Finished inserting 91 records into "SubjectNameCollection" in 0.11s
+2024/11/19 11: 29: 28 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 29: 28 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 29: 28 Finished inserting 1234 records into "TitleShortDescCollection" in 0.11s
+2024/11/19 11: 29: 28 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 29: 28 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 29: 28 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.11s
+2024/11/19 11: 29: 28 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 29: 28 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 29: 28 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.11s
+2024/11/19 11: 29: 36 What courses are being taught by Phil Peterson and Greg Benson?
+2024/11/19 11: 29: 37 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil Peterson",
+    "Greg Benson"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 11: 29: 37 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 11: 29: 38 Queried collection "InstructorFullNameCollection" in 0.53s
+2024/11/19 11: 29: 38 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 11: 29: 38 Queried collection "InstructorFirstNameCollection" in 0.52s
+2024/11/19 11: 29: 38 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 11: 29: 39 Queried collection "InstructorLastNameCollection" in 0.54s
+2024/11/19 11: 29: 39 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 11: 29: 39 1 unique records for "Phil Peterson"2024/11/19 11: 29: 39 Finished inserting 1 records into "Phil Peterson" in 0.46s
+2024/11/19 11: 41: 39 Set up chroma-go client successfully
+2024/11/19 11: 41: 39 &{
+  0xc00022a1b0 <nil> 1 0xc0005b4a80 0
+}
+2024/11/19 11: 41: 39 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 41: 39 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 41: 39 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 41: 39 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 41: 39 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 41: 39 91 unique records for "SubjectNameCollection"2024/11/19 11: 41: 39 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 41: 39 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 41: 39 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 41: 39 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 41: 39 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 41: 39 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 41: 39 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
+2024/11/19 11: 41: 39 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 41: 39 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 41: 39 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.08s
+2024/11/19 11: 41: 39 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 41: 39 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 41: 39 Finished inserting 1234 records into "TitleShortDescCollection" in 0.08s
+2024/11/19 11: 41: 39 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 41: 39 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 41: 39 Finished inserting 939 records into "InstructorLastNameCollection" in 0.08s
+2024/11/19 11: 41: 39 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 41: 39 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 41: 39 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 41: 58 Set up chroma-go client successfully
+2024/11/19 11: 41: 58 &{
+  0xc00023e1b0 <nil> 1 0xc000584c40 0
+}
+2024/11/19 11: 41: 58 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 41: 58 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 41: 58 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 41: 58 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 41: 58 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 41: 58 91 unique records for "SubjectNameCollection"2024/11/19 11: 41: 58 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 41: 58 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 41: 58 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 41: 58 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 41: 58 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 41: 58 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 41: 58 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 41: 58 Finished inserting 939 records into "InstructorLastNameCollection" in 0.08s
+2024/11/19 11: 41: 58 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 41: 58 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.08s
+2024/11/19 11: 41: 58 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 41: 58 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 41: 58 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 41: 58 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 41: 58 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 41: 58 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 41: 58 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 41: 58 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 41: 58 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 43: 02 Set up chroma-go client successfully
+2024/11/19 11: 43: 02 &{
+  0xc00023e1b0 <nil> 1 0xc000584c40 0
+}
+2024/11/19 11: 43: 02 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 43: 02 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 43: 02 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 43: 02 91 unique records for "SubjectNameCollection"2024/11/19 11: 43: 02 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 43: 02 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 43: 02 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 43: 02 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 43: 02 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 43: 02 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 43: 02 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 43: 02 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 43: 02 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 43: 02 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 43: 02 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 43: 02 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 43: 02 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 43: 02 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 43: 02 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 43: 02 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 43: 02 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 43: 02 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 43: 02 Finished inserting 939 records into "InstructorLastNameCollection" in 0.09s
+2024/11/19 11: 43: 02 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 43: 02 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 44: 06 Set up chroma-go client successfully
+2024/11/19 11: 44: 06 &{
+  0xc00022a1b0 <nil> 1 0xc000634a80 0
+}
+2024/11/19 11: 44: 06 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 44: 06 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 44: 06 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 44: 06 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 44: 06 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 44: 06 91 unique records for "SubjectNameCollection"2024/11/19 11: 44: 06 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 44: 06 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 44: 06 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 44: 06 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 44: 06 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 44: 06 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 44: 06 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 44: 06 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 44: 06 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 44: 06 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 44: 06 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 44: 06 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 44: 06 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 44: 06 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 44: 06 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 44: 06 Finished inserting 1234 records into "TitleShortDescCollection" in 0.10s
+2024/11/19 11: 44: 06 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 44: 06 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 44: 06 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 11: 44: 24 Set up chroma-go client successfully
+2024/11/19 11: 44: 25 &{
+  0xc0002281b0 <nil> 1 0xc000253500 0
+}
+2024/11/19 11: 44: 25 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 44: 25 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 44: 25 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 44: 25 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 44: 25 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 44: 25 91 unique records for "SubjectNameCollection"2024/11/19 11: 44: 25 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 44: 25 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 44: 25 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 44: 25 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 44: 25 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 44: 25 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 44: 25 Finished inserting 939 records into "InstructorLastNameCollection" in 0.08s
+2024/11/19 11: 44: 25 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 44: 25 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 44: 25 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
+2024/11/19 11: 44: 25 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 44: 25 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 44: 25 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 44: 25 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 44: 25 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 44: 25 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 44: 25 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 44: 25 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 44: 25 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 45: 10 What courses are there with Phil Peterson this semester?
+2024/11/19 11: 45: 14 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil Peterson"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 11: 45: 14 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 11: 45: 15 Queried collection "InstructorFullNameCollection" in 0.44s
+2024/11/19 11: 45: 15 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 11: 45: 15 Queried collection "InstructorFirstNameCollection" in 0.39s
+2024/11/19 11: 45: 15 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 11: 45: 16 Queried collection "InstructorLastNameCollection" in 0.31s
+2024/11/19 11: 45: 16 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 11: 45: 16 1 unique records for "Phil Peterson"2024/11/19 11: 45: 16 Finished inserting 1 records into "Phil Peterson" in 0.60s
+2024/11/19 11: 47: 23 Set up chroma-go client successfully
+2024/11/19 11: 47: 24 &{
+  0xc00022a1b0 <nil> 1 0xc0000c7a40 0
+}
+2024/11/19 11: 47: 24 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 47: 24 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 47: 24 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 47: 24 91 unique records for "SubjectNameCollection"2024/11/19 11: 47: 24 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 47: 24 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 47: 24 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 47: 24 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 47: 24 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 47: 24 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 47: 24 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 47: 24 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 47: 24 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.08s
+2024/11/19 11: 47: 24 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 47: 24 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 47: 24 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.08s
+2024/11/19 11: 47: 24 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 47: 24 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 47: 24 Finished inserting 1234 records into "TitleShortDescCollection" in 0.08s
+2024/11/19 11: 47: 24 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 47: 24 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 47: 24 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 47: 24 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 47: 24 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 47: 24 Finished inserting 939 records into "InstructorLastNameCollection" in 0.09s
+2024/11/19 11: 47: 26 What courses are there for Phi?
+2024/11/19 11: 47: 28 {
+  "subject_codes": [
+    "PHI"
+  ],
+  "subject_names": [
+    "Philosophy"
+  ],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 11: 48: 02 What courses are there that are taught by Phil?
+2024/11/19 11: 48: 04 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 11: 48: 04 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 11: 48: 04 Queried collection "InstructorFullNameCollection" in 0.43s
+2024/11/19 11: 48: 04 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 11: 48: 05 Queried collection "InstructorFirstNameCollection" in 0.51s
+2024/11/19 11: 48: 05 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 11: 48: 05 Queried collection "InstructorLastNameCollection" in 0.51s
+2024/11/19 11: 48: 05 Inserting records to collection "Phil" with 3 records
+2024/11/19 11: 48: 05 1 unique records for "Phil"2024/11/19 11: 48: 06 Finished inserting 1 records into "Phil" in 0.20s
+2024/11/19 11: 48: 14 Set up chroma-go client successfully
+2024/11/19 11: 48: 14 &{
+  0xc0000bc360 <nil> 1 0xc0001056c0 0
+}
+2024/11/19 11: 48: 14 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 48: 14 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 48: 14 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 48: 14 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 48: 14 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 48: 14 91 unique records for "SubjectNameCollection"2024/11/19 11: 48: 14 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 48: 14 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 48: 14 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 48: 14 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 48: 14 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 48: 14 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 48: 14 Finished inserting 939 records into "InstructorLastNameCollection" in 0.09s
+2024/11/19 11: 48: 14 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 48: 14 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 48: 14 Finished inserting 91 records into "SubjectNameCollection" in 0.09s
+2024/11/19 11: 48: 14 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 48: 14 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 48: 14 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 11: 48: 14 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 48: 14 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 48: 14 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 11: 48: 14 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 48: 14 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 48: 14 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 11: 48: 24 What courses are there that are taught by Jesse?
+2024/11/19 11: 48: 26 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Jesse"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 11: 49: 01 Set up chroma-go client successfully
+2024/11/19 11: 49: 01 &{
+  0xc00022a120 <nil> 1 0xc0003ce8c0 0
+}
+2024/11/19 11: 49: 01 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 49: 01 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 49: 01 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 49: 01 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 49: 01 91 unique records for "SubjectNameCollection"2024/11/19 11: 49: 01 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 49: 01 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 49: 01 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 49: 01 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 49: 01 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 49: 01 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 49: 01 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 49: 01 Finished inserting 1234 records into "TitleShortDescCollection" in 0.10s
+2024/11/19 11: 49: 01 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 49: 01 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 49: 01 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 11: 49: 01 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 49: 01 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 49: 01 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/19 11: 49: 01 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 49: 01 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 49: 01 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.11s
+2024/11/19 11: 49: 01 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 49: 01 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 49: 01 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.11s
+2024/11/19 11: 49: 18 Set up chroma-go client successfully
+2024/11/19 11: 49: 18 &{
+  0xc00022a1b0 <nil> 1 0xc000635500 0
+}
+2024/11/19 11: 49: 18 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 51: 05 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 51: 05 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 51: 05 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 51: 05 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 51: 05 91 unique records for "SubjectNameCollection"2024/11/19 11: 51: 05 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 51: 05 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 51: 05 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 51: 05 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 51: 05 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 51: 05 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 51: 05 Finished inserting 91 records into "SubjectNameCollection" in 0.11s
+2024/11/19 11: 51: 05 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 51: 05 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 51: 05 Finished inserting 939 records into "InstructorLastNameCollection" in 0.12s
+2024/11/19 11: 51: 05 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 51: 05 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 51: 05 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.12s
+2024/11/19 11: 51: 05 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 51: 05 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 51: 05 Finished inserting 1234 records into "TitleShortDescCollection" in 107.70s
+2024/11/19 11: 51: 05 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 51: 05 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 51: 05 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.13s
+2024/11/19 11: 55: 15 Set up chroma-go client successfully
+2024/11/19 11: 55: 16 &{
+  0xc0002b61b0 <nil> 1 0xc000357180 0
+}
+2024/11/19 11: 55: 16 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 11: 55: 19 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 11: 55: 19 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 11: 55: 19 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 11: 55: 19 91 unique records for "SubjectNameCollection"2024/11/19 11: 55: 19 1022 unique records for "InstructorFullNameCollection"2024/11/19 11: 55: 19 1234 unique records for "TitleShortDescCollection"2024/11/19 11: 55: 19 939 unique records for "InstructorLastNameCollection"2024/11/19 11: 55: 16 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 11: 55: 19 669 unique records for "InstructorFirstNameCollection"2024/11/19 11: 55: 19 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 11: 55: 19 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 11: 55: 19 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.10s
+2024/11/19 11: 55: 19 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 11: 55: 19 Collection SubjectNameCollection already exists with matching records
+2024/11/19 11: 55: 19 Finished inserting 91 records into "SubjectNameCollection" in 0.11s
+2024/11/19 11: 55: 19 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 11: 55: 19 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 11: 55: 19 Finished inserting 939 records into "InstructorLastNameCollection" in 0.11s
+2024/11/19 11: 55: 19 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 11: 55: 19 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 11: 55: 19 Finished inserting 1234 records into "TitleShortDescCollection" in 3.30s
+2024/11/19 11: 55: 19 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 11: 55: 19 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 11: 55: 19 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.12s
+2024/11/19 13: 26: 48 Set up chroma-go client successfully
+2024/11/19 13: 26: 48 &{
+  0xc00022c1b0 <nil> 1 0xc000489340 0
+}
+2024/11/19 13: 26: 48 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 13: 26: 48 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 13: 26: 48 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 13: 27: 30 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 13: 26: 48 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 13: 27: 30 91 unique records for "SubjectNameCollection"2024/11/19 13: 27: 30 669 unique records for "InstructorFirstNameCollection"2024/11/19 13: 27: 30 1234 unique records for "TitleShortDescCollection"2024/11/19 13: 27: 30 1022 unique records for "InstructorFullNameCollection"2024/11/19 13: 27: 30 939 unique records for "InstructorLastNameCollection"2024/11/19 13: 27: 30 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 13: 27: 30 Collection SubjectNameCollection already exists with matching records
+2024/11/19 13: 27: 30 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/19 13: 27: 30 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 13: 27: 30 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 13: 27: 30 Finished inserting 1234 records into "TitleShortDescCollection" in 41.65s
+2024/11/19 13: 27: 30 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 13: 27: 30 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 13: 27: 30 Finished inserting 669 records into "InstructorFirstNameCollection" in 41.66s
+2024/11/19 13: 27: 30 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 13: 27: 30 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 13: 27: 30 Finished inserting 939 records into "InstructorLastNameCollection" in 41.66s
+2024/11/19 13: 27: 30 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 13: 27: 30 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 13: 27: 30 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.12s
+2024/11/19 13: 27: 38 Set up chroma-go client successfully
+2024/11/19 13: 27: 38 &{
+  0xc00023c2d0 <nil> 1 0xc00034fa40 0
+}
+2024/11/19 13: 27: 38 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 13: 27: 39 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 13: 27: 39 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 13: 27: 39 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 13: 27: 39 91 unique records for "SubjectNameCollection"2024/11/19 13: 27: 39 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 13: 27: 39 669 unique records for "InstructorFirstNameCollection"2024/11/19 13: 27: 39 1234 unique records for "TitleShortDescCollection"2024/11/19 13: 27: 39 939 unique records for "InstructorLastNameCollection"2024/11/19 13: 27: 39 1022 unique records for "InstructorFullNameCollection"2024/11/19 13: 27: 39 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 13: 27: 39 Collection SubjectNameCollection already exists with matching records
+2024/11/19 13: 27: 39 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/19 13: 27: 39 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 13: 27: 39 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 13: 27: 39 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 13: 27: 39 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 13: 27: 39 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 13: 27: 39 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.11s
+2024/11/19 13: 27: 39 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 13: 27: 39 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 13: 27: 39 Finished inserting 1234 records into "TitleShortDescCollection" in 0.11s
+2024/11/19 13: 27: 39 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 13: 27: 39 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 13: 27: 39 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.12s
+2024/11/19 13: 30: 35 What courses are there that are taught by Phil?
+2024/11/19 13: 30: 39 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 13: 30: 39 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 13: 30: 39 Queried collection "InstructorFullNameCollection" in 0.43s
+2024/11/19 13: 30: 39 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 13: 30: 40 Queried collection "InstructorFirstNameCollection" in 0.68s
+2024/11/19 13: 30: 40 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 13: 30: 41 Queried collection "InstructorLastNameCollection" in 0.43s
+2024/11/19 13: 30: 41 Inserting records to collection "Phil" with 3 records
+2024/11/19 13: 30: 41 1 unique records for "Phil"2024/11/19 13: 30: 41 Creating collection "Phil"2024/11/19 13: 30: 41 Inserted 1 records into collection "Phil"2024/11/19 13: 30: 41 Finished inserting 1 records into "Phil" in 0.79s
+2024/11/19 13: 30: 41 Querying collection "Phil" with query: Phil
+2024/11/19 13: 30: 42 Queried collection "Phil" in 0.48s
+2024/11/19 13: 31: 31 What courses are there that are taught by Phil?
+2024/11/19 13: 31: 36 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 13: 31: 36 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 13: 31: 36 Queried collection "InstructorFullNameCollection" in 0.24s
+2024/11/19 13: 31: 36 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 13: 31: 36 Queried collection "InstructorFirstNameCollection" in 0.19s
+2024/11/19 13: 31: 36 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 13: 31: 37 Queried collection "InstructorLastNameCollection" in 0.60s
+2024/11/19 13: 31: 37 Inserting records to collection "Phil" with 3 records
+2024/11/19 13: 31: 37 1 unique records for "Phil"2024/11/19 13: 31: 37 Collection "Phil" already exists with 1 records
+2024/11/19 13: 31: 37 Collection Phil already exists with matching records
+2024/11/19 13: 31: 37 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 13: 31: 37 Querying collection "Phil" with query: Phil
+2024/11/19 13: 31: 37 Queried collection "Phil" in 0.30s
+2024/11/19 13: 31: 52 What courses are there with Phil Peterson?
+2024/11/19 13: 31: 55 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil Peterson"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 13: 31: 55 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 13: 31: 56 Queried collection "InstructorFullNameCollection" in 0.28s
+2024/11/19 13: 31: 56 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 13: 31: 56 Queried collection "InstructorFirstNameCollection" in 0.45s
+2024/11/19 13: 31: 56 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 13: 31: 56 Queried collection "InstructorLastNameCollection" in 0.31s
+2024/11/19 13: 31: 56 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 13: 31: 56 1 unique records for "Phil Peterson"2024/11/19 13: 31: 56 Creating collection "Phil Peterson"2024/11/19 13: 31: 56 Error creating collection: 400 Bad Request 
+2024/11/19 13: 33: 01 Set up chroma-go client successfully
+2024/11/19 13: 33: 02 &{
+  0xc00022a2d0 <nil> 1 0xc000253dc0 0
+}
+2024/11/19 13: 33: 17 Set up chroma-go client successfully
+2024/11/19 13: 33: 18 &{
+  0xc0002201b0 <nil> 1 0xc0005b3dc0 0
+}
+2024/11/19 13: 33: 18 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 13: 33: 18 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 13: 33: 18 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 13: 33: 18 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 13: 33: 18 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 13: 33: 18 91 unique records for "SubjectNameCollection"2024/11/19 13: 33: 18 669 unique records for "InstructorFirstNameCollection"2024/11/19 13: 33: 18 939 unique records for "InstructorLastNameCollection"2024/11/19 13: 33: 18 1022 unique records for "InstructorFullNameCollection"2024/11/19 13: 33: 18 1234 unique records for "TitleShortDescCollection"2024/11/19 13: 33: 18 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 13: 33: 18 Collection SubjectNameCollection already exists with matching records
+2024/11/19 13: 33: 18 Finished inserting 91 records into "SubjectNameCollection" in 0.08s
+2024/11/19 13: 33: 18 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 13: 33: 18 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 13: 33: 18 Finished inserting 1234 records into "TitleShortDescCollection" in 0.09s
+2024/11/19 13: 33: 18 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 13: 33: 18 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 13: 33: 18 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.09s
+2024/11/19 13: 33: 18 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 13: 33: 18 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 13: 33: 18 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 13: 33: 18 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 13: 33: 18 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 13: 33: 18 Finished inserting 939 records into "InstructorLastNameCollection" in 0.09s
+2024/11/19 20: 48: 51 Set up chroma-go client successfully
+2024/11/19 20: 48: 51 &{
+  0xc0002401b0 <nil> 1 0xc000584380 0
+}
+2024/11/19 20: 48: 51 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 20: 48: 51 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 20: 48: 51 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 20: 48: 51 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 20: 48: 51 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 20: 48: 51 91 unique records for "SubjectNameCollection"2024/11/19 20: 48: 51 669 unique records for "InstructorFirstNameCollection"2024/11/19 20: 48: 51 939 unique records for "InstructorLastNameCollection"2024/11/19 20: 48: 51 1022 unique records for "InstructorFullNameCollection"2024/11/19 20: 48: 51 1234 unique records for "TitleShortDescCollection"2024/11/19 20: 48: 51 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 20: 48: 51 Collection SubjectNameCollection already exists with matching records
+2024/11/19 20: 48: 51 Finished inserting 91 records into "SubjectNameCollection" in 0.18s
+2024/11/19 20: 48: 51 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 20: 48: 51 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 20: 48: 51 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.18s
+2024/11/19 20: 48: 51 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 20: 48: 51 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 20: 48: 51 Finished inserting 939 records into "InstructorLastNameCollection" in 0.18s
+2024/11/19 20: 48: 51 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 20: 48: 51 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 20: 48: 51 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.19s
+2024/11/19 20: 48: 51 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 20: 48: 51 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 20: 48: 51 Finished inserting 1234 records into "TitleShortDescCollection" in 0.19s
+2024/11/19 20: 49: 00 What courses are there about cat care or feline studies?
+2024/11/19 20: 49: 02 {
+  "subject_codes": [
+    "ANIMAL",
+    "VET",
+    "WILD"
+  ],
+  "subject_names": [
+    "Animal Care",
+    "Veterinary Science",
+    "Wildlife Studies"
+  ],
+  "course_numbers": [
+    "301",
+    "202"
+  ],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [
+    "Cat Care 101",
+    "Feline Behavior and Health"
+  ],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [],
+  "primary_instructor_emails": [],
+  "colleges": [
+    "College of Veterinary Medicine",
+    "College of Animal Sciences"
+  ]
+}
+2024/11/19 20: 49: 02 Querying collection "SubjectNameCollection" with query: Animal Care
+2024/11/19 20: 49: 03 Queried collection "SubjectNameCollection" in 1.38s
+2024/11/19 20: 49: 03 Querying collection "SubjectNameCollection" with query: Veterinary Science
+2024/11/19 20: 49: 04 Queried collection "SubjectNameCollection" in 0.59s
+2024/11/19 20: 49: 04 Querying collection "SubjectNameCollection" with query: Wildlife Studies
+2024/11/19 20: 49: 04 Queried collection "SubjectNameCollection" in 0.53s
+2024/11/19 20: 49: 04 Querying collection "TitleShortDescCollection" with query: Cat Care 101
+2024/11/19 20: 49: 05 Queried collection "TitleShortDescCollection" in 0.67s
+2024/11/19 20: 49: 05 Querying collection "TitleShortDescCollection" with query: Feline Behavior and Health
+2024/11/19 20: 49: 06 Queried collection "TitleShortDescCollection" in 0.58s
+2024/11/19 20: 57: 04 What courses are there that are taught by Phil?
+2024/11/19 20: 57: 05 {
+  "subject_codes": [],
+  "subject_names": [],
+  "course_numbers": [],
+  "sections": [],
+  "crns": [],
+  "schedule_type_codes": [],
+  "campus_codes": [],
+  "title_short_descs": [],
+  "instruction_mode_descs": [],
+  "meeting_type_codes": [],
+  "meeting_type_names": [],
+  "meet_days": [],
+  "meet_days_full": [],
+  "begin_times": [],
+  "end_times": [],
+  "meet_starts": [],
+  "meet_ends": [],
+  "buildings": [],
+  "rooms": [],
+  "actual_enrollments": [],
+  "primary_instructor_names": [
+    "Phil"
+  ],
+  "primary_instructor_emails": [],
+  "colleges": []
+}
+2024/11/19 20: 57: 05 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 20: 57: 06 Queried collection "InstructorFullNameCollection" in 0.55s
+2024/11/19 20: 57: 06 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 20: 57: 06 Queried collection "InstructorFirstNameCollection" in 0.57s
+2024/11/19 20: 57: 06 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 20: 57: 07 Queried collection "InstructorLastNameCollection" in 0.30s
+2024/11/19 20: 57: 07 Inserting records to collection "Phil" with 3 records
+2024/11/19 20: 57: 07 1 unique records for "Phil"2024/11/19 20: 57: 07 Collection "Phil" already exists with 1 records
+2024/11/19 20: 57: 07 Collection Phil already exists with matching records
+2024/11/19 20: 57: 07 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 20: 57: 07 Querying collection "Phil" with query: Phil
+2024/11/19 20: 57: 07 Queried collection "Phil" in 0.26s
+2024/11/19 20: 57: 24 Set up chroma-go client successfully
+2024/11/19 20: 57: 24 &{
+  0xc0002241b0 <nil> 1 0xc000104c40 0
+}
+2024/11/19 20: 57: 24 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 20: 57: 24 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 20: 57: 24 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 20: 57: 24 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 20: 57: 24 91 unique records for "SubjectNameCollection"2024/11/19 20: 57: 24 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 20: 57: 24 669 unique records for "InstructorFirstNameCollection"2024/11/19 20: 57: 24 1022 unique records for "InstructorFullNameCollection"2024/11/19 20: 57: 24 939 unique records for "InstructorLastNameCollection"2024/11/19 20: 57: 24 1234 unique records for "TitleShortDescCollection"2024/11/19 20: 57: 24 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 20: 57: 24 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 20: 57: 24 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.09s
+2024/11/19 20: 57: 24 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 20: 57: 24 Collection SubjectNameCollection already exists with matching records
+2024/11/19 20: 57: 24 Finished inserting 91 records into "SubjectNameCollection" in 0.10s
+2024/11/19 20: 57: 24 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 20: 57: 24 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 20: 57: 24 Finished inserting 939 records into "InstructorLastNameCollection" in 0.10s
+2024/11/19 20: 57: 24 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 20: 57: 24 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 20: 57: 24 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.10s
+2024/11/19 20: 57: 24 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 20: 57: 24 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 20: 57: 24 Finished inserting 1234 records into "TitleShortDescCollection" in 0.11s
+2024/11/19 20: 57: 28 What courses are there by Phil?
+2024/11/19 20: 57: 29 Course Filter:
+CourseFilter:
+  PrimaryInstructorNs: [Phil
+]
+2024/11/19 20: 57: 29 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 20: 57: 30 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/19 20: 57: 30 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 20: 57: 30 Queried collection "InstructorFirstNameCollection" in 0.28s
+2024/11/19 20: 57: 30 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 20: 57: 30 Queried collection "InstructorLastNameCollection" in 0.27s
+2024/11/19 20: 57: 30 Inserting records to collection "Phil" with 3 records
+2024/11/19 20: 57: 30 1 unique records for "Phil"2024/11/19 20: 57: 30 Collection "Phil" already exists with 1 records
+2024/11/19 20: 57: 30 Collection Phil already exists with matching records
+2024/11/19 20: 57: 30 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 20: 57: 30 Querying collection "Phil" with query: Phil
+2024/11/19 20: 57: 31 Queried collection "Phil" in 0.35s
+2024/11/19 20: 57: 31 Corrected Filter:
+CourseFilter:
+  PrimaryInstructorNs: [Sam Mickey
+]
+2024/11/19 20: 59: 09 What courses are there by Phil?
+2024/11/19 20: 59: 10 Course Filter:
+CourseFilter:
+  PrimaryInstructorNs: [Phil
+]
+2024/11/19 20: 59: 10 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 20: 59: 10 Queried collection "InstructorFullNameCollection" in 0.39s
+2024/11/19 20: 59: 10 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 20: 59: 10 Queried collection "InstructorFirstNameCollection" in 0.41s
+2024/11/19 20: 59: 10 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 20: 59: 11 Queried collection "InstructorLastNameCollection" in 0.41s
+2024/11/19 20: 59: 11 Inserting records to collection "Phil" with 3 records
+2024/11/19 20: 59: 11 1 unique records for "Phil"2024/11/19 20: 59: 11 Collection "Phil" already exists with 1 records
+2024/11/19 20: 59: 11 Collection Phil already exists with matching records
+2024/11/19 20: 59: 11 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 20: 59: 11 Querying collection "Phil" with query: Phil
+2024/11/19 20: 59: 11 Queried collection "Phil" in 0.45s
+2024/11/19 20: 59: 11 Corrected Filter:
+CourseFilter:
+  PrimaryInstructorNs: [Sam Mickey
+]
+2024/11/19 21: 02: 45 Set up chroma-go client successfully
+2024/11/19 21: 02: 45 &{
+  0xc0000bc360 <nil> 1 0xc000104c40 0
+}
+2024/11/19 21: 02: 45 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 02: 45 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 02: 45 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 02: 45 91 unique records for "SubjectNameCollection"2024/11/19 21: 02: 45 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 02: 45 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 02: 45 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 02: 45 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 02: 45 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 02: 45 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 02: 46 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 02: 46 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 02: 46 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.16s
+2024/11/19 21: 02: 46 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 02: 46 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 02: 46 Finished inserting 939 records into "InstructorLastNameCollection" in 0.16s
+2024/11/19 21: 02: 46 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 02: 46 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 02: 46 Finished inserting 91 records into "SubjectNameCollection" in 0.17s
+2024/11/19 21: 02: 46 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 02: 46 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 02: 46 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.17s
+2024/11/19 21: 02: 46 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 02: 46 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 02: 46 Finished inserting 1234 records into "TitleShortDescCollection" in 0.17s
+2024/11/19 21: 02: 49 What courses are there that are taught by Phil?
+2024/11/19 21: 02: 51 Course Filter:
+CourseFilter: Names: [Phil
+],
+2024/11/19 21: 02: 51 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 21: 02: 51 Queried collection "InstructorFullNameCollection" in 0.26s
+2024/11/19 21: 02: 51 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 21: 02: 51 Queried collection "InstructorFirstNameCollection" in 0.43s
+2024/11/19 21: 02: 51 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 21: 02: 51 Queried collection "InstructorLastNameCollection" in 0.24s
+2024/11/19 21: 02: 51 Inserting records to collection "Phil" with 3 records
+2024/11/19 21: 02: 51 1 unique records for "Phil"2024/11/19 21: 02: 51 Collection "Phil" already exists with 1 records
+2024/11/19 21: 02: 51 Collection Phil already exists with matching records
+2024/11/19 21: 02: 51 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 21: 02: 51 Querying collection "Phil" with query: Phil
+2024/11/19 21: 02: 52 Queried collection "Phil" in 0.28s
+2024/11/19 21: 02: 52 Corrected Filter:
+CourseFilter: Names: [Sam Mickey
+],
+2024/11/19 21: 03: 49 Set up chroma-go client successfully
+2024/11/19 21: 03: 50 &{
+  0xc00022a1b0 <nil> 1 0xc000529c00 0
+}
+2024/11/19 21: 03: 50 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 03: 50 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 03: 50 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 03: 50 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 03: 50 91 unique records for "SubjectNameCollection"2024/11/19 21: 03: 50 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 03: 50 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 03: 50 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 03: 50 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 03: 50 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 03: 50 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 03: 50 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 03: 50 Finished inserting 1234 records into "TitleShortDescCollection" in 0.15s
+2024/11/19 21: 03: 50 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 03: 50 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 03: 50 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.16s
+2024/11/19 21: 03: 50 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 03: 50 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 03: 50 Finished inserting 91 records into "SubjectNameCollection" in 0.16s
+2024/11/19 21: 03: 50 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 03: 50 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 03: 50 Finished inserting 939 records into "InstructorLastNameCollection" in 0.16s
+2024/11/19 21: 03: 50 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 03: 50 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 03: 50 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.16s
+2024/11/19 21: 03: 55 What courses are there that are taught by Phil?
+2024/11/19 21: 03: 56 Original Filter: Names: [Phil
+],
+2024/11/19 21: 03: 56 Querying collection "InstructorFullNameCollection" with query: Phil
+2024/11/19 21: 03: 56 Queried collection "InstructorFullNameCollection" in 0.43s
+2024/11/19 21: 03: 56 Querying collection "InstructorFirstNameCollection" with query: Phil
+2024/11/19 21: 03: 57 Queried collection "InstructorFirstNameCollection" in 0.35s
+2024/11/19 21: 03: 57 Querying collection "InstructorLastNameCollection" with query: Phil
+2024/11/19 21: 03: 57 Queried collection "InstructorLastNameCollection" in 0.31s
+2024/11/19 21: 03: 57 Inserting records to collection "Phil" with 3 records
+2024/11/19 21: 03: 57 1 unique records for "Phil"2024/11/19 21: 03: 57 Collection "Phil" already exists with 1 records
+2024/11/19 21: 03: 57 Collection Phil already exists with matching records
+2024/11/19 21: 03: 57 Finished inserting 1 records into "Phil" in 0.01s
+2024/11/19 21: 03: 57 Querying collection "Phil" with query: Phil
+2024/11/19 21: 03: 57 Queried collection "Phil" in 0.57s
+2024/11/19 21: 03: 57 Corrected Filter: Names: [Sam Mickey
+],
+2024/11/19 21: 06: 43 What courses are there that meet on Mondays?
+2024/11/19 21: 06: 44 Original Filter: MeetDays: [M
+],
+2024/11/19 21: 06: 44 Corrected Filter: MeetDays: [M
+],
+2024/11/19 21: 09: 22 What courses are there for Computer Science?
+2024/11/19 21: 09: 23 Original Filter: SubjectCodes: [CS
+],SubjectNames: [Computer Science
+],
+2024/11/19 21: 09: 23 Corrected Filter: SubjectCodes: [CS
+],SubjectNames: [Computer Science Computer Science
+],
+2024/11/19 21: 09: 47 What courses are there related to human anatomy and sexuality?
+2024/11/19 21: 09: 49 Original Filter: SubjectCodes: [BIO HEA
+],SubjectNames: [Biology Health
+],CourseNumbers: [
+  201 350
+],Sections: [
+  001 002
+],CRNs: [
+  12345 67890
+],ScheduleTypeCodes: [LEC SEM
+],CampusCodes: [MAIN
+],TitleShortDescs: [Human Anatomy Human Sexuality
+],InstructionModeDescs: [In Person Online
+],MeetingTypeCodes: [CLAS SEM
+],MeetingTypeNames: [Lecture Seminar
+],MeetDays: [M W F
+],MeetDaysFull: [Monday Wednesday Friday
+],BeginTimes: [
+  09: 00 10: 00
+],EndTimes: [
+  10: 00 11: 00
+],MeetStarts: [
+  2023-09-10 2023-09-15
+],MeetEnds: [
+  2023-12-10 2023-12-15
+],Buildings: [Health Sciences Center Biology Building
+],Rooms: [
+  101 202
+],ActualEnrollments: [
+  30 25
+],Names: [Dr. Brown Prof. Green
+],PrimaryInstructorEmails: [brown@example.com green@example.com
+],Colleges: [College of Health Sciences College of Arts and Sciences
+],
+2024/11/19 21: 09: 49 Querying collection "SubjectNameCollection" with query: Health
+2024/11/19 21: 09: 49 Queried collection "SubjectNameCollection" in 0.37s
+2024/11/19 21: 09: 49 Querying collection "TitleShortDescCollection" with query: Human Sexuality
+2024/11/19 21: 09: 49 Queried collection "TitleShortDescCollection" in 0.30s
+2024/11/19 21: 09: 49 Querying collection "InstructorFullNameCollection" with query: Dr. Brown
+2024/11/19 21: 09: 50 Queried collection "InstructorFullNameCollection" in 0.38s
+2024/11/19 21: 09: 50 Querying collection "InstructorFirstNameCollection" with query: Dr. Brown
+2024/11/19 21: 09: 50 Queried collection "InstructorFirstNameCollection" in 0.27s
+2024/11/19 21: 09: 50 Querying collection "InstructorLastNameCollection" with query: Dr. Brown
+2024/11/19 21: 09: 50 Queried collection "InstructorLastNameCollection" in 0.36s
+2024/11/19 21: 09: 50 Inserting records to collection "Dr. Brown" with 3 records
+2024/11/19 21: 09: 50 1 unique records for "Dr. Brown"2024/11/19 21: 09: 50 Creating collection "Dr. Brown"2024/11/19 21: 09: 50 Error creating collection: 400 Bad Request 
+2024/11/19 21: 24: 27 Set up chroma-go client successfully
+2024/11/19 21: 24: 27 &{
+  0xc00022a1b0 <nil> 1 0xc0004c2fc0 0
+}
+2024/11/19 21: 24: 27 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 24: 27 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 24: 27 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 24: 27 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 24: 27 91 unique records for "SubjectNameCollection"2024/11/19 21: 24: 27 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 24: 27 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 24: 27 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 24: 27 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 24: 27 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 24: 27 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 24: 27 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 24: 27 Finished inserting 1234 records into "TitleShortDescCollection" in 0.12s
+2024/11/19 21: 24: 27 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 24: 27 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 24: 27 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.12s
+2024/11/19 21: 24: 27 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 24: 27 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 24: 27 Finished inserting 939 records into "InstructorLastNameCollection" in 0.13s
+2024/11/19 21: 24: 27 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 24: 27 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 24: 27 Finished inserting 91 records into "SubjectNameCollection" in 0.13s
+2024/11/19 21: 24: 27 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 24: 27 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 24: 27 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.13s
+2024/11/19 21: 24: 30 What courses are there related to cats or animal behavior?
+2024/11/19 21: 24: 33 Original Filter: SubjectCodes: [ANIMAL BIO ICS
+],SubjectNames: [Animal Behavior Biology of Domesticated Animals Impact of Cats on Ecosystems
+],CourseNumbers: [
+  101 202
+],Sections: [
+  001 002
+],CRNs: [
+  12345 67890
+],ScheduleTypeCodes: [LEC LAB
+],CampusCodes: [MAIN
+],TitleShortDescs: [Introduction to Animal Behavior Biology of Domesticated Animals Impact of Cats on Ecosystems
+],InstructionModeDescs: [In Person
+],MeetingTypeCodes: [CLAS LAB
+],MeetingTypeNames: [Class Laboratory
+],MeetDays: [M W F
+],MeetDaysFull: [Monday Wednesday Friday
+],BeginTimes: [
+  08: 00 10: 00
+],EndTimes: [
+  09: 00 11: 00
+],MeetStarts: [
+  2023-01-10 2023-01-11
+],MeetEnds: [
+  2023-05-10 2023-05-11
+],Buildings: [Animal Science Building Biological Sciences Building
+],Rooms: [
+  101 202
+],ActualEnrollments: [
+  30 25
+],Names: [Dr. Smith Prof. Johnson
+],PrimaryInstructorEmails: [smith@example.com johnson@example.com
+],Colleges: [College of Animal Sciences College of Life Sciences
+],
+2024/11/19 21: 24: 33 Querying collection "SubjectNameCollection" with query: Animal Behavior
+2024/11/19 21: 24: 33 Queried collection "SubjectNameCollection" in 0.34s
+2024/11/19 21: 24: 33 Querying collection "SubjectNameCollection" with query: Biology of Domesticated Animals
+2024/11/19 21: 24: 34 Queried collection "SubjectNameCollection" in 0.40s
+2024/11/19 21: 24: 34 Querying collection "SubjectNameCollection" with query: Impact of Cats on Ecosystems
+2024/11/19 21: 24: 34 Queried collection "SubjectNameCollection" in 0.50s
+2024/11/19 21: 24: 34 Querying collection "TitleShortDescCollection" with query: Introduction to Animal Behavior
+2024/11/19 21: 24: 35 Queried collection "TitleShortDescCollection" in 0.34s
+2024/11/19 21: 24: 35 Querying collection "TitleShortDescCollection" with query: Biology of Domesticated Animals
+2024/11/19 21: 24: 35 Queried collection "TitleShortDescCollection" in 0.42s
+2024/11/19 21: 24: 35 Querying collection "TitleShortDescCollection" with query: Impact of Cats on Ecosystems
+2024/11/19 21: 24: 35 Queried collection "TitleShortDescCollection" in 0.19s
+2024/11/19 21: 24: 35 Querying collection "InstructorFullNameCollection" with query: Dr. Smith
+2024/11/19 21: 24: 35 Queried collection "InstructorFullNameCollection" in 0.25s
+2024/11/19 21: 24: 35 Querying collection "InstructorFirstNameCollection" with query: Dr. Smith
+2024/11/19 21: 24: 36 Queried collection "InstructorFirstNameCollection" in 0.72s
+2024/11/19 21: 24: 36 Querying collection "InstructorLastNameCollection" with query: Dr. Smith
+2024/11/19 21: 24: 37 Queried collection "InstructorLastNameCollection" in 0.33s
+2024/11/19 21: 24: 37 Inserting records to collection "Dr. Smith" with 3 records
+2024/11/19 21: 24: 37 2 unique records for "Dr. Smith"2024/11/19 21: 24: 37 Creating collection "Dr. Smith"2024/11/19 21: 24: 37 Error creating collection: 400 Bad Request 
+2024/11/19 21: 25: 50 Set up chroma-go client successfully
+2024/11/19 21: 25: 50 &{
+  0xc0000c6240 <nil> 1 0xc000604fc0 0
+}
+2024/11/19 21: 25: 50 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 25: 50 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 25: 50 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 25: 50 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 25: 50 91 unique records for "SubjectNameCollection"2024/11/19 21: 25: 50 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 25: 50 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 25: 50 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 25: 50 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 25: 50 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 25: 50 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 25: 50 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 25: 50 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.44s
+2024/11/19 21: 25: 50 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 25: 50 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 25: 50 Finished inserting 1234 records into "TitleShortDescCollection" in 0.45s
+2024/11/19 21: 25: 50 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 25: 50 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 25: 50 Finished inserting 91 records into "SubjectNameCollection" in 0.45s
+2024/11/19 21: 25: 50 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 25: 50 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 25: 50 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.45s
+2024/11/19 21: 25: 50 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 25: 50 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 25: 50 Finished inserting 939 records into "InstructorLastNameCollection" in 0.45s
+2024/11/19 21: 25: 53 What courses are there for Phil Peterson in Fall 2024?
+2024/11/19 21: 25: 55 Original Filter: Names: [Phil Peterson
+],
+2024/11/19 21: 25: 55 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 21: 25: 55 Queried collection "InstructorFullNameCollection" in 0.51s
+2024/11/19 21: 25: 55 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 21: 25: 56 Queried collection "InstructorFirstNameCollection" in 0.47s
+2024/11/19 21: 25: 56 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 21: 25: 56 Queried collection "InstructorLastNameCollection" in 0.35s
+2024/11/19 21: 25: 56 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 21: 25: 56 1 unique records for "Phil Peterson"2024/11/19 21: 25: 56 Creating collection "Phil Peterson"2024/11/19 21: 25: 56 Error creating collection: 400 Bad Request 
+2024/11/19 21: 27: 44 Set up chroma-go client successfully
+2024/11/19 21: 27: 44 &{
+  0xc00022a1b0 <nil> 1 0xc000104e00 0
+}
+2024/11/19 21: 27: 44 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 27: 44 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 27: 44 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 27: 44 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 27: 44 91 unique records for "SubjectNameCollection"2024/11/19 21: 27: 44 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 27: 44 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 27: 44 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 27: 44 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 27: 44 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 27: 45 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 27: 45 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 27: 45 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.17s
+2024/11/19 21: 27: 45 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 27: 45 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 27: 45 Finished inserting 91 records into "SubjectNameCollection" in 0.18s
+2024/11/19 21: 27: 45 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 27: 45 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 27: 45 Finished inserting 939 records into "InstructorLastNameCollection" in 0.18s
+2024/11/19 21: 27: 45 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 27: 45 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 27: 45 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.18s
+2024/11/19 21: 27: 45 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 27: 45 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 27: 45 Finished inserting 1234 records into "TitleShortDescCollection" in 0.18s
+2024/11/19 21: 27: 50 What courses are there with Phil Peterson in Fall 2024?
+2024/11/19 21: 27: 52 Original Filter: Names: [Phil Peterson
+],
+2024/11/19 21: 27: 52 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 21: 27: 52 Queried collection "InstructorFullNameCollection" in 0.44s
+2024/11/19 21: 27: 52 Result Full: [Corey Cook
+]
+2024/11/19 21: 27: 52 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 21: 27: 52 Queried collection "InstructorFirstNameCollection" in 0.29s
+2024/11/19 21: 27: 52 Result First: []
+2024/11/19 21: 27: 52 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 21: 27: 53 Queried collection "InstructorLastNameCollection" in 0.26s
+2024/11/19 21: 27: 53 Result Last: []
+2024/11/19 21: 27: 53 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 21: 27: 53 1 unique records for "Phil Peterson"2024/11/19 21: 27: 53 Creating collection "Phil Peterson"2024/11/19 21: 27: 53 Error creating collection: 400 Bad Request 
+2024/11/19 21: 49: 38 Set up chroma-go client successfully
+2024/11/19 21: 49: 39 &{
+  0xc00022a2d0 <nil> 1 0xc000104e00 0
+}
+2024/11/19 21: 49: 39 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 49: 39 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 49: 39 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 49: 39 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 49: 39 91 unique records for "SubjectNameCollection"2024/11/19 21: 49: 39 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 49: 39 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 49: 39 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 49: 39 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 49: 39 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 49: 39 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 49: 39 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 49: 39 Finished inserting 91 records into "SubjectNameCollection" in 0.16s
+2024/11/19 21: 49: 39 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 49: 39 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 49: 39 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.17s
+2024/11/19 21: 49: 39 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 49: 39 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 49: 39 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.17s
+2024/11/19 21: 49: 39 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 49: 39 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 49: 39 Finished inserting 939 records into "InstructorLastNameCollection" in 0.17s
+2024/11/19 21: 49: 39 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 49: 39 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 49: 39 Finished inserting 1234 records into "TitleShortDescCollection" in 0.17s
+2024/11/19 21: 49: 50 What courses are there with Phil Peterson for Fall 2024?
+2024/11/19 21: 49: 52 Original Filter: Names: [Phil Peterson
+],
+2024/11/19 21: 49: 52 Querying collection "InstructorFullNameCollection" with query: Phil Peterson
+2024/11/19 21: 49: 52 Queried collection "InstructorFullNameCollection" with in 0.47s
+2024/11/19 21: 49: 52 Result Full: [Corey Cook
+]
+2024/11/19 21: 49: 52 Querying collection "InstructorFirstNameCollection" with query: Phil Peterson
+2024/11/19 21: 49: 53 Queried collection "InstructorFirstNameCollection" with in 0.48s
+2024/11/19 21: 49: 53 Result First: []
+2024/11/19 21: 49: 53 Querying collection "InstructorLastNameCollection" with query: Phil Peterson
+2024/11/19 21: 49: 53 Queried collection "InstructorLastNameCollection" with in 0.26s
+2024/11/19 21: 49: 53 Result Last: []
+2024/11/19 21: 49: 53 Inserting records to collection "Phil Peterson" with 3 records
+2024/11/19 21: 49: 53 1 unique records for "Phil Peterson"2024/11/19 21: 49: 53 Creating collection "Phil Peterson"2024/11/19 21: 49: 53 Error creating collection: 400 Bad Request 
+2024/11/19 21: 54: 52 Set up chroma-go client successfully
+2024/11/19 21: 54: 53 &{
+  0xc00022a1b0 <nil> 1 0xc0001056c0 0
+}
+2024/11/19 21: 55: 18 Set up chroma-go client successfully
+2024/11/19 21: 55: 19 &{
+  0xc0002281b0 <nil> 1 0xc000104e00 0
+}
+2024/11/19 21: 55: 23 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 21: 55: 23 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 21: 55: 23 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 21: 55: 23 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 21: 55: 23 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 21: 55: 23 91 unique records for "SubjectNameCollection"2024/11/19 21: 55: 23 1022 unique records for "InstructorFullNameCollection"2024/11/19 21: 55: 23 1234 unique records for "TitleShortDescCollection"2024/11/19 21: 55: 23 939 unique records for "InstructorLastNameCollection"2024/11/19 21: 55: 23 669 unique records for "InstructorFirstNameCollection"2024/11/19 21: 55: 23 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 21: 55: 23 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 21: 55: 23 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.12s
+2024/11/19 21: 55: 23 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 21: 55: 23 Collection SubjectNameCollection already exists with matching records
+2024/11/19 21: 55: 23 Finished inserting 91 records into "SubjectNameCollection" in 0.12s
+2024/11/19 21: 55: 23 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 21: 55: 23 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 21: 55: 23 Finished inserting 1234 records into "TitleShortDescCollection" in 0.13s
+2024/11/19 21: 55: 23 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 21: 55: 23 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 21: 55: 23 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 21: 55: 23 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 21: 55: 23 Finished inserting 939 records into "InstructorLastNameCollection" in 0.13s
+2024/11/19 21: 55: 23 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.13s
+2024/11/19 22: 02: 17 Set up chroma-go client successfully
+2024/11/19 22: 02: 17 &{
+  0xc00022a1b0 <nil> 1 0xc0006048c0 0
+}
+2024/11/19 22: 02: 33 Inserting records to collection "InstructorFullNameCollection" with 2740 records
+2024/11/19 22: 02: 33 Inserting records to collection "TitleShortDescCollection" with 2740 records
+2024/11/19 22: 02: 33 Inserting records to collection "InstructorFirstNameCollection" with 2740 records
+2024/11/19 22: 02: 33 Inserting records to collection "InstructorLastNameCollection" with 2740 records
+2024/11/19 22: 02: 33 Inserting records to collection "SubjectNameCollection" with 91 records
+2024/11/19 22: 02: 33 91 unique records for "SubjectNameCollection"2024/11/19 22: 02: 33 669 unique records for "InstructorFirstNameCollection"2024/11/19 22: 02: 33 1234 unique records for "TitleShortDescCollection"2024/11/19 22: 02: 33 939 unique records for "InstructorLastNameCollection"2024/11/19 22: 02: 33 1022 unique records for "InstructorFullNameCollection"2024/11/19 22: 02: 33 Collection "SubjectNameCollection" already exists with 91 records
+2024/11/19 22: 02: 33 Collection SubjectNameCollection already exists with matching records
+2024/11/19 22: 02: 33 Finished inserting 91 records into "SubjectNameCollection" in 0.13s
+2024/11/19 22: 02: 33 Collection "InstructorLastNameCollection" already exists with 939 records
+2024/11/19 22: 02: 33 Collection InstructorLastNameCollection already exists with matching records
+2024/11/19 22: 02: 33 Finished inserting 939 records into "InstructorLastNameCollection" in 0.14s
+2024/11/19 22: 02: 33 Collection "InstructorFirstNameCollection" already exists with 669 records
+2024/11/19 22: 02: 33 Collection InstructorFirstNameCollection already exists with matching records
+2024/11/19 22: 02: 33 Finished inserting 669 records into "InstructorFirstNameCollection" in 0.15s
+2024/11/19 22: 02: 33 Collection "InstructorFullNameCollection" already exists with 1022 records
+2024/11/19 22: 02: 33 Collection InstructorFullNameCollection already exists with matching records
+2024/11/19 22: 02: 33 Finished inserting 1022 records into "InstructorFullNameCollection" in 0.15s
+2024/11/19 22: 02: 33 Collection "TitleShortDescCollection" already exists with 1234 records
+2024/11/19 22: 02: 33 Collection TitleShortDescCollection already exists with matching records
+2024/11/19 22: 02: 33 Finished inserting 1234 records into "TitleShortDescCollection" in 0.15s
+2024/11/19 22: 02: 33 91 documents in SubjectNameCollection
+2024/11/19 22: 13: 07 Set up chroma-go client successfully
+2024/11/19 22: 13: 07 &{
+  0xc0002361b0 <nil> 1 0xc0004c2c40 0
+}
+2024/11/19 22: 13: 07 91 unique records for "6ab444f63401cbf9ad426ab39d755f9cbc748c34adfeb67c1ea63aecbddd56f3"2024/11/19 22: 13: 07 669 unique records for "d85c1e12935ca99c2dc70018bf18a1ef225d11017d49e0561047d5e45626c725"2024/11/19 22: 13: 07 939 unique records for "68e17e1fc54da62cc607f2fca8a5a4f9d370956a7a5d3abbb9103dc9638ccb30"2024/11/19 22: 13: 07 1022 unique records for "3b0308fd445c20b3c4dfe2ea7ebef4b933e0c478f9ff9ba6b6714559a026c400"2024/11/19 22: 13: 07 1234 unique records for "746dbe13de06a0a41e8094c39300fbfdbeae621bee60dde3be3a09e876d88333"2024/11/19 22: 13: 07 Error creating collection: 400 Bad Request 
+2024/11/19 22: 14: 02 &{
+  0xc0000bc480 <nil> 1 0xc0004ed340 0
+}
+2024/11/19 22: 14: 02 91 unique records for "9b143c1676b2d9ca479e76bb2675fa47a6c8546c2af86d65d6fd45227132e984"2024/11/19 22: 14: 02 669 unique records for "d85c1e12935ca99c2dc70018bf18a1ef225d11017d49e0561047d5e45626c725"2024/11/19 22: 14: 02 939 unique records for "68e17e1fc54da62cc607f2fca8a5a4f9d370956a7a5d3abbb9103dc9638ccb30"2024/11/19 22: 14: 02 1234 unique records for "746dbe13de06a0a41e8094c39300fbfdbeae621bee60dde3be3a09e876d88333"2024/11/19 22: 14: 02 1022 unique records for "3b0308fd445c20b3c4dfe2ea7ebef4b933e0c478f9ff9ba6b6714559a026c400"2024/11/19 22: 14: 02 Error creating collection: 400 Bad Request 
+2024/11/19 22: 20: 08 &{
+  0xc0002401b0 <nil> 1 0xc000368000 0
+}
+2024/11/19 22: 20: 08 91 unique records for "e45e5140648872c01ca22f90a639961b67119abead8caa5d2c14ce50564119e6"2024/11/19 22: 20: 08 669 unique records for "d85c1e12935ca99c2dc70018bf18a1ef225d11017d49e0561047d5e45626c725"2024/11/19 22: 20: 08 939 unique records for "68e17e1fc54da62cc607f2fca8a5a4f9d370956a7a5d3abbb9103dc9638ccb30"2024/11/19 22: 20: 08 1234 unique records for "746dbe13de06a0a41e8094c39300fbfdbeae621bee60dde3be3a09e876d88333"2024/11/19 22: 20: 08 1022 unique records for "3b0308fd445c20b3c4dfe2ea7ebef4b933e0c478f9ff9ba6b6714559a026c400"2024/11/19 22: 20: 08 Error creating collection: 400 Bad Request 
+2024/11/19 22: 24: 23 &{
+  0xc000148240 <nil> 1 0xc0005008c0 0
+}
+2024/11/19 22: 24: 23 91 unique records for "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d82068e"2024/11/19 22: 24: 23 669 unique records for "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993edc"2024/11/19 22: 24: 23 1022 unique records for "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075f4"2024/11/19 22: 24: 23 939 unique records for "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c7d"2024/11/19 22: 24: 23 1234 unique records for "4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87c5"2024/11/19 22: 24: 23 Error creating collection: 400 Bad Request 
+2024/11/19 22: 24: 41 &{
+  0xc00022c1b0 <nil> 1 0xc000581a40 0
+}
+2024/11/19 22: 24: 41 91 unique records for "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d82068e"2024/11/19 22: 24: 41 669 unique records for "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993edc"2024/11/19 22: 24: 41 1022 unique records for "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075f4"2024/11/19 22: 24: 41 939 unique records for "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c7d"2024/11/19 22: 24: 41 1234 unique records for "4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87c5"2024/11/19 22: 24: 41 Error creating collection: 400 Bad Request 
+2024/11/19 22: 27: 19 &{
+  0xc00024c1b0 <nil> 1 0xc000601dc0 0
+}
+2024/11/19 22: 27: 19 Hashed 91 records in 0.00s
+2024/11/19 22: 27: 19 91 unique records for "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d82068e"2024/11/19 22: 27: 19 Hashed 2740 records in 0.01s
+2024/11/19 22: 27: 19 Hashed 2740 records in 0.01s
+2024/11/19 22: 27: 19 Hashed 2740 records in 0.01s
+2024/11/19 22: 27: 19 669 unique records for "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993edc"2024/11/19 22: 27: 19 Hashed 2740 records in 0.01s
+2024/11/19 22: 27: 19 1022 unique records for "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075f4"2024/11/19 22: 27: 19 1234 unique records for "4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87c5"2024/11/19 22: 27: 19 939 unique records for "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c7d"2024/11/19 22: 27: 19 Error creating collection: 400 Bad Request 
+2024/11/19 22: 32: 44 CSV setup complete
+2024/11/19 22: 32: 44 OpenAI setup complete
+2024/11/19 22: 32: 44 Chroma setup complete
+2024/11/19 22: 32: 44 SQLite setup complete
+2024/11/19 22: 32: 44 91 unique records for "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d82068e"2024/11/19 22: 32: 44 669 unique records for "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993edc"2024/11/19 22: 32: 44 939 unique records for "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c7d"2024/11/19 22: 32: 44 1022 unique records for "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075f4"2024/11/19 22: 32: 44 1234 unique records for "4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87c5"2024/11/19 22: 32: 45 Error creating collection: 400 Bad Request 
+2024/11/19 22: 37: 34 CSV setup complete
+2024/11/19 22: 37: 34 OpenAI setup complete
+2024/11/19 22: 37: 34 Chroma setup complete
+2024/11/19 22: 37: 34 SQLite setup complete
+2024/11/19 22: 37: 34 Error creating collection: 400 Bad Request 
+2024/11/19 22: 37: 38 CSV setup complete
+2024/11/19 22: 37: 38 OpenAI setup complete
+2024/11/19 22: 37: 38 Chroma setup complete
+2024/11/19 22: 37: 38 SQLite setup complete
+2024/11/19 22: 37: 38 Error creating collection: 400 Bad Request 
+2024/11/19 22: 44: 41 CSV setup complete
+2024/11/19 22: 44: 41 OpenAI setup complete
+2024/11/19 22: 44: 41 Chroma setup complete
+2024/11/19 22: 44: 41 SQLite setup complete
+2024/11/19 22: 44: 41 Error creating collection: 400 Bad Request 
+2024/11/19 22: 44: 49 CSV setup complete
+2024/11/19 22: 44: 49 OpenAI setup complete
+2024/11/19 22: 44: 49 Chroma setup complete
+2024/11/19 22: 44: 49 SQLite setup complete
+2024/11/19 22: 45: 43 Error creating collection: 400 Bad Request 
+2024/11/19 22: 49: 52 CSV setup complete
+2024/11/19 22: 49: 52 OpenAI setup complete
+2024/11/19 22: 49: 52 Chroma setup complete
+2024/11/19 22: 49: 52 SQLite setup complete
+2024/11/19 22: 50: 07 Error getting collection: 400 Bad Request 
+2024/11/19 22: 50: 07 Error getting collection: 400 Bad Request 
+2024/11/19 22: 52: 47 CSV setup complete
+2024/11/19 22: 52: 47 OpenAI setup complete
+2024/11/19 22: 52: 47 Collection InstructorFullNameCollection has 1022 records
+2024/11/19 22: 52: 47 Collection InstructorLastNameCollection has 939 records
+2024/11/19 22: 52: 47 Collection TitleShortDescCollection has 1234 records
+2024/11/19 22: 52: 47 Collection Phil has 1 records
+2024/11/19 22: 52: 47 Collection InstructorFirstNameCollection has 669 records
+2024/11/19 22: 52: 47 Collection SubjectNameCollection has 91 records
+2024/11/19 22: 52: 47 Chroma setup complete
+2024/11/19 22: 52: 47 SQLite setup complete
+2024/11/19 22: 53: 07 Error getting collection: 400 Bad Request 
+2024/11/19 22: 53: 12 CSV setup complete
+2024/11/19 22: 53: 12 OpenAI setup complete
+2024/11/19 22: 53: 12 Collection InstructorFullNameCollection has 1022 records
+2024/11/19 22: 53: 12 Collection InstructorLastNameCollection has 939 records
+2024/11/19 22: 53: 12 Collection TitleShortDescCollection has 1234 records
+2024/11/19 22: 53: 12 Collection Phil has 1 records
+2024/11/19 22: 53: 12 Collection InstructorFirstNameCollection has 669 records
+2024/11/19 22: 53: 12 Collection SubjectNameCollection has 91 records
+2024/11/19 22: 53: 12 Chroma setup complete
+2024/11/19 22: 53: 13 SQLite setup complete
+2024/11/19 22: 53: 13 Error getting collection: 400 Bad Request 
+2024/11/19 22: 53: 13 Error creating collection: 400 Bad Request 
+2024/11/19 23: 02: 13 CSV setup complete
+2024/11/19 23: 02: 13 OpenAI setup complete
+2024/11/19 23: 02: 13 Collection InstructorFullNameCollection has 1022 records
+2024/11/19 23: 02: 13 Collection InstructorLastNameCollection has 939 records
+2024/11/19 23: 02: 13 Collection TitleShortDescCollection has 1234 records
+2024/11/19 23: 02: 13 Collection Phil has 1 records
+2024/11/19 23: 02: 13 Collection InstructorFirstNameCollection has 669 records
+2024/11/19 23: 02: 13 Collection SubjectNameCollection has 91 records
+2024/11/19 23: 02: 13 Chroma setup complete
+2024/11/19 23: 02: 13 SQLite setup complete
+2024/11/19 23: 02: 13 Error getting collection: 400 Bad Request 
+2024/11/19 23: 02: 13 Error getting collection: 400 Bad Request 
+2024/11/19 23: 02: 13 Error creating collection: 400 Bad Request 
+2024/11/19 23: 02: 34 CSV setup complete
+2024/11/19 23: 02: 34 OpenAI setup complete
+2024/11/19 23: 02: 34 Collection InstructorFullNameCollection has 1022 records
+2024/11/19 23: 02: 34 Collection InstructorLastNameCollection has 939 records
+2024/11/19 23: 02: 34 Collection TitleShortDescCollection has 1234 records
+2024/11/19 23: 02: 34 Collection Phil has 1 records
+2024/11/19 23: 02: 34 Collection InstructorFirstNameCollection has 669 records
+2024/11/19 23: 02: 34 Collection SubjectNameCollection has 91 records
+2024/11/19 23: 02: 34 Chroma setup complete
+2024/11/19 23: 02: 34 SQLite setup complete
+2024/11/19 23: 02: 34 Error getting collection: 400 Bad Request 
+2024/11/19 23: 02: 34 Error creating collection: 400 Bad Request 
+2024/11/19 23: 04: 02 CSV setup complete
+2024/11/19 23: 04: 02 OpenAI setup complete
+2024/11/19 23: 04: 05 Chroma setup complete
+2024/11/19 23: 04: 05 SQLite setup complete
+2024/11/19 23:05:07 CSV setup complete
+2024/11/19 23:05:07 OpenAI setup complete
+2024/11/19 23:05:07 Chroma setup complete
+2024/11/19 23:05:07 SQLite setup complete
+2024/11/19 23:05:24 Error getting collection: 400 Bad Request 
+2024/11/19 23:05:29 Error getting collection: 400 Bad Request 
+2024/11/19 23:05:29 Error getting collection: 400 Bad Request 
+2024/11/19 23:05:29 Error creating collection: 400 Bad Request 
+2024/11/19 23:07:30 CSV setup complete
+2024/11/19 23:07:30 OpenAI setup complete
+2024/11/19 23:07:31 Chroma setup complete
+2024/11/19 23:07:31 SQLite setup complete
+2024/11/19 23:07:43 Error getting collection: 400 Bad Request 
+2024/11/19 23:07:58 CSV setup complete
+2024/11/19 23:07:58 OpenAI setup complete
+2024/11/19 23:07:58 Chroma setup complete
+2024/11/19 23:07:59 SQLite setup complete
+2024/11/19 23:07:59 Error getting collection: 400 Bad Request 
+2024/11/19 23:07:59 Error getting collection: 400 Bad Request 
+2024/11/19 23:07:59 Error getting collection: 400 Bad Request 
+2024/11/19 23:07:59 Error getting collection: 400 Bad Request 
+2024/11/19 23:07:59 Error getting collection: 400 Bad Request 
+2024/11/19 23:08:01 Created collection with 91 records in 2.53s
+2024/11/19 23:08:01 91 documents in 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206
+2024/11/19 23:08:13 Created collection with 669 records in 14.19s
+2024/11/19 23:08:21 Created collection with 939 records in 21.95s
+2024/11/19 23:08:23 Created collection with 1022 records in 24.65s
+2024/11/19 23:08:27 Created collection with 1234 records in 28.11s
+2024/11/19 23:08:27 Collections setup complete
+2024/11/19 23:08:27 Setup complete in 28.96s
+2024/11/19 23:08:40 What courses are there with Phil Peterson in Fall 2024?
+2024/11/19 23:08:42 Original Filter: Names: [Phil Peterson],
+2024/11/19 23:08:43 Queried "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075" for "Phil Peterson" in 0.61s
+2024/11/19 23:08:43 Result Full: [Philip Peterson]
+2024/11/19 23:08:43 Queried "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e" for "Phil Peterson" in 0.42s
+2024/11/19 23:08:43 Result First: [Peter]
+2024/11/19 23:08:43 Queried "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c" for "Phil Peterson" in 0.26s
+2024/11/19 23:08:43 Result Last: [Peterson]
+2024/11/19 23:08:43 Error getting collection: 400 Bad Request 
+2024/11/19 23:08:44 Created collection with 3 records in 0.48s
+2024/11/19 23:08:44 Queried "02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9" for "Phil Peterson" in 0.26s
+2024/11/19 23:08:44 Corrected Filter: Names: [Philip Peterson],
+2024/11/19 23:09:40 What courses are there in section 4?
+2024/11/19 23:09:42 Original Filter: Sections: [4],
+2024/11/19 23:09:42 Corrected Filter: Sections: [4],
+2024/11/19 23:10:00 What courses are there with section 004?
+2024/11/19 23:10:01 Original Filter: Sections: [004],
+2024/11/19 23:10:01 Corrected Filter: Sections: [004],
+2024/11/19 23:11:17 What courses are there with Phil Peterson in Fall 2024?
+2024/11/19 23:11:19 Original Filter: Names: [Phil Peterson],
+2024/11/19 23:11:19 Queried "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075" for "Phil Peterson" in 0.24s
+2024/11/19 23:11:19 Result Full: [Philip Peterson]
+2024/11/19 23:11:19 Queried "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e" for "Phil Peterson" in 0.36s
+2024/11/19 23:11:19 Result First: [Peter]
+2024/11/19 23:11:19 Queried "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c" for "Phil Peterson" in 0.18s
+2024/11/19 23:11:19 Result Last: [Peterson]
+2024/11/19 23:11:19 Collection 02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9 already exists
+2024/11/19 23:11:19 Collection 02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9 already exists with matching records
+2024/11/19 23:11:19 Created collection with 3 records in 0.01s
+2024/11/19 23:11:20 Queried "02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9" for "Phil Peterson" in 0.38s
+2024/11/19 23:11:20 Corrected Filter: Names: [Philip Peterson],
+2024/11/19 23:11:43 What courses are there for philosophy this semester?
+2024/11/19 23:11:45 Original Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy],
+2024/11/19 23:11:45 Corrected Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy Philosophy],
+2024/11/19 23:12:58 CSV setup complete
+2024/11/19 23:12:58 OpenAI setup complete
+2024/11/19 23:12:58 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 has 1234 records
+2024/11/19 23:12:58 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e has 669 records
+2024/11/19 23:12:58 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c has 939 records
+2024/11/19 23:12:58 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 has 1022 records
+2024/11/19 23:12:58 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 has 91 records
+2024/11/19 23:12:58 Collection 02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9 has 3 records
+2024/11/19 23:12:58 Chroma setup complete
+2024/11/19 23:12:58 SQLite setup complete
+2024/11/19 23:12:58 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists
+2024/11/19 23:12:58 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists with matching records
+2024/11/19 23:12:58 Created collection with 91 records in 0.01s
+2024/11/19 23:12:58 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists
+2024/11/19 23:12:58 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists with matching records
+2024/11/19 23:12:58 Created collection with 939 records in 0.03s
+2024/11/19 23:12:58 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists
+2024/11/19 23:12:58 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists with matching records
+2024/11/19 23:12:58 Created collection with 1234 records in 0.03s
+2024/11/19 23:12:58 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists
+2024/11/19 23:12:58 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists with matching records
+2024/11/19 23:12:58 Created collection with 669 records in 0.04s
+2024/11/19 23:12:58 91 documents in 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206
+2024/11/19 23:12:58 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists
+2024/11/19 23:12:58 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists with matching records
+2024/11/19 23:12:58 Created collection with 1022 records in 0.09s
+2024/11/19 23:12:58 Collections setup complete
+2024/11/19 23:12:58 Setup complete in 0.51s
+2024/11/19 23:13:23 What courses are there for Philosophy this semester?
+2024/11/19 23:13:24 Original Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy],
+2024/11/19 23:13:24 Corrected Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy Philosophy],
+2024/11/19 23:13:24 Found 0 courses
+2024/11/19 23:14:40 What courses are there related to logging and programming?
+2024/11/19 23:14:42 Original Filter: SubjectCodes: [CS],SubjectNames: [Computer Science],
+2024/11/19 23:14:42 Corrected Filter: SubjectCodes: [CS],SubjectNames: [Computer Science Computer Science],
+2024/11/19 23:14:42 Found 0 courses
+2024/11/19 23:14:59 CSV setup complete
+2024/11/19 23:14:59 OpenAI setup complete
+2024/11/19 23:14:59 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 has 1234 records
+2024/11/19 23:14:59 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e has 669 records
+2024/11/19 23:14:59 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c has 939 records
+2024/11/19 23:14:59 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 has 1022 records
+2024/11/19 23:14:59 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 has 91 records
+2024/11/19 23:14:59 Collection 02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9 has 3 records
+2024/11/19 23:14:59 Chroma setup complete
+2024/11/19 23:14:59 SQLite setup complete
+2024/11/19 23:14:59 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists
+2024/11/19 23:14:59 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists with matching records
+2024/11/19 23:14:59 Created collection with 91 records in 0.02s
+2024/11/19 23:14:59 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists
+2024/11/19 23:14:59 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists with matching records
+2024/11/19 23:14:59 Created collection with 939 records in 0.02s
+2024/11/19 23:14:59 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists
+2024/11/19 23:14:59 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists with matching records
+2024/11/19 23:14:59 Created collection with 669 records in 0.03s
+2024/11/19 23:14:59 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists
+2024/11/19 23:14:59 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists with matching records
+2024/11/19 23:14:59 Created collection with 1234 records in 0.03s
+2024/11/19 23:14:59 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists
+2024/11/19 23:14:59 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists with matching records
+2024/11/19 23:14:59 Created collection with 1022 records in 0.03s
+2024/11/19 23:14:59 91 documents in 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206
+2024/11/19 23:14:59 Collections setup complete
+2024/11/19 23:14:59 Setup complete in 0.45s
+2024/11/19 23:15:01 What courses are available?
+2024/11/19 23:15:02 Original Filter: 
+2024/11/19 23:15:02 Corrected Filter: 
+2024/11/19 23:15:02 Found 2740 courses
+2024/11/19 23:15:20 CSV setup complete
+2024/11/19 23:15:20 OpenAI setup complete
+2024/11/19 23:15:20 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 has 1234 records
+2024/11/19 23:15:20 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e has 669 records
+2024/11/19 23:15:20 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c has 939 records
+2024/11/19 23:15:20 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 has 1022 records
+2024/11/19 23:15:20 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 has 91 records
+2024/11/19 23:15:20 Collection 02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9 has 3 records
+2024/11/19 23:15:20 Chroma setup complete
+2024/11/19 23:15:20 SQLite setup complete
+2024/11/19 23:15:21 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists
+2024/11/19 23:15:21 Collection 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206 already exists with matching records
+2024/11/19 23:15:21 Created collection with 91 records in 0.01s
+2024/11/19 23:15:21 91 documents in 217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206
+2024/11/19 23:15:21 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists
+2024/11/19 23:15:21 Collection 979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075 already exists with matching records
+2024/11/19 23:15:21 Created collection with 1022 records in 0.13s
+2024/11/19 23:15:21 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists
+2024/11/19 23:15:21 Collection 28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e already exists with matching records
+2024/11/19 23:15:21 Created collection with 669 records in 0.13s
+2024/11/19 23:15:21 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists
+2024/11/19 23:15:21 Collection 4023d2e290d00383ed44b6d3d9d8fd37a2dd9ef2696e3db839e14c2b3a7c87 already exists with matching records
+2024/11/19 23:15:21 Created collection with 1234 records in 0.13s
+2024/11/19 23:15:21 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists
+2024/11/19 23:15:21 Collection a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c already exists with matching records
+2024/11/19 23:15:21 Created collection with 939 records in 0.14s
+2024/11/19 23:15:21 Collections setup complete
+2024/11/19 23:15:21 Setup complete in 0.49s
+2024/11/19 23:15:25 What courses are there for Philosophy this semester?
+2024/11/19 23:15:27 Original Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy],
+2024/11/19 23:15:27 Corrected Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy Philosophy],
+2024/11/19 23:15:27 Found 33 courses

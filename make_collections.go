@@ -1,7 +1,9 @@
 package main
 
 import (
+	"context"
 	"fmt"
+	"log"
 	"sync"
 
 	chroma "github.com/amikos-tech/chroma-go"
@@ -21,6 +23,7 @@ type collections struct {
 }
 
 func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
+	defer log.Println("Collections setup complete")
 	subjectNameRecords := make([]string, 0, len(courseSubjects))
 	for _, subject := range courseSubjects {
 		subjectNameRecords = append(subjectNameRecords, subject)
@@ -50,15 +53,20 @@ func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
 
 	go func() {
 		defer wg.Done()
-		subjectNameCollection, err = db.makeCollectionWithRecords("SubjectNameCollection", subjectNameRecords)
+		subjectNameCollection, err = db.makeCollectionWithRecords(subjectNameRecords)
 		if err != nil {
 			err = fmt.Errorf("failed to create SubjectNameCollection: %v", err)
 		}
+		collectionGet, err := subjectNameCollection.Get(context.TODO(), nil, nil, nil, nil)
+		if err != nil {
+			log.Printf("failed to get from SubjectNameCollection: %v", err)
+		}
+		log.Printf("%v documents in %s", len(collectionGet.Documents), subjectNameCollection.Name)
 	}()
 
 	go func() {
 		defer wg.Done()
-		titleShortDescCollection, err = db.makeCollectionWithRecords("TitleShortDescCollection", titleShortDescRecords)
+		titleShortDescCollection, err = db.makeCollectionWithRecords(titleShortDescRecords)
 		if err != nil {
 			err = fmt.Errorf("failed to create TitleShortDescCollection: %v", err)
 		}
@@ -66,7 +74,7 @@ func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
 
 	go func() {
 		defer wg.Done()
-		instructorFirstNameCollection, err = db.makeCollectionWithRecords("InstructorFirstNameCollection", instructorFirstNameRecords)
+		instructorFirstNameCollection, err = db.makeCollectionWithRecords(instructorFirstNameRecords)
 		if err != nil {
 			err = fmt.Errorf("failed to create InstructorFirstNameCollection: %v", err)
 		}
@@ -74,7 +82,7 @@ func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
 
 	go func() {
 		defer wg.Done()
-		instructorLastNameCollection, err = db.makeCollectionWithRecords("InstructorLastNameCollection", instructorLastNameRecords)
+		instructorLastNameCollection, err = db.makeCollectionWithRecords(instructorLastNameRecords)
 		if err != nil {
 			err = fmt.Errorf("failed to create InstructorLastNameCollection: %v", err)
 		}
@@ -82,7 +90,7 @@ func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
 
 	go func() {
 		defer wg.Done()
-		instructorFullNameCollection, err = db.makeCollectionWithRecords("InstructorFullNameCollection", instructorFullNameRecords)
+		instructorFullNameCollection, err = db.makeCollectionWithRecords(instructorFullNameRecords)
 		if err != nil {
 			err = fmt.Errorf("failed to create InstructorFullNameCollection: %v", err)
 		}
