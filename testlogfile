@@ -2666,3 +2666,113 @@ CourseFilter: Names: [Sam Mickey
 2024/11/19 23:15:27 Original Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy],
 2024/11/19 23:15:27 Corrected Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy Philosophy],
 2024/11/19 23:15:27 Found 33 courses
+2024/11/20 00:01:32 CSV setup complete
+2024/11/20 00:01:32 OpenAI setup complete
+2024/11/20 00:01:32 Chroma setup complete
+2024/11/20 00:01:32 SQLite setup complete
+2024/11/20 00:01:32 Found "217fc" with 91 records in 0.07s
+2024/11/20 00:01:32 Found "4023d" with 1234 records in 0.08s
+2024/11/20 00:01:32 Found "979bc" with 1022 records in 0.08s
+2024/11/20 00:01:32 Found "a07be" with 939 records in 0.08s
+2024/11/20 00:01:32 Found "28370" with 669 records in 0.08s
+2024/11/20 00:01:32 Collections setup complete
+2024/11/20 00:01:32 Setup complete in 0.28s
+2024/11/20 00:01:47 Original Filter: Names: [Phil Peterson],
+2024/11/20 00:01:47 Queried "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075" for "Phil Peterson" in 0.49s
+2024/11/20 00:01:47 Result Full: [Philip Peterson]
+2024/11/20 00:01:48 Queried "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e" for "Phil Peterson" in 0.70s
+2024/11/20 00:01:48 Result First: [Peter]
+2024/11/20 00:01:48 Queried "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c" for "Phil Peterson" in 0.48s
+2024/11/20 00:01:48 Result Last: [Peterson]
+2024/11/20 00:01:48 Found "02deb" with 3 records in 0.01s
+2024/11/20 00:01:49 Queried "02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9" for "Phil Peterson" in 0.49s
+2024/11/20 00:01:49 Corrected Filter: Names: [Philip Peterson],
+2024/11/20 00:01:49 Found 4 courses in 3.603836.2
+2024/11/20 00:03:42 CSV setup complete
+2024/11/20 00:03:42 OpenAI setup complete
+2024/11/20 00:03:42 Chroma setup complete
+2024/11/20 00:03:43 SQLite setup complete
+2024/11/20 00:03:43 Found "217fc" with 91 records in 0.13s
+2024/11/20 00:03:43 Found "28370" with 669 records in 0.13s
+2024/11/20 00:03:43 Found "a07be" with 939 records in 0.14s
+2024/11/20 00:03:43 Found "979bc" with 1022 records in 0.14s
+2024/11/20 00:03:43 Found "4023d" with 1234 records in 0.14s
+2024/11/20 00:03:43 Collections setup complete
+2024/11/20 00:03:43 Setup complete in 0.46s
+2024/11/20 00:03:50 get_courses("Phil Peterson teaching courses Fall 2024")
+2024/11/20 00:03:52 Original Filter: Names: [Phil Peterson],
+2024/11/20 00:03:52 Queried "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075" for "Phil Peterson" in 0.77s
+2024/11/20 00:03:52 Result Full: [Philip Peterson]
+2024/11/20 00:03:53 Queried "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e" for "Phil Peterson" in 0.24s
+2024/11/20 00:03:53 Result First: [Peter]
+2024/11/20 00:03:53 Queried "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c" for "Phil Peterson" in 0.64s
+2024/11/20 00:03:53 Result Last: [Peterson]
+2024/11/20 00:03:53 Found "02deb" with 3 records in 0.00s
+2024/11/20 00:03:54 Queried "02deb1fbc42e98027172e43b24f087c93f701a0e6d044069b82050597af4d9" for "Phil Peterson" in 0.30s
+2024/11/20 00:03:54 Corrected Filter: Names: [Philip Peterson],
+2024/11/20 00:03:54 Found 4 courses in 3.491176.2
+2024/11/20 00:04:21 get_courses("Philosophy courses offered this semester")
+2024/11/20 00:04:22 Original Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy],
+2024/11/20 00:04:22 Corrected Filter: SubjectCodes: [PHIL],SubjectNames: [Philosophy Philosophy],
+2024/11/20 00:04:22 Found 33 courses in 1.508657.2
+2024/11/20 00:05:04 CSV setup complete
+2024/11/20 00:05:04 OpenAI setup complete
+2024/11/20 00:05:04 Chroma setup complete
+2024/11/20 00:05:04 SQLite setup complete
+2024/11/20 00:05:04 Found "217fc" with 91 records in 0.07 seconds
+2024/11/20 00:05:04 Found "a07be" with 939 records in 0.08 seconds
+2024/11/20 00:05:04 Found "28370" with 669 records in 0.08 seconds
+2024/11/20 00:05:04 Found "979bc" with 1022 records in 0.08 seconds
+2024/11/20 00:05:04 Found "4023d" with 1234 records in 0.09 seconds
+2024/11/20 00:05:04 Collections setup complete
+2024/11/20 00:05:04 Setup complete in 0.37s
+2024/11/20 00:05:14 get_courses("Bioinformatics")
+2024/11/20 00:05:15 Original Filter: SubjectNames: [Bioinformatics],
+2024/11/20 00:05:15 Queried "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206" for "Bioinformatics" in 0.15s
+2024/11/20 00:05:15 Corrected Filter: SubjectNames: [Biotechnology],
+2024/11/20 00:05:15 Found 18 courses in 1.486255.2
+2024/11/20 00:05:41 get_courses("guitar")
+2024/11/20 00:05:43 Original Filter: 
+2024/11/20 00:05:43 Corrected Filter: 
+2024/11/20 00:05:43 Found 2740 courses in 1.605997.2
+2024/11/20 00:05:44 Error creating chat completion: POST "https://api.openai.com/v1/chat/completions": 400 Bad Request {
+  "error": {
+    "message": "Invalid 'messages[2].content[0].text': string too long. Expected a string with maximum length 1048576, but got a string with length 1830382 instead.",
+    "type": "invalid_request_error",
+    "param": "messages[2].content[0].text",
+    "code": "string_above_max_length"
+  }
+}
+2024/11/20 00:06:01 get_courses("guitar classes")
+2024/11/20 00:06:02 Original Filter: SubjectNames: [guitar classes],
+2024/11/20 00:06:02 Queried "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206" for "guitar classes" in 0.43s
+2024/11/20 00:06:02 Corrected Filter: SubjectNames: [Music],
+2024/11/20 00:06:02 Found 25 courses in 1.860530.2
+2024/11/20 00:06:29 get_courses("Rhetoric course with Phil Choong")
+2024/11/20 00:06:30 Original Filter: SubjectNames: [Rhetoric],Names: [Phil Choong],
+2024/11/20 00:06:31 Queried "217fc347a4022aa5c8c23133833a38d1eafacb37bb6e23a1e97ee8fa6d8206" for "Rhetoric" in 0.26s
+2024/11/20 00:06:31 Queried "979bc448651e8d3ca4894493c91edc86061bfc4be42b30d2cd3510b3935075" for "Phil Choong" in 0.37s
+2024/11/20 00:06:31 Result Full: [Philip Choong]
+2024/11/20 00:06:31 Queried "28370eab8cfc09c14759dcf68f05dbd03adc3a398132e4fa49c160b7c0993e" for "Phil Choong" in 0.27s
+2024/11/20 00:06:31 Result First: [Liang]
+2024/11/20 00:06:32 Queried "a07be8f108f9c8ba12f14efdefc4407d87393a78d84aa8f4ed0c8e6426a89c" for "Phil Choong" in 0.50s
+2024/11/20 00:06:32 Result Last: [Choong]
+2024/11/20 00:06:32 Found "90395" with 3 records in 0.01 seconds
+2024/11/20 00:06:32 Queried "9039535a579e2a855e4c18e86ac0aeca203ac7125bbe5c343a013851044be4" for "Phil Choong" in 0.50s
+2024/11/20 00:06:32 Corrected Filter: SubjectNames: [Rhetoric and Composition],Names: [Philip Choong],
+2024/11/20 00:06:32 Found 4 courses in 2.987200.2
+2024/11/20 00:08:34 CSV setup complete
+2024/11/20 00:08:34 OpenAI setup complete
+2024/11/20 00:08:34 Chroma setup complete
+2024/11/20 00:08:34 SQLite setup complete
+2024/11/20 00:08:34 Found "a07be" with 939 records in 0.08 seconds
+2024/11/20 00:08:34 Found "4023d" with 1234 records in 0.08 seconds
+2024/11/20 00:08:34 Found "28370" with 669 records in 0.08 seconds
+2024/11/20 00:08:34 Found "979bc" with 1022 records in 0.09 seconds
+2024/11/20 00:08:34 Found "217fc" with 91 records in 0.09 seconds
+2024/11/20 00:08:34 Collections setup complete
+2024/11/20 00:08:34 Setup complete in 0.35s
+2024/11/20 00:08:59 get_courses("Classes in Computer Science taught by Alark")
+2024/11/20 00:09:00 Original Filter: SubjectCodes: [CS],SubjectNames: [Computer Science],Names: [Alark],
+2024/11/20 00:09:00 Corrected Filter: SubjectCodes: [CS],SubjectNames: [Computer Science Computer Science],Names: [Alark],
+2024/11/20 00:09:00 Found 2 courses in 1.537946.2

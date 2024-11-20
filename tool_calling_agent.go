@@ -25,11 +25,11 @@ func toolCallingAgent(setup Setup, prompt string) string {
 					Parameters: openai.F(openai.FunctionParameters{
 						"type": "object",
 						"properties": map[string]interface{}{
-							"location": map[string]string{
+							"prompt": map[string]string{
 								"type": "string",
 							},
 						},
-						"required": []string{"location"},
+						"required": []string{"prompt"},
 					}),
 				}),
 			},
@@ -55,16 +55,18 @@ func toolCallingAgent(setup Setup, prompt string) string {
 	params.Messages.Value = append(params.Messages.Value, completion.Choices[0].Message)
 	for _, toolCall := range toolCalls {
 		if toolCall.Function.Name == "get_courses" {
-			// Extract the location from the function call arguments
+			// Extract the prompt from the function call arguments
 			var args map[string]interface{}
 			if err := json.Unmarshal([]byte(toolCall.Function.Arguments), &args); err != nil {
 				log.Printf("Error unmarshalling arguments: %v", err)
 				continue
 			}
-			location := args["location"].(string)
+			prompt := args["prompt"].(string)
+
+			log.Printf("%v(\"%s\")", toolCalls[0].Function.Name, prompt)
 
 			// Call the getCourses function with the arguments requested by the model
-			courses, err := getCourses(&setup, location)
+			courses, err := getCourses(&setup, prompt)
 			if err != nil {
 				log.Printf("Error getting courses: %v", err)
 				continue

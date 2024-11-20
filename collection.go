@@ -86,7 +86,7 @@ func (d *chromaDB) makeCollectionWithRecords(records []string) (*chroma.Collecti
 
 	collection, existed := d.getOrCreateCollection(name)
 	if existed {
-		log.Printf("Found \"%s\" with %v records in %.2fs", name[:5], len(records), time.Since(startTime).Seconds())
+		log.Printf("Found \"%s\" with %v records in %.2f seconds", name[:5], len(records), time.Since(startTime).Seconds())
 		return collection, nil
 	}
 
