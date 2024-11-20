@@ -15,7 +15,7 @@ import (
 func (d *chromaDB) getOrCreateCollection(name string) (*chroma.Collection, bool) {
 	existingCollection, err := d.client.GetCollection(context.TODO(), name, d.openaiEf)
 	if err != nil {
-		log.Printf("Error getting collection: %s \n", err)
+		log.Printf("Error getting collection: %s ; Making new one\n", err)
 	} else {
 		return existingCollection, true
 	}

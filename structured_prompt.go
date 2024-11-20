@@ -11,20 +11,22 @@ import (
 
 // A struct that will be converted to a Structured Outputs response schema
 type IsSimilar struct {
-	IsSimilar bool `json:"isSimilar" jsonschema_description:"If the two texts give similar information"`
+	IsSimilar bool   `json:"isSimilar" jsonschema_description:"If the two texts convey similar information"`
+	Reasoning string `json:"reasoning" jsonschema_description:"The reasoning behind the similarity determination"`
 }
 
 // Generate the JSON schema at initialization time
-var IsSimilarResponseSchema = GenerateSchema[IsSimilar]()
 
-func isSimilar(setup Setup, text1, text2 string) bool {
+func isSimilar(setup Setup, text1, text2 string) (bool, string) {
+	var IsSimilarResponseSchema = GenerateSchema[IsSimilar]()
+
 	schemaParam := openai.ResponseFormatJSONSchemaJSONSchemaParam{
-		Name:        openai.F("similarity"),
+		Name:        openai.F("is_similar"),
 		Description: openai.F("whether two texts are similar"),
 		Schema:      openai.F(IsSimilarResponseSchema),
 		Strict:      openai.Bool(true),
 	}
-	isSimilarPrompt := fmt.Sprintf("Is the following text similar to the following text?\n\nText 1: %s\n\nText 2: %s", text1, text2)
+	isSimilarPrompt := fmt.Sprintf("Do the following texts convey the same information?\n\nText 1: %s\n\nText 2: %s", text1, text2)
 	// Query the Chat Completions API
 	chat, err := setup.openAIClient.client.Chat.Completions.New(context.TODO(), openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{
@@ -51,7 +53,7 @@ func isSimilar(setup Setup, text1, text2 string) bool {
 		panic(err.Error())
 	}
 
-	return similarity.IsSimilar
+	return similarity.IsSimilar, similarity.Reasoning
 }
 
 func (openAIClient *OpenAIClient) GetCourseFilter(prompt, systemPrompt string) CourseFilter {
