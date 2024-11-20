@@ -17,7 +17,6 @@ func (d *chromaDB) getOrCreateCollection(name string) (*chroma.Collection, bool)
 	if err != nil {
 		log.Printf("Error getting collection: %s \n", err)
 	} else {
-		log.Printf("Collection %s already exists", name)
 		return existingCollection, true
 	}
 
@@ -60,10 +59,6 @@ func hashStrings(records []string) string {
 
 func (d *chromaDB) makeCollectionWithRecords(records []string) (*chroma.Collection, error) {
 	startTime := time.Now()
-	defer func() {
-		log.Printf("Created collection with %v records in %.2fs", len(records), time.Since(startTime).Seconds())
-	}()
-
 	name := hashStrings(records)
 
 	batchSize := 1000
@@ -91,7 +86,7 @@ func (d *chromaDB) makeCollectionWithRecords(records []string) (*chroma.Collecti
 
 	collection, existed := d.getOrCreateCollection(name)
 	if existed {
-		log.Printf("Collection %s already exists with matching records", name)
+		log.Printf("Found \"%s\" with %v records in %.2fs", name[:5], len(records), time.Since(startTime).Seconds())
 		return collection, nil
 	}
 
@@ -114,6 +109,7 @@ func (d *chromaDB) makeCollectionWithRecords(records []string) (*chroma.Collecti
 			log.Fatalf("Error adding documents: %s \n", err)
 		}
 	}
+	log.Printf("Created \"%s\" with %v records in %.2fs", name[:5], len(records), time.Since(startTime).Seconds())
 	return collection, nil
 }
 

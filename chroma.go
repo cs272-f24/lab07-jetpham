@@ -34,19 +34,6 @@ func newChroma() (*chromaDB, error) {
 		return nil, fmt.Errorf("error creating OpenAI embedding function: %s", err)
 	}
 
-	collections, err := client.ListCollections(context.TODO())
-	if err != nil {
-		return nil, fmt.Errorf("error listing collections: %s", err)
-	}
-
-	for _, collection := range collections {
-		records, err := collection.Get(context.TODO(), nil, nil, nil, nil)
-		if err != nil {
-			return nil, fmt.Errorf("error getting records from collection: %s", err)
-		}
-		log.Printf("Collection %s has %d records", collection.Name, len(records.Documents))
-	}
-
 	return &chromaDB{
 		ctx:      ctx,
 		openaiEf: openaiEf,

@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -30,26 +29,7 @@ func main() {
 		if prompt == "exit" {
 			break
 		}
-		courses, err := getCourses(&setup, prompt)
-		if err != nil {
-			fmt.Println("Error getting courses:", err)
-			continue
-		}
-		log.Printf("Found %d courses", len(courses))
-		fmt.Printf("Found %d courses: \n", len(courses))
-		for _, course := range courses {
-			fmt.Println(course)
-		}
-		coursesJSON, err := json.MarshalIndent(courses, "", "  ")
-		if err != nil {
-			fmt.Println("Error marshalling courses to JSON:", err)
-			continue
-		}
-		systemPrompt := "Answer the prompt with the courses, Don't repeat the courses if not necessary\n"
-		output, err := setup.openAIClient.CreateCompletion("Prompt: "+prompt+"\nCourses:\n"+string(coursesJSON), systemPrompt)
-		if err != nil {
-			fmt.Println("Error creating completion:", err)
-		}
+		output := toolCallingAgent(setup, prompt)
 		fmt.Println(output)
 	}
 }

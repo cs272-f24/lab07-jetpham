@@ -3,26 +3,15 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 )
 
 func getCourses(setup *Setup, prompt string) ([]Course, error) {
-	enhancingPrompt := `
-		phrase this into a prompt that is asking about courses for example:
-		"Can I learn guitar this semester?" would be phrased as "What courses are there about guitar?"
-		"Where does Bioinformatics meet?" would be phrased as "What courses are there for Bioinformatics?"
-		"I would like to take a Rhetoric course from Phil Choong. What can I take?" would be phrased as "What courses are there for Rhetoric with Phil Choong?"
-		"Can I take a course on the weekends?" would be phrased as "What courses are there that meet on the weekends?"
-		`
-	enhancedPrompt, err := setup.openAIClient.CreateCompletion(prompt, enhancingPrompt)
-
-	if err != nil {
-		return nil, err
-	}
-	log.Println(enhancedPrompt)
+	start := time.Now()
 	filterPrompt := `
 		extract information from the prompt int o course filter. Only inlude information that is explicitly in the prompt and not inferred.
 		`
-	courseFilter := setup.openAIClient.GetCourseFilter(enhancedPrompt, filterPrompt)
+	courseFilter := setup.openAIClient.GetCourseFilter(prompt, filterPrompt)
 	log.Printf("Original %s", courseFilter)
 
 	correctedFilter := setup.chromaDB.correctCourseFilter(setup.collections, courseFilter)
@@ -33,5 +22,8 @@ func getCourses(setup *Setup, prompt string) ([]Course, error) {
 		fmt.Println("Error filtering courses:", err)
 		return nil, err
 	}
+
+	log.Printf("Found %v courses in %f.2", len(filteredCourses), time.Since(start).Seconds())
+
 	return filteredCourses, nil
 }

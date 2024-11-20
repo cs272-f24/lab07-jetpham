@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"log"
 	"sync"
@@ -57,11 +56,6 @@ func makeCollections(db *chromaDB, courses []Course) (*collections, error) {
 		if err != nil {
 			err = fmt.Errorf("failed to create SubjectNameCollection: %v", err)
 		}
-		collectionGet, err := subjectNameCollection.Get(context.TODO(), nil, nil, nil, nil)
-		if err != nil {
-			log.Printf("failed to get from SubjectNameCollection: %v", err)
-		}
-		log.Printf("%v documents in %s", len(collectionGet.Documents), subjectNameCollection.Name)
 	}()
 
 	go func() {
