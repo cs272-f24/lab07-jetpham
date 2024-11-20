@@ -35,4 +35,4 @@ jobs:
       uses: cs272-0304-f23/action-go-grade@v0.3.4
       if: always()
       with:
-        rubricUrl: 'https://cs272-f24.github.io/rubric/lab06.json'
+        rubricUrl: 'https://raw.githubusercontent.com/cs272-f24/lab07-jetpham/refs/heads/dev/.github/workflows/lab07.json?token=GHSAT0AAAAAACWRQBZJWI4VUDJWLCTKIX76ZZ5T3ZQ'
