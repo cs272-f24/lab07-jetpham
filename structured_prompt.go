@@ -39,7 +39,7 @@ func isSimilar(setup Setup, text1, text2 string) (bool, string) {
 			},
 		),
 		// Only certain models can perform structured outputs
-		Model: openai.F(openai.ChatModelGPT4o2024_08_06),
+		Model: openai.F(openai.ChatModelGPT4oMini),
 	})
 
 	if err != nil {

@@ -35,7 +35,7 @@ func toolCallingAgent(setup Setup, prompt string) string {
 				}),
 			},
 		}),
-		Model: openai.F(openai.ChatModelGPT4o),
+		Model: openai.F(openai.ChatModelGPT4oMini),
 	}
 
 	completion, err := setup.openAIClient.client.Chat.Completions.New(context.TODO(), params)
