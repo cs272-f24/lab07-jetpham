@@ -26,7 +26,28 @@ func isSimilar(setup Setup, text1, text2 string) (bool, string) {
 		Schema:      openai.F(IsSimilarResponseSchema),
 		Strict:      openai.Bool(true),
 	}
-	isSimilarPrompt := fmt.Sprintf("Do the following texts convey the same information?\n\nText 1: %s\n\nText 2: %s", text1, text2)
+	format := `
+		"Compare the following two texts and determine if they discuss the same topic and convey a similar overarching idea. The comparison should focus on the general subject matter and intent, rather than on identical wording or formatting. Return 'True' if the texts discuss the same general topic and convey similar core messages, even if some details differ slightly or the presentation varies. Return 'False' if the texts discuss completely different subjects or convey distinctly different ideas."
+
+		Instructions:
+
+		1. Analyze both texts to identify the main topic or subject each one is addressing.
+		2. Evaluate the overall intent or message each text is trying to communicate.
+		3. Consider the broader themes and concepts rather than focusing on specific details or wording.
+		4. Determine if both texts are centered around the same general idea or intent.
+		5. Provide an explanation for your determination, highlighting key points of similarity or difference.
+
+		Example:
+
+		Text A: "The city's initiative to plant more trees has positively impacted air quality and reduced noise pollution, making urban living more sustainable."
+
+		Text B: "Implementing green spaces within urban environments not only enhances air quality but also serves as a natural sound barrier, contributing to a more livable city."
+
+		Expected Output:
+
+		True - Both texts discuss the positive impact of urban greening initiatives on air quality and noise reduction, conveying a similar idea of sustainable urban living.
+	`
+	isSimilarPrompt := fmt.Sprintf("%s?\n\nText 1: %s\n\nText 2: %s", format, text1, text2)
 	// Query the Chat Completions API
 	chat, err := setup.openAIClient.client.Chat.Completions.New(context.TODO(), openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{

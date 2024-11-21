@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "auto",
             "program": "${workspaceFolder}",
-            "console": "externalTerminal",
+            "console": "integratedTerminal",
             "preLaunchTask": "clearTerminal"
         }
     ]

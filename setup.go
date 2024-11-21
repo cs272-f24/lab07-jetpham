@@ -35,6 +35,9 @@ func newSetup() (Setup, error) {
 		log.Println("Using OPENAI_API_KEY from environment")
 	}
 
+	// prevent timeouts with openai
+	os.Setenv("MODULES_CLIENT_TIMEOUT", "2m")
+
 	courses, err := loadCSV("Fall 2024 Class Schedule.csv")
 	if err != nil {
 		fmt.Println("Error loading CSV file:", err)

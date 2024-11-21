@@ -13,8 +13,12 @@ func toolCallingAgent(setup Setup, prompt string) string {
 	// using the official example:
 	//https://github.com/openai/openai-go/blob/main/examples/chat-completion-tool-calling/main.go
 
+	systemPrompt := `
+		You are a Retrieval Augmented Generation model that assists university students using course information.
+	`
 	params := openai.ChatCompletionNewParams{
 		Messages: openai.F([]openai.ChatCompletionMessageParamUnion{
+			openai.SystemMessage(systemPrompt),
 			openai.UserMessage(prompt),
 		}),
 		Tools: openai.F([]openai.ChatCompletionToolParam{
@@ -51,8 +55,8 @@ func toolCallingAgent(setup Setup, prompt string) string {
 		log.Printf("No function call")
 		return completion.Choices[0].Message.Content
 	} else {
-		log.Printf("Function call: %v", toolCalls[0].Function.Name)
-		fmt.Printf("Function call: %v", toolCalls[0].Function.Name)
+		log.Printf("Function call: %v\n", toolCalls[0].Function.Name)
+		fmt.Printf("Function call: %v\n", toolCalls[0].Function.Name)
 	}
 
 	// If there was tool calls, continue
@@ -80,6 +84,24 @@ func toolCallingAgent(setup Setup, prompt string) string {
 		}
 	}
 
+	params.Messages.Value = append(params.Messages.Value, openai.SystemMessage(`
+		Task: Generate an answer that corresponds to the provided question, mimicking the question's structure and format. Ensure the response is succinct, directly relevant to the query, and excludes any extraneous details.
+
+		Reponce Format:
+			[answer to the question]
+			cited courses:
+			[course details]
+			
+		Course Details: If relevant courses are involved in the answer, format them as follows:
+		- Format: (subject_code)(course_number)-(section) title_short_desc by primary_instructor_full_name (relevant course details).
+		- Ensure each course listed accurately responds to the original question.
+
+		Response Guidelines:
+		- Provide responses in plain text format, avoiding markdown.
+		- List course details in a numbered format for clarity.
+		- Ensure responce directory addresses the question
+		`))
+	params.Messages.Value = append(params.Messages.Value, openai.UserMessage(fmt.Sprintf("Prompt: %s", prompt)))
 	completion, err = setup.openAIClient.client.Chat.Completions.New(context.TODO(), params)
 	if err != nil {
 		log.Printf("Error creating chat completion: %v", err)

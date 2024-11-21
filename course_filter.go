@@ -17,7 +17,7 @@ type CourseFilter struct {
 	CRNs                    []int    `json:"crns" jsonschema_description:"The course registration numbers. Example: [12345, 67890]"`
 	ScheduleTypeCodes       []string `json:"schedule_type_codes" jsonschema_description:"The schedule type codes, if provided as codes. Example: ['LEC', 'LAB']"`
 	CampusCodes             []string `json:"campus_codes" jsonschema_description:"The campus codes, if provided as codes. Example: ['MAIN', 'SAT']"`
-	TitleShortDescs         []string `json:"title_short_descs" jsonschema_description:"The short descriptions of the course titles. Example: ['Intro to CS', 'Calculus I']"`
+	Title                   []string `json:"title" jsonschema_description:"The title of the course. Example: ['Intro to CS', 'Calculus I', 'Physics II']"`
 	InstructionModeDescs    []string `json:"instruction_mode_descs" jsonschema_description:"The descriptions of the instruction modes. Example: ['In Person', 'Online']"`
 	MeetingTypeCodes        []string `json:"meeting_type_codes" jsonschema_description:"The meeting type codes, if provided as codes. Example: ['CLAS', 'LAB']"`
 	MeetingTypeNames        []string `json:"meeting_type_names" jsonschema_description:"The meeting type names, if provided as names. Example: ['Class', 'Laboratory']"`
@@ -46,8 +46,11 @@ func GenerateSchema[T any]() interface{} {
 }
 
 func (d *chromaDB) correctCourseFilter(collections *collections, filter CourseFilter) CourseFilter {
+	combinedSubjectNamesAndTitles := append(filter.SubjectNames, filter.Title...)
+	filter.SubjectNames = combinedSubjectNamesAndTitles
+	filter.Title = combinedSubjectNamesAndTitles
 	filter.SubjectNames = d.correctSubjectNames(collections, filter)
-	filter.TitleShortDescs = d.correctTitleShortDescs(collections, filter)
+	filter.Title = d.correctTitleShortDescs(collections, filter)
 	filter.PrimaryInstructorNames = d.correctInstructorFullNames(collections, filter)
 	return filter
 }
@@ -82,8 +85,8 @@ func (d *chromaDB) correctSubjectNames(collections *collections, filter CourseFi
 }
 
 func (d *chromaDB) correctTitleShortDescs(collections *collections, filter CourseFilter) []string {
-	correctedTitleShortDescs := make([]string, 0, len(filter.TitleShortDescs))
-	for _, titleShortDesc := range filter.TitleShortDescs {
+	correctedTitleShortDescs := make([]string, 0, len(filter.Title))
+	for _, titleShortDesc := range filter.Title {
 		// Shortcut if it's in the collection already
 		if slices.Contains(collections.TitleShortDescList, titleShortDesc) {
 			correctedTitleShortDescs = append(correctedTitleShortDescs, titleShortDesc)
@@ -164,8 +167,8 @@ func (f CourseFilter) String() string {
 	if len(f.CampusCodes) > 0 {
 		sb.WriteString(fmt.Sprintf("CampusCodes: %v,", f.CampusCodes))
 	}
-	if len(f.TitleShortDescs) > 0 {
-		sb.WriteString(fmt.Sprintf("TitleShortDescs: %v,", f.TitleShortDescs))
+	if len(f.Title) > 0 {
+		sb.WriteString(fmt.Sprintf("TitleShortDescs: %v,", f.Title))
 	}
 	if len(f.InstructionModeDescs) > 0 {
 		sb.WriteString(fmt.Sprintf("InstructionModeDescs: %v,", f.InstructionModeDescs))

@@ -36,6 +36,9 @@ func filterCourses(sqlDB *gorm.DB, filter CourseFilter) ([]Course, error) {
 		if len(filter.SubjectNames) > 0 {
 			subQuery = subQuery.Or("subject_name IN ?", filter.SubjectNames)
 		}
+		if len(filter.Title) > 0 {
+			subQuery = subQuery.Or("title_short_desc IN ?", filter.Title)
+		}
 		query = query.Where(subQuery)
 	}
 	if len(filter.CourseNumbers) > 0 {
@@ -56,9 +59,6 @@ func filterCourses(sqlDB *gorm.DB, filter CourseFilter) ([]Course, error) {
 	}
 	if len(filter.CampusCodes) > 0 {
 		query = query.Where("campus_code IN ?", filter.CampusCodes)
-	}
-	if len(filter.TitleShortDescs) > 0 {
-		query = query.Where("title_short_desc IN ?", filter.TitleShortDescs)
 	}
 	if len(filter.InstructionModeDescs) > 0 {
 		query = query.Where("instruction_mode_desc IN ?", filter.InstructionModeDescs)
