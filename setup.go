@@ -31,7 +31,7 @@ func newSetup() (Setup, error) {
 		return Setup{}, err
 	}
 
-	courses, err := loadCSV("/home/jet/Documents/cs272/project05-jetpham/Fall 2024 Class Schedule.csv")
+	courses, err := loadCSV("Fall 2024 Class Schedule.csv")
 	if err != nil {
 		fmt.Println("Error loading CSV file:", err)
 		return Setup{}, err
