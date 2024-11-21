@@ -31,6 +31,8 @@ jobs:
       run: echo "OPENAIKEY=${{ secrets.OPENAIKEY }}" > .env
 
     - name: Test
+      env: # Or as an environment variable
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       id: test
       uses: cs272-0304-f23/action-go-grade@v0.3.4
       if: always()
