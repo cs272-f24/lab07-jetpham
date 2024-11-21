@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"log"
 
 	"github.com/openai/openai-go"
@@ -49,6 +50,9 @@ func toolCallingAgent(setup Setup, prompt string) string {
 	if len(toolCalls) == 0 {
 		log.Printf("No function call")
 		return completion.Choices[0].Message.Content
+	} else {
+		log.Printf("Function call: %v", toolCalls[0].Function.Name)
+		fmt.Printf("Function call: %v", toolCalls[0].Function.Name)
 	}
 
 	// If there was tool calls, continue

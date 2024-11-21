@@ -24,11 +24,15 @@ func newSetup() (Setup, error) {
 		log.Printf("Setup complete in %.2fs", time.Since(startTime).Seconds())
 	}()
 
-	err := godotenv.Load(".env")
-
-	if err != nil {
-		fmt.Println("Error loading .env file:", err)
-		return Setup{}, err
+	if os.Getenv("OPENAI_API_KEY") == "" {
+		log.Println("Loading OPENAI_API_KEY from .env file")
+		err := godotenv.Load(".env")
+		if err != nil {
+			fmt.Println("Error loading .env file:", err)
+			return Setup{}, err
+		}
+	} else {
+		log.Println("Using OPENAI_API_KEY from environment")
 	}
 
 	courses, err := loadCSV("Fall 2024 Class Schedule.csv")
