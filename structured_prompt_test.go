@@ -61,7 +61,7 @@ func Test_isSimilar(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			similar, reason := isSimilar(setup, tt.args.text1, tt.args.text2)
-			if !similar {
+			if similar != tt.want {
 				t.Errorf("text1:\n\n%v\n\ntext2:\n\n%v\n\nreason:\n\n%v", tt.args.text1, tt.args.text2, reason)
 			}
 		})
