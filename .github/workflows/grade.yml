@@ -27,9 +27,6 @@ jobs:
     - name: Run Docker Compose
       run: docker compose up -d
       
-    - name: Create .env file
-      run: echo "OPENAIKEY=${{ secrets.OPENAIKEY }}" > .env
-
     - name: Test
       env: # Or as an environment variable
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
